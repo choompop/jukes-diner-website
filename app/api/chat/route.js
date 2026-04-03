@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
+import { getSupabase } from '@/lib/supabase';
 
 const SYSTEM_PROMPT = `You are Lexi, the AI assistant for Juke's Diner. You help operators (Daniel, Justin, John, and future franchisees) manage the business by being a brain dump partner, answering questions, and capturing important context.
 
@@ -107,6 +108,21 @@ export async function POST(request) {
     const rawResponse = completion.choices[0].message.content;
     const category = extractCategory(rawResponse);
     const aiResponse = stripCategoryTag(rawResponse);
+
+    // Save to Supabase (non-blocking, don't fail the response if DB is unavailable)
+    const supabase = getSupabase();
+    if (supabase) {
+      try {
+        await supabase.from('dumps').insert({
+          user_name: user,
+          category,
+          message,
+          ai_response: aiResponse,
+        });
+      } catch (dbErr) {
+        console.error('Failed to save dump to Supabase:', dbErr);
+      }
+    }
 
     return NextResponse.json({
       ai_response: aiResponse,

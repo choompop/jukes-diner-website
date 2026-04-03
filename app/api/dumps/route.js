@@ -1,33 +1,40 @@
 import { NextResponse } from 'next/server';
-import { getDb } from '@/lib/db';
+import { getSupabase } from '@/lib/supabase';
 
 export async function GET(request) {
   try {
+    const supabase = getSupabase();
+    if (!supabase) {
+      return NextResponse.json({ dumps: [], error: 'Database not configured' });
+    }
+
     const { searchParams } = new URL(request.url);
     const user = searchParams.get('user');
     const category = searchParams.get('category');
     const limit = parseInt(searchParams.get('limit') || '50', 10);
     const offset = parseInt(searchParams.get('offset') || '0', 10);
 
-    let query = 'SELECT * FROM dumps WHERE 1=1';
-    const params = [];
+    let query = supabase
+      .from('dumps')
+      .select('*')
+      .order('timestamp', { ascending: false })
+      .range(offset, offset + limit - 1);
 
     if (user) {
-      query += ' AND user = ?';
-      params.push(user);
+      query = query.eq('user_name', user);
     }
     if (category) {
-      query += ' AND category = ?';
-      params.push(category);
+      query = query.eq('category', category);
     }
 
-    query += ' ORDER BY timestamp DESC LIMIT ? OFFSET ?';
-    params.push(limit, offset);
+    const { data, error } = await query;
 
-    const db = getDb();
-    const rows = db.prepare(query).all(...params);
+    if (error) {
+      console.error('Supabase query error:', error);
+      return NextResponse.json({ error: 'Failed to fetch dumps' }, { status: 500 });
+    }
 
-    return NextResponse.json({ dumps: rows });
+    return NextResponse.json({ dumps: data });
   } catch (err) {
     console.error('Dumps API error:', err);
     return NextResponse.json({ error: 'Failed to fetch dumps' }, { status: 500 });

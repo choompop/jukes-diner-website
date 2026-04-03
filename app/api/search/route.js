@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { getDb } from '@/lib/db';
+import { getSupabase } from '@/lib/supabase';
 
 export async function GET(request) {
   try {
@@ -10,28 +10,33 @@ export async function GET(request) {
       return NextResponse.json({ results: [] });
     }
 
-    const user = searchParams.get('user');
-    const db = getDb();
-    const term = `%${q}%`;
-    
-    let rows;
-    if (user) {
-      rows = db.prepare(
-        `SELECT * FROM dumps 
-         WHERE (message LIKE ? OR ai_response LIKE ?) AND user = ?
-         ORDER BY timestamp DESC 
-         LIMIT 50`
-      ).all(term, term, user);
-    } else {
-      rows = db.prepare(
-        `SELECT * FROM dumps 
-         WHERE message LIKE ? OR ai_response LIKE ? 
-         ORDER BY timestamp DESC 
-         LIMIT 50`
-      ).all(term, term);
+    const supabase = getSupabase();
+    if (!supabase) {
+      return NextResponse.json({ results: [], error: 'Database not configured' });
     }
 
-    return NextResponse.json({ results: rows });
+    const user = searchParams.get('user');
+    const term = `%${q}%`;
+
+    let query = supabase
+      .from('dumps')
+      .select('*')
+      .or(`message.ilike.${term},ai_response.ilike.${term}`)
+      .order('timestamp', { ascending: false })
+      .limit(50);
+
+    if (user) {
+      query = query.eq('user_name', user);
+    }
+
+    const { data, error } = await query;
+
+    if (error) {
+      console.error('Supabase search error:', error);
+      return NextResponse.json({ error: 'Search failed' }, { status: 500 });
+    }
+
+    return NextResponse.json({ results: data });
   } catch (err) {
     console.error('Search API error:', err);
     return NextResponse.json({ error: 'Search failed' }, { status: 500 });
