@@ -160,10 +160,10 @@ export async function POST(request) {
     const aiResponse = stripCategoryTag(rawResponse);
 
     // Save to Supabase (non-blocking, don't fail the response if DB is unavailable)
-    const supabase = getSupabase();
-    if (supabase) {
+    const supabaseForSave = getSupabase();
+    if (supabaseForSave) {
       try {
-        await supabase.from('dumps').insert({
+        await supabaseForSave.from('dumps').insert({
           user_name: user,
           category,
           message,
