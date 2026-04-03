@@ -46,14 +46,14 @@ export default function DashboardPage() {
   }, []);
 
   useEffect(() => {
-    fetchDumps();
-  }, [filterCategory, filterUser]);
+    if (currentUser) fetchDumps();
+  }, [filterCategory, currentUser]);
 
   async function fetchDumps() {
     setLoading(true);
     const params = new URLSearchParams();
     if (filterCategory !== 'all') params.set('category', filterCategory);
-    if (filterUser !== 'all') params.set('user', filterUser);
+    params.set('user', currentUser);
     
     const res = await fetch(`/api/dumps?${params}`);
     const data = await res.json();
@@ -67,7 +67,7 @@ export default function DashboardPage() {
       setSearchResults(null);
       return;
     }
-    const res = await fetch(`/api/search?q=${encodeURIComponent(searchQuery)}`);
+    const res = await fetch(`/api/search?q=${encodeURIComponent(searchQuery)}&user=${currentUser}`);
     const data = await res.json();
     setSearchResults(data.results || []);
   }
@@ -160,23 +160,7 @@ export default function DashboardPage() {
           </div>
         )}
 
-        {searchResults === null && (
-          <div className="flex gap-1.5">
-            {USERS.map((u) => (
-              <button
-                key={u}
-                onClick={() => setFilterUser(u)}
-                className={`px-3 py-1.5 rounded-full text-xs font-medium transition-colors ${
-                  filterUser === u
-                    ? 'bg-gold text-brand-black'
-                    : 'bg-zinc-800 text-zinc-400 hover:text-zinc-200'
-                }`}
-              >
-                {u}
-              </button>
-            ))}
-          </div>
-        )}
+        {/* User filter removed - each person only sees their own dumps */}
 
         {/* Results */}
         {searchResults !== null && (

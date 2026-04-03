@@ -10,14 +10,26 @@ export async function GET(request) {
       return NextResponse.json({ results: [] });
     }
 
+    const user = searchParams.get('user');
     const db = getDb();
     const term = `%${q}%`;
-    const rows = db.prepare(
-      `SELECT * FROM dumps 
-       WHERE message LIKE ? OR ai_response LIKE ? 
-       ORDER BY timestamp DESC 
-       LIMIT 50`
-    ).all(term, term);
+    
+    let rows;
+    if (user) {
+      rows = db.prepare(
+        `SELECT * FROM dumps 
+         WHERE (message LIKE ? OR ai_response LIKE ?) AND user = ?
+         ORDER BY timestamp DESC 
+         LIMIT 50`
+      ).all(term, term, user);
+    } else {
+      rows = db.prepare(
+        `SELECT * FROM dumps 
+         WHERE message LIKE ? OR ai_response LIKE ? 
+         ORDER BY timestamp DESC 
+         LIMIT 50`
+      ).all(term, term);
+    }
 
     return NextResponse.json({ results: rows });
   } catch (err) {
