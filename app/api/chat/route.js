@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
-import { getDb } from '@/lib/db';
 
 const SYSTEM_PROMPT = `You are a chill, sharp assistant for Juke's Diner operators. Think of yourself as a coworker they can talk to about anything related to the business.
 
@@ -64,14 +63,7 @@ export async function POST(request) {
     const category = extractCategory(rawResponse);
     const aiResponse = stripCategoryTag(rawResponse);
 
-    const db = getDb();
-    const stmt = db.prepare(
-      'INSERT INTO dumps (user, category, message, ai_response) VALUES (?, ?, ?, ?)'
-    );
-    const result = stmt.run(user, category, message, aiResponse);
-
     return NextResponse.json({
-      id: result.lastInsertRowid,
       ai_response: aiResponse,
       category,
     });

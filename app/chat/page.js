@@ -19,6 +19,11 @@ export default function ChatPage() {
       return;
     }
     setCurrentUser(user);
+    // Load previous messages from localStorage
+    const saved = localStorage.getItem(`jukes_chat_${user}`);
+    if (saved) {
+      try { setMessages(JSON.parse(saved)); } catch(e) {}
+    }
   }, []);
 
   useEffect(() => {
@@ -32,7 +37,11 @@ export default function ChatPage() {
 
     setInput('');
     const userMsg = { role: 'user', content: text };
-    setMessages((prev) => [...prev, userMsg]);
+    setMessages((prev) => {
+      const updated = [...prev, userMsg];
+      localStorage.setItem(`jukes_chat_${currentUser}`, JSON.stringify(updated));
+      return updated;
+    });
     setLoading(true);
 
     try {
@@ -51,14 +60,19 @@ export default function ChatPage() {
       const data = await res.json();
 
       if (data.ai_response) {
-        setMessages((prev) => [
-          ...prev,
-          {
-            role: 'assistant',
-            content: data.ai_response,
-            category: data.category,
-          },
-        ]);
+        setMessages((prev) => {
+          const updated = [
+            ...prev,
+            {
+              role: 'assistant',
+              content: data.ai_response,
+              category: data.category,
+            },
+          ];
+          // Save to localStorage
+          localStorage.setItem(`jukes_chat_${currentUser}`, JSON.stringify(updated));
+          return updated;
+        });
       }
     } catch (err) {
       setMessages((prev) => [
