@@ -1,0 +1,7 @@
+{
+  "name": "Juke's Diner",
+  "description": "A sleek, nostalgic website for Juke's Diner food truck franchise, featuring online ordering, event booking, and a franchise dashboard.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
