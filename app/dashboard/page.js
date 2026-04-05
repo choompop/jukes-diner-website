@@ -10,7 +10,7 @@ export default function DashboardRedirect() {
     if (!user) {
       router.push('/dashboard/login');
     } else {
-      router.push('/dashboard/chat');
+      router.push('/dashboard/command-center');
     }
   }, []);
   return null;
