@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { MENU_ITEMS, TESTIMONIALS } from '@/lib/constants';
 import { Star, ArrowRight } from 'lucide-react';
