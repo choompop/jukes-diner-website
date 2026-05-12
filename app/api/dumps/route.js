@@ -35,12 +35,12 @@ export async function GET(request) {
 
     if (error) {
       console.error('Supabase query error:', error);
-      return NextResponse.json({ error: 'Failed to fetch dumps' }, { status: 500 });
+      return NextResponse.json({ dumps: [], error: null, warning: 'Brain dump history is not configured yet' });
     }
 
     return NextResponse.json({ dumps: data });
   } catch (err) {
     console.error('Dumps API error:', err);
-    return NextResponse.json({ error: 'Failed to fetch dumps' }, { status: 500 });
+    return NextResponse.json({ dumps: [], error: null, warning: 'Brain dump history is temporarily unavailable' });
   }
 }

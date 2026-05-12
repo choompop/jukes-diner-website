@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { readFileSync, writeFileSync, readdirSync, statSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, readdirSync, statSync, existsSync, mkdirSync } from 'fs';
 import { join } from 'path';
 import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
@@ -12,6 +12,7 @@ const __dirname = dirname(__filename);
 const PROFILES_DIR = '/Users/lexi/.hermes/profiles';
 const KANBAN_DB = '/Users/lexi/.hermes/kanban.db';
 const OUTPUT_FILE = join(dirname(__dirname), 'data', 'agent-roster.json');
+const PUBLIC_OUTPUT_FILE = join(dirname(__dirname), 'public', 'data', 'agent-roster.json');
 
 // Read all profiles when the local Hermes profile directory exists.
 // Vercel/production builds do not have /Users/lexi/.hermes, so fall back
@@ -133,6 +134,11 @@ const output = {
   agents: roster
 };
 
-writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
+const serializedOutput = JSON.stringify(output, null, 2);
+mkdirSync(join(dirname(__dirname), 'data'), { recursive: true });
+mkdirSync(join(dirname(__dirname), 'public', 'data'), { recursive: true });
+writeFileSync(OUTPUT_FILE, serializedOutput);
+writeFileSync(PUBLIC_OUTPUT_FILE, serializedOutput);
 console.log(`Generated roster with ${roster.length} agents and ${activeTasks.length} active tasks`);
 console.log(`Output: ${OUTPUT_FILE}`);
+console.log(`Public output: ${PUBLIC_OUTPUT_FILE}`);
