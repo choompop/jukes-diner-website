@@ -13,14 +13,18 @@ const PROFILES_DIR = '/Users/lexi/.hermes/profiles';
 const KANBAN_DB = '/Users/lexi/.hermes/kanban.db';
 const OUTPUT_FILE = join(dirname(__dirname), 'data', 'agent-roster.json');
 
-// Read all profiles
-const profiles = readdirSync(PROFILES_DIR).filter(name => {
-  try {
-    return statSync(join(PROFILES_DIR, name)).isDirectory();
-  } catch {
-    return false;
-  }
-});
+// Read all profiles when the local Hermes profile directory exists.
+// Vercel/production builds do not have /Users/lexi/.hermes, so fall back
+// to an empty generated roster instead of failing the website build.
+const profiles = existsSync(PROFILES_DIR)
+  ? readdirSync(PROFILES_DIR).filter(name => {
+      try {
+        return statSync(join(PROFILES_DIR, name)).isDirectory();
+      } catch {
+        return false;
+      }
+    })
+  : [];
 
 // Parse GOALS.md
 function parseGoals(profileName) {
