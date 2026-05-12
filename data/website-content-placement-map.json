@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "title": "Juke's Diner Website Content Placement Map",
+  "updatedAt": "2026-05-11",
+  "purpose": "Curate approved media assets into conversion-focused website slots without dumping every Drive or social asset publicly.",
+  "sourceOfTruth": "Hermes Kanban + media hub approval status",
+  "globalRules": [
+    "Only use assets with status=approved or explicit John/brand-lead approval for public website placement.",
+    "Prefer a small number of high-converting visuals over galleries that slow the site or dilute booking CTAs.",
+    "Do not publish private docs, raw Drive folders, customer/vendor PII, unapproved minors, license plates, payment info, or behind-the-scenes mess without approval.",
+    "Every public asset should support one of three outcomes: book catering/private events, trust the truck, or crave the food.",
+    "If an asset is useful but not website-grade, keep it in social/Metricool repurposing or internal brand-board use instead."
+  ],
+  "requiredTags": {
+    "approval": ["approved", "website-approved"],
+    "safety": ["brand-safe", "public-ok"],
+    "conversion": ["booking-cta", "catering-conversion", "food-proof", "social-proof"]
+  },
+  "slots": [
+    {
+      "id": "hero",
+      "label": "Hero",
+      "priority": "critical",
+      "pageTargets": ["/", "/book"],
+      "idealAssetType": "One polished horizontal truck or food-truck-at-event photo; optional 5-8 second silent loop only if optimized.",
+      "tagsRequired": ["approved", "website-approved", "brand-safe", "hero", "truck", "booking-cta"],
+      "approvalCriteria": [
+        "Instantly communicates Nashville food truck + retro diner energy.",
+        "Clean enough for first impression: no cluttered background, private addresses, unreadable signage, or operational mess.",
+        "Subject leaves room for headline and Book the Truck CTA on mobile and desktop.",
+        "Compressed web derivative exists; original can remain in Drive/media hub."
+      ],
+      "fallbackCopy": "Smash burgers, hot chicken, waffle wheels, and a full event truck experience — served fast, loud, clean, and memorable.",
+      "updateCadence": "Review monthly; update only when a clearly stronger hero asset is approved or season/event positioning changes.",
+      "doNotUse": "Do not rotate random Drive uploads into the hero. Hero changes need explicit brand approval."
+    },
+    {
+      "id": "menu-highlights",
+      "label": "Menu highlights",
+      "priority": "critical",
+      "pageTargets": ["/", "/menu", "/order"],
+      "idealAssetType": "Tight food photos: burgers, hot chicken, fries, waffle wheels, sauces, trays; horizontal or square crops.",
+      "tagsRequired": ["approved", "website-approved", "brand-safe", "food-proof", "menu", "item-name"],
+      "approvalCriteria": [
+        "Food is sharp, appetizing, well-lit, and matches what customers can actually order.",
+        "No misleading portions, unavailable specials, messy packaging, or inconsistent menu names.",
+        "Alt text and menu item mapping are clear before publishing."
+      ],
+      "fallbackCopy": "Fan favorites built for lunch rushes, events, and late-night cravings.",
+      "updateCadence": "Quarterly menu review; immediately update when menu items, pricing, or seasonal specials change.",
+      "doNotUse": "Do not publish experimental food shots unless John approves the item as customer-facing."
+    },
+    {
+      "id": "catering-private-events",
+      "label": "Catering/private events",
+      "priority": "critical",
+      "pageTargets": ["/book", "/catering", "/"],
+      "idealAssetType": "Event setup photos, packed lines, serving windows, tray spreads, private party context, short recap clips.",
+      "tagsRequired": ["approved", "website-approved", "brand-safe", "catering-conversion", "event", "booking-cta"],
+      "approvalCriteria": [
+        "Shows reliable service and clean setup before showing crowd chaos.",
+        "No customer faces unless permission is documented or faces are not identifiable.",
+        "Asset can be paired with event type, service style, and clear inquiry CTA.",
+        "Any client logos, venue names, or private locations are approved for public use."
+      ],
+      "fallbackCopy": "Bring Juke's to corporate lunches, festivals, weddings, late-night drops, and private parties.",
+      "updateCadence": "Refresh after every approved high-quality event recap; otherwise monthly.",
+      "doNotUse": "Do not expose contract terms, invoices, guest lists, private addresses, or raw planning docs."
+    },
+    {
+      "id": "truck",
+      "label": "Truck",
+      "priority": "high",
+      "pageTargets": ["/", "/find-us", "/book"],
+      "idealAssetType": "Clean exterior truck shots, service-window shots, parked-at-venue proof, route/location graphics.",
+      "tagsRequired": ["approved", "website-approved", "brand-safe", "truck", "build-in-public", "location"],
+      "approvalCriteria": [
+        "Truck is clean, branded, and positioned as reliable/mobile/event-ready.",
+        "No license plates, private property, permit-sensitive details, or accidental people in compromising context.",
+        "Works as a trust-builder near Find Us or Book the Truck CTAs."
+      ],
+      "fallbackCopy": "The Juke's truck rolls into Nashville events with a diner-style setup built for speed and service.",
+      "updateCadence": "Monthly route/season check; replace when wrap, equipment, or service setup materially changes.",
+      "doNotUse": "Do not use repair, breakdown, messy prep, or off-brand parking-lot shots publicly."
+    },
+    {
+      "id": "staff-story",
+      "label": "Staff/story",
+      "priority": "medium",
+      "pageTargets": ["/about", "/", "/apply"],
+      "idealAssetType": "Founder/operator photos, prep process, team service moments, training/system snapshots approved for public story.",
+      "tagsRequired": ["approved", "website-approved", "brand-safe", "staff", "story", "build-in-public"],
+      "approvalCriteria": [
+        "People shown have permission and are represented respectfully.",
+        "Story supports trust, operator discipline, or franchise-readiness — not vanity content.",
+        "No confidential SOPs, dashboard data, financials, or employee/customer PII visible."
+      ],
+      "fallbackCopy": "Juke's is built by operators who care about fast service, clean systems, and food people remember.",
+      "updateCadence": "Quarterly or after major team/franchise milestones.",
+      "doNotUse": "Do not post internal dashboards, sensitive SOPs, private Slack, or unapproved employee images."
+    },
+    {
+      "id": "dining-room-social-proof",
+      "label": "Dining room/social proof",
+      "priority": "high",
+      "pageTargets": ["/", "/book", "/find-us"],
+      "idealAssetType": "Busy-but-clean service photos, customer reactions with permission, testimonials, review cards, line/crowd proof.",
+      "tagsRequired": ["approved", "website-approved", "brand-safe", "social-proof", "customer-permission"],
+      "approvalCriteria": [
+        "Shows demand and trust without making service look chaotic or slow.",
+        "Testimonials/reviews are attributable only where terms permit; otherwise quote as anonymized snippets.",
+        "Faces, minors, and venue/customer names are approved or obscured."
+      ],
+      "fallbackCopy": "Built for the rush: memorable food, fast handoff, and a setup guests notice.",
+      "updateCadence": "Monthly; add strongest new proof from approved events and reviews.",
+      "doNotUse": "Do not use screenshots of private messages or reviews if platform terms or customer privacy are unclear."
+    },
+    {
+      "id": "instagram-tiktok-embeds-gallery",
+      "label": "Instagram/TikTok embeds or gallery",
+      "priority": "medium",
+      "pageTargets": ["/", "/social", "/book"],
+      "idealAssetType": "Approved top-performing embeds, a 6-9 item curated gallery, or static thumbnails linking to social profiles.",
+      "tagsRequired": ["approved", "website-approved", "brand-safe", "social", "embed-ok", "performance-reviewed"],
+      "approvalCriteria": [
+        "Embed/gallery content is curated and fast-loading; no endless feeds or unmoderated account dumps.",
+        "Posts support food proof, event trust, or booking intent.",
+        "Captions/comments shown by third-party embeds are brand-safe at the time of review.",
+        "Fallback static images exist if embeds hurt performance or privacy."
+      ],
+      "fallbackCopy": "See what Juke's is cooking, where the truck is rolling, and what the team is building next.",
+      "updateCadence": "Biweekly during active campaigns; monthly otherwise.",
+      "doNotUse": "Do not auto-embed every social post or rely on third-party feeds as the only proof block."
+    },
+    {
+      "id": "press-reviews",
+      "label": "Press/reviews",
+      "priority": "high",
+      "pageTargets": ["/", "/book", "/about"],
+      "idealAssetType": "Press logos, review snippets, ratings screenshots where allowed, event organizer quotes, media mentions.",
+      "tagsRequired": ["approved", "website-approved", "brand-safe", "press", "review", "source-url", "booking-cta"],
+      "approvalCriteria": [
+        "Quote/source is accurate, current, and allowed to be reused.",
+        "No fake scarcity, inflated numbers, or unverifiable claims.",
+        "Press/review block sits near booking CTA to reduce buyer hesitation."
+      ],
+      "fallbackCopy": "Trusted for events, rushes, and Nashville food-truck moments that need to run smoothly.",
+      "updateCadence": "Monthly review; update within 72 hours of a meaningful new press/review win.",
+      "doNotUse": "Do not crop or quote reviews in a way that changes meaning."
+    },
+    {
+      "id": "seasonal-campaigns",
+      "label": "Seasonal campaigns",
+      "priority": "medium",
+      "pageTargets": ["/", "/menu", "/book", "/find-us"],
+      "idealAssetType": "Limited-time menu shots, holiday/event graphics, festival recap photos, campaign-specific truck/food visuals.",
+      "tagsRequired": ["approved", "website-approved", "brand-safe", "seasonal", "campaign", "start-date", "end-date"],
+      "approvalCriteria": [
+        "Campaign dates, menu availability, pricing, and event details are confirmed before publishing.",
+        "Asset has a removal date or expiration note so stale campaigns do not linger.",
+        "CTA points to the right action: book, find us, order, or follow."
+      ],
+      "fallbackCopy": "Seasonal specials and event runs appear here when they are live and confirmed.",
+      "updateCadence": "Before campaign launch, mid-campaign check, and removal within 24 hours after end date.",
+      "doNotUse": "Do not leave expired holiday, festival, or limited-time offer graphics on primary pages."
+    }
+  ]
+}

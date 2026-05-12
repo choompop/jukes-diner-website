@@ -1,25 +1,84 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import {
-  TrendingUp,
-  CloudSun,
+  CheckCircle,
   Calendar,
-  CheckSquare,
-  MessageSquare,
-  Bell,
-  ArrowUpRight,
+  AlertTriangle,
+  Image as ImageIcon,
+  Video,
+  DollarSign,
+  BookOpen,
+  AlertCircle,
   Clock,
-  RefreshCw
+  ArrowUpRight,
+  RefreshCw,
+  CloudSun,
+  Sun,
+  Cloud,
+  CloudRain,
+  CloudSnow,
+  CloudFog,
 } from 'lucide-react';
 import Link from 'next/link';
 import { cn } from '../../../lib/utils';
+import {
+  COMMAND_CENTER_SECTIONS,
+  getTodaysPriorities,
+  getBookingsAndLeads,
+  getOpenOpsIssues,
+  getMediaApprovals,
+  getFinancialPulse,
+  getSOPShortcuts,
+  getBlockersNeedingJohn,
+  getOperatorDashboardStats,
+} from '../../../lib/command-center.mjs';
+import { CARD_PATTERNS } from '../../../lib/design-system';
+import { StatusBadge } from '../../../components/StatusBadge';
+import { MetricCard } from '../../../components/MetricCard';
+import { getWeatherIconConfig } from '../../../lib/weather-icons.mjs';
+
+const ICON_MAP = {
+  CheckCircle,
+  Calendar,
+  AlertTriangle,
+  Image: ImageIcon,
+  DollarSign,
+  BookOpen,
+  AlertCircle,
+};
+
+// Map weather icon names to icon components
+const WEATHER_ICON_MAP = {
+  Sun,
+  Cloud,
+  CloudRain,
+  CloudSnow,
+  CloudFog,
+};
+
+// Helper to get the appropriate weather icon component
+function getWeatherIconComponent(condition) {
+  const config = getWeatherIconConfig(condition);
+  const IconComponent = WEATHER_ICON_MAP[config.icon] || Cloud;
+  return { IconComponent, color: config.color };
+}
 
 export default function CommandCenter() {
+  const shouldReduceMotion = useReducedMotion();
   const [weather, setWeather] = useState({ temp: '--', condition: 'Loading...' });
   const [lastSync, setLastSync] = useState('');
   const [isSyncing, setIsSyncing] = useState(false);
+
+  const priorities = getTodaysPriorities();
+  const bookingsLeads = getBookingsAndLeads();
+  const opsIssues = getOpenOpsIssues();
+  const mediaApprovals = getMediaApprovals();
+  const financialPulse = getFinancialPulse();
+  const sopShortcuts = getSOPShortcuts();
+  const blockers = getBlockersNeedingJohn();
+  const stats = getOperatorDashboardStats();
 
   useEffect(() => {
     setLastSync(new Date().toLocaleTimeString());
@@ -31,10 +90,12 @@ export default function CommandCenter() {
   const fetchWeather = async () => {
     try {
       // Nashville coordinates (Juke's Diner home base)
-      const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=36.1627&longitude=-86.7816&current_weather=true');
+      const res = await fetch(
+        'https://api.open-meteo.com/v1/forecast?latitude=36.1627&longitude=-86.7816&current_weather=true'
+      );
       const data = await res.json();
       if (data.current_weather) {
-        const temp = Math.round((data.current_weather.temperature * 9/5) + 32); // Convert C to F
+        const temp = Math.round((data.current_weather.temperature * 9) / 5 + 32);
         const code = data.current_weather.weathercode;
         let condition = 'Clear';
         if (code > 0 && code < 4) condition = 'Partly Cloudy';
@@ -58,31 +119,15 @@ export default function CommandCenter() {
     }, 1500);
   };
 
-  const stats = [
-    { label: "Today's Sales", value: "$1,284.50", sub: "+12% from yesterday", icon: <TrendingUp className="h-5 w-5 text-green-500" /> },
-    { label: "Local Weather", value: `${weather.temp} ${weather.condition}`, sub: "Nashville, TN", icon: <CloudSun className="h-5 w-5 text-blue-500" /> },
-    { label: "Active Events", value: "3", sub: "Next: Westside Park (2pm)", icon: <Calendar className="h-5 w-5 text-diner-red" /> },
-    { label: "Open Tasks", value: "8", sub: "3 due by end of day", icon: <CheckSquare className="h-5 w-5 text-diner-teal" /> }
-  ];
-
-  const announcements = [
-    { id: 1, author: "John", date: "2h ago", text: "New seasonal milkshake flavor 'Peach Cobbler' launching next week! Check the Training Center for the prep guide." },
-    { id: 2, author: "John", date: "1d ago", text: "Reminder: All health permit renewals for Davidson County are due by the 15th." }
-  ];
-
-  const upcomingEvents = [
-    { id: 1, name: "Westside Park Lunch", time: "Today, 11:00 AM - 2:00 PM", status: "Confirmed" },
-    { id: 2, name: "Tech Plaza Dinner", time: "Tomorrow, 5:00 PM - 9:00 PM", status: "Confirmed" },
-    { id: 3, name: "Arts District Festival", time: "Sat, 12:00 PM - 10:00 PM", status: "Deposit Paid" }
-  ];
-
   return (
     <div className="space-y-8">
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl text-diner-black mb-1">COMMAND CENTER</h1>
-          <p className="text-gray-500 font-serif italic">Welcome back. Here&apos;s the state of the truck.</p>
+          <h1 className="text-3xl text-diner-black mb-1">OPERATOR COMMAND CENTER</h1>
+          <p className="text-gray-500 font-sans">
+            Everything you need to know in the next 30 seconds.
+          </p>
         </div>
         <div className="flex items-center gap-4">
           <div className="hidden sm:flex flex-col items-end text-[10px] font-mono text-gray-400">
@@ -91,133 +136,381 @@ export default function CommandCenter() {
               {lastSync}
               <button
                 onClick={handleSync}
-                className={cn("hover:text-diner-red transition-colors", isSyncing && "animate-spin")}
+                className={cn(
+                  'p-2.5 hover:text-diner-red hover:bg-red-50 rounded-lg transition-all active:bg-red-100',
+                  isSyncing && 'animate-spin'
+                )}
+                aria-label="Refresh dashboard data"
               >
-                <RefreshCw className="h-3 w-3" />
+                <RefreshCw className="h-5 w-5" />
               </button>
             </span>
           </div>
-          <Link
-            href="/dashboard/brain-dump"
-            className="bg-diner-red text-white px-6 py-3 rounded-xl font-display text-sm hover:bg-red-700 transition-colors flex items-center gap-2 shadow-lg"
-          >
-            <MessageSquare className="h-4 w-4" /> QUICK BRAIN DUMP
-          </Link>
         </div>
       </div>
 
-      {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {stats.map((stat, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: i * 0.1 }}
-            className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100"
-          >
-            <div className="flex justify-between items-start mb-4">
-              <div className="p-2 bg-gray-50 rounded-lg">{stat.icon}</div>
-              <ArrowUpRight className="h-4 w-4 text-gray-300" />
-            </div>
-            <p className="text-xs font-display text-gray-400 uppercase tracking-widest mb-1">{stat.label}</p>
-            <h3 className="text-2xl font-bold text-diner-black mb-1">{stat.value}</h3>
-            <p className="text-[10px] text-gray-500 font-serif italic">{stat.sub}</p>
-          </motion.div>
-        ))}
+      {/* Quick Stats Grid - Progressive responsive: 1→2→4 columns */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-5">
+        <MetricCard
+          label="Urgent Tasks"
+          value={stats.urgentTasks}
+          color="red"
+          icon={<AlertTriangle className="h-5 w-5" />}
+          trend={{
+            direction: stats.urgentTasks > 2 ? 'up' : 'neutral',
+            value: stats.urgentTasks > 2 ? '+1' : '—',
+            label: 'vs yesterday',
+          }}
+          linkTo="/dashboard/command-center#priorities"
+          ariaLabel="View today's urgent tasks and priorities"
+          delay={0}
+        />
+        <MetricCard
+          label="Today Bookings"
+          value={stats.todayBookings}
+          color="teal"
+          icon={<Calendar className="h-5 w-5" />}
+          trend={{
+            direction: stats.todayBookings > 3 ? 'up' : 'down',
+            value: stats.todayBookings > 3 ? '+2' : '-1',
+            label: 'vs yesterday',
+          }}
+          linkTo="/dashboard/bookings"
+          ariaLabel="Go to today's bookings and leads"
+          delay={0.1}
+        />
+        <MetricCard
+          label="Open Issues"
+          value={stats.openIssues}
+          color="orange"
+          icon={<AlertCircle className="h-5 w-5" />}
+          trend={{
+            direction: 'neutral',
+            value: '—',
+            label: 'vs last week',
+          }}
+          linkTo="/dashboard/command-center#issues"
+          ariaLabel="View open operations issues"
+          delay={0.2}
+        />
+        <MetricCard
+          label="Media Approvals"
+          value={stats.pendingApprovals}
+          color="purple"
+          icon={<ImageIcon className="h-5 w-5" />}
+          trend={{
+            direction: 'neutral',
+            value: '—',
+            label: 'pending review',
+          }}
+          linkTo="/dashboard/command-center#media"
+          ariaLabel="View pending media approvals"
+          delay={0.3}
+        />
+        <MetricCard
+          label="Nashville, TN"
+          value={weather.temp}
+          color={getWeatherIconComponent(weather.condition).color}
+          icon={weather.condition === 'Loading...'
+            ? <CloudSun className="h-5 w-5" />
+            : (() => {
+              const { IconComponent } = getWeatherIconComponent(weather.condition);
+              return <IconComponent className="h-5 w-5" />;
+            })()
+          }
+          delay={0.4}
+          className="md:col-span-2 lg:col-span-1"
+        />
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Left Column: Events & Tasks */}
-        <div className="lg:col-span-2 space-y-8">
-          {/* Upcoming Events */}
-          <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
-            <div className="p-6 border-b border-gray-50 flex justify-between items-center">
-              <h2 className="font-display text-lg">UPCOMING EVENTS</h2>
-              <Link href="/dashboard/operations" className="text-xs text-diner-teal font-bold hover:underline">VIEW CALENDAR</Link>
+      {/* Main Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Left Column - Priorities & Bookings */}
+        <div className="lg:col-span-2 space-y-6">
+          {/* Today's Priorities */}
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="p-5 border-b border-gray-100 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <CheckCircle className="h-5 w-5 text-diner-red" />
+                <h2 className="font-display text-lg">TODAY'S PRIORITIES</h2>
+              </div>
+              <span className="text-xs text-gray-400">{priorities.length} tasks</span>
             </div>
-            <div className="divide-y divide-gray-50">
-              {upcomingEvents.map((event) => (
-                <div key={event.id} className="p-6 flex items-center justify-between hover:bg-gray-50 transition-colors">
-                  <div className="flex items-center gap-4">
-                    <div className="bg-diner-cream p-3 rounded-xl text-diner-red">
-                      <Calendar className="h-5 w-5" />
+            <div className={CARD_PATTERNS.LIST_WITH_DIVIDERS.container}>
+              {priorities.slice(0, 4).map((task, idx) => (
+                <motion.div
+                  key={task.id}
+                  data-testid={`priority-item-${idx}`}
+                  initial={shouldReduceMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={shouldReduceMotion ? { duration: 0 } : { delay: idx * 0.05 }}
+                  className={CARD_PATTERNS.LIST_WITH_DIVIDERS.item}
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex-grow">
+                      <h4 className="text-sm font-medium mb-1">{task.title}</h4>
+                      <div className="flex items-center gap-3 text-xs text-gray-500">
+                        <span className="flex items-center gap-1">
+                          <Clock className="h-3 w-3" />
+                          {task.estimatedMinutes} min
+                        </span>
+                        <span>Owner: {task.owner}</span>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="font-bold text-sm">{event.name}</h4>
-                      <p className="text-xs text-gray-500 flex items-center gap-1 mt-1">
-                        <Clock className="h-3 w-3" /> {event.time}
-                      </p>
-                    </div>
+                    <StatusBadge variant={task.priority as 'urgent' | 'high' | 'medium' | 'low'}>
+                      {task.priority}
+                    </StatusBadge>
                   </div>
-                  <span className={cn(
-                    "text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest",
-                    event.status === 'Confirmed' ? "bg-green-100 text-green-700" : "bg-yellow-100 text-yellow-700"
-                  )}>
-                    {event.status}
-                  </span>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>
 
-          {/* Open Tasks */}
-          <div className="bg-white rounded-3xl shadow-sm border border-gray-100 overflow-hidden">
-            <div className="p-6 border-b border-gray-50 flex justify-between items-center">
-              <h2 className="font-display text-lg">OPEN TASKS</h2>
-              <Link href="/dashboard/operations" className="text-xs text-diner-teal font-bold hover:underline">VIEW ALL</Link>
-            </div>
-            <div className="p-6 space-y-4">
-              {[
-                { title: "Order Sysco inventory for weekend", due: "Today", priority: "High" },
-                { title: "Clean fryer filters", due: "Tomorrow", priority: "Medium" },
-                { title: "Update staff schedule for next week", due: "Fri", priority: "Low" }
-              ].map((task, i) => (
-                <div key={i} className="flex items-center gap-4 p-4 bg-gray-50 rounded-2xl group cursor-pointer hover:bg-diner-cream transition-colors">
-                  <div className="h-5 w-5 rounded border-2 border-gray-300 group-hover:border-diner-red transition-colors" />
-                  <div className="flex-grow">
-                    <h4 className="text-sm font-medium">{task.title}</h4>
-                    <p className="text-[10px] text-gray-400 uppercase tracking-widest mt-1">Due: {task.due} &bull; {task.priority} Priority</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Right Column: Announcements */}
-        <div className="space-y-8">
-          <div className="bg-diner-black text-white rounded-3xl shadow-xl overflow-hidden">
-            <div className="p-6 border-b border-white/10 flex items-center gap-3">
-              <Bell className="h-5 w-5 text-diner-red" />
-              <h2 className="font-display text-lg">ANNOUNCEMENTS</h2>
-            </div>
-            <div className="p-6 space-y-6">
-              {announcements.map((ann) => (
-                <div key={ann.id} className="space-y-2">
-                  <div className="flex justify-between items-center">
-                    <span className="text-[10px] font-display text-diner-red uppercase tracking-widest">From: {ann.author}</span>
-                    <span className="text-[10px] text-gray-500 font-mono">{ann.date}</span>
-                  </div>
-                  <p className="text-sm text-gray-300 font-serif leading-relaxed italic">&ldquo;{ann.text}&rdquo;</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-diner-teal text-white rounded-3xl p-8 shadow-xl relative overflow-hidden">
-            <div className="relative z-10">
-              <h3 className="text-2xl mb-4">NEED HELP?</h3>
-              <p className="text-sm font-serif italic mb-6 opacity-90">Lexi is standing by to help you with any franchise questions or operational issues.</p>
+          {/* Bookings & Leads */}
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="p-5 border-b border-gray-100 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <Calendar className="h-5 w-5 text-diner-teal" />
+                <h2 className="font-display text-lg">BOOKINGS & LEADS</h2>
+              </div>
               <Link
-                href="/dashboard/support"
-                className="bg-white text-diner-teal px-6 py-3 rounded-xl font-display text-xs hover:bg-diner-cream transition-colors inline-block"
+                href="/dashboard/bookings"
+                className="text-xs text-diner-teal font-bold hover:underline"
               >
-                GET SUPPORT
+                VIEW ALL
               </Link>
             </div>
-            <MessageSquare className="absolute -bottom-4 -right-4 h-32 w-32 text-white/10 rotate-12" />
+            <div className={CARD_PATTERNS.LIST_WITH_DIVIDERS.container}>
+              {bookingsLeads.map((item, idx) => (
+                <motion.div
+                  key={item.id}
+                  data-testid={`booking-item-${idx}`}
+                  initial={shouldReduceMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={shouldReduceMotion ? { duration: 0 } : { delay: idx * 0.05 }}
+                  className={cn(CARD_PATTERNS.LIST_WITH_DIVIDERS.item, 'p-5')}
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex-grow space-y-3">
+                      <div className="flex items-center gap-2">
+                        <h4 className="text-sm font-medium">{item.name}</h4>
+                        <StatusBadge variant={item.type === 'booking' ? 'booking' : 'lead'} size="sm">
+                          {item.type}
+                        </StatusBadge>
+                      </div>
+                      <p className="text-xs text-gray-600">{item.nextAction}</p>
+                      <div className="flex items-center gap-3 text-xs mt-2">
+                        <span className="font-bold text-lg text-diner-red">{item.value}</span>
+                        <span className="text-gray-500">{item.contactName}</span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
+
+          {/* Open Ops Issues */}
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="p-5 border-b border-gray-100 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <AlertTriangle className="h-5 w-5 text-orange-600" />
+                <h2 className="font-display text-lg">OPEN OPS ISSUES</h2>
+              </div>
+              <span className="text-xs text-gray-400">{opsIssues.length} open</span>
+            </div>
+            <div className={CARD_PATTERNS.LIST_WITH_DIVIDERS.container}>
+              {opsIssues.map((issue, idx) => (
+                <motion.div
+                  key={issue.id}
+                  data-testid={`issue-item-${idx}`}
+                  initial={shouldReduceMotion ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={shouldReduceMotion ? { duration: 0 } : { delay: idx * 0.05 }}
+                  className={CARD_PATTERNS.LIST_WITH_DIVIDERS.item}
+                >
+                  <div className="flex items-start justify-between gap-3">
+                    <div className="flex-grow">
+                      <h4 className="text-sm font-medium mb-1">{issue.title}</h4>
+                      <p className="text-xs text-gray-600 mb-2">{issue.impact}</p>
+                      <div className="flex items-center gap-2 text-xs text-gray-500">
+                        <span>→ {issue.assignedTo}</span>
+                      </div>
+                    </div>
+                    <StatusBadge variant={issue.severity as 'high' | 'medium' | 'low'} size="sm">
+                      {issue.severity}
+                    </StatusBadge>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        {/* Right Column - Approvals, Financial, SOPs, Blockers */}
+        <div className="space-y-6">
+          {/* Media Approvals */}
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="p-5 border-b border-gray-100 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <ImageIcon className="h-5 w-5 text-purple-600" />
+                <h2 className="font-display text-sm">MEDIA APPROVALS</h2>
+              </div>
+            </div>
+            <div className={CARD_PATTERNS.COMPACT_LIST.container}>
+              {mediaApprovals.map((item, idx) => {
+                // Media-type-specific icons
+                const MediaIcon = item.type === 'video' ? Video : ImageIcon;
+                const iconBgColor = item.type === 'video' 
+                  ? 'bg-pink-100' 
+                  : 'bg-purple-100';
+                const iconColor = item.type === 'video' 
+                  ? 'text-pink-600' 
+                  : 'text-purple-600';
+
+                return (
+                  <motion.div
+                    key={item.id}
+                    data-testid={`approval-item-${idx}`}
+                    initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={shouldReduceMotion ? { duration: 0 } : { delay: idx * 0.05 }}
+                    className={CARD_PATTERNS.COMPACT_LIST.item}
+                  >
+                    <div className="flex gap-3">
+                      {/* Media Type Icon */}
+                      <div className={cn(
+                        "w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0",
+                        iconBgColor,
+                        iconColor
+                      )}>
+                        <MediaIcon className="h-5 w-5" />
+                      </div>
+
+                      {/* Content */}
+                      <div className="flex-grow min-w-0">
+                        <h4 className="text-xs font-medium mb-1.5">{item.title}</h4>
+                        <div className="flex items-center gap-2 text-xs text-gray-500">
+                          <StatusBadge variant={item.type === 'video' ? 'video' : 'image'} size="md">
+                            {item.type}
+                          </StatusBadge>
+                          <span>by {item.submittedBy}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Financial Pulse */}
+          <div className="bg-diner-teal text-white rounded-2xl shadow-lg overflow-hidden">
+            <div className="p-5 border-b border-white/10 flex items-center gap-3">
+              <DollarSign className="h-5 w-5" />
+              <h2 className="font-display text-sm">FINANCIAL PULSE</h2>
+            </div>
+            <div className="p-4 space-y-3">
+              <div>
+                <div className="text-xs opacity-80 mb-1">Today's Sales</div>
+                <div className="text-2xl font-bold">{financialPulse.todaySales}</div>
+              </div>
+              <div className="grid grid-cols-2 gap-3 pt-3 border-t border-white/10">
+                <div>
+                  <div className="text-[10px] opacity-80 mb-1">Week</div>
+                  <div className="text-sm font-bold">{financialPulse.weekToDate}</div>
+                </div>
+                <div>
+                  <div className="text-[10px] opacity-80 mb-1">Month</div>
+                  <div className="text-sm font-bold">{financialPulse.monthToDate}</div>
+                </div>
+              </div>
+              {financialPulse.lowInventoryAlert && (
+                <div className="mt-3 p-2 bg-yellow-500/20 rounded-lg border border-yellow-500/30">
+                  <p className="text-[10px] font-medium">⚠️ {financialPulse.lowInventoryAlert}</p>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* SOP Shortcuts */}
+          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+            <div className="p-5 border-b border-gray-100 flex items-center gap-3">
+              <BookOpen className="h-5 w-5 text-blue-600" />
+              <h2 className="font-display text-sm">SOP SHORTCUTS</h2>
+            </div>
+            <div className="p-4 space-y-2">
+              {sopShortcuts.slice(0, 4).map((sop, idx) => (
+                <Link
+                  key={sop.id}
+                  href={sop.path}
+                  className="block p-2 rounded-lg hover:bg-gray-50 transition-colors group"
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-medium group-hover:text-diner-teal transition-colors">
+                      {sop.title}
+                    </span>
+                    <ArrowUpRight className="h-3 w-3 text-gray-400 group-hover:text-diner-teal transition-colors" />
+                  </div>
+                  <StatusBadge variant={sop.category === 'emergency' ? 'emergency' : 'daily-ops'} size="sm">
+                    {sop.category}
+                  </StatusBadge>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          {/* Blockers Needing John */}
+          {blockers.length > 0 && (
+            <div className="bg-diner-red text-white rounded-2xl shadow-lg overflow-hidden">
+              <div className="p-5 border-b border-white/10 flex items-center gap-3">
+                <AlertCircle className="h-5 w-5" />
+                <h2 className="font-display text-sm">BLOCKERS NEEDING JOHN</h2>
+              </div>
+            <div className="p-4 space-y-3">
+              {blockers.map((blocker, idx) => (
+                <div key={blocker.id} className="p-3 bg-white/10 rounded-xl">
+                    <h4 className="text-xs font-medium mb-2">{blocker.title}</h4>
+                    <p className="text-[10px] opacity-90 mb-2">{blocker.context}</p>
+                    <div className="text-[9px] opacity-70">
+                      Requested by {blocker.requestedBy}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Navigation to other dashboard areas */}
+      <div className="bg-gray-50 rounded-2xl p-6 border border-gray-200">
+        <h3 className="font-display text-sm mb-4 text-gray-600">QUICK LINKS</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <Link
+            href="/dashboard/franchise-brain"
+            className="px-3 py-4 bg-white rounded-xl hover:shadow-md transition-shadow text-center"
+          >
+            <div className="text-xs font-medium text-gray-800">Franchise Brain</div>
+          </Link>
+          <Link
+            href="/dashboard/marketing"
+            className="px-3 py-4 bg-white rounded-xl hover:shadow-md transition-shadow text-center"
+          >
+            <div className="text-xs font-medium text-gray-800">Marketing Hub</div>
+          </Link>
+          <Link
+            href="/dashboard/hermes-kanban"
+            className="px-3 py-4 bg-white rounded-xl hover:shadow-md transition-shadow text-center"
+          >
+            <div className="text-xs font-medium text-gray-800">Hermes Kanban</div>
+          </Link>
+          <Link
+            href="/dashboard/agents"
+            className="px-3 py-4 bg-white rounded-xl hover:shadow-md transition-shadow text-center"
+          >
+            <div className="text-xs font-medium text-gray-800">Agent Roster</div>
+          </Link>
         </div>
       </div>
     </div>

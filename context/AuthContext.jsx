@@ -13,7 +13,13 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const savedUser = localStorage.getItem('jukes_user');
     if (savedUser) {
-      setUser(JSON.parse(savedUser));
+      try {
+        const parsed = JSON.parse(savedUser);
+        setUser(typeof parsed === 'string' ? { username: parsed, role: 'admin' } : parsed);
+      } catch {
+        setUser({ username: savedUser, role: 'admin' });
+        localStorage.setItem('jukes_user', JSON.stringify({ username: savedUser, role: 'admin' }));
+      }
     }
     setIsLoading(false);
   }, []);

@@ -137,7 +137,7 @@ export default function BrainDump() {
         </div>
 
         {error && (
-          <div className="mx-6 mt-6 p-4 bg-red-50 border border-red-100 rounded-2xl text-red-600 text-xs font-serif italic">
+          <div className="mx-6 mt-6 p-4 bg-red-50 border border-red-100 rounded-2xl text-red-600 text-xs font-sans">
             {error}
           </div>
         )}
@@ -150,7 +150,7 @@ export default function BrainDump() {
             <div className="h-full flex flex-col items-center justify-center text-center opacity-40">
               <MessageSquare className="h-16 w-16 mb-4" />
               <h3 className="text-xl font-display">READY FOR ORDERS</h3>
-              <p className="font-serif italic max-w-xs">Dump your ideas, tasks, or feedback here. I&apos;ll keep track of everything.</p>
+              <p className="font-sans max-w-xs">Dump your ideas, tasks, or feedback here. I&apos;ll keep track of everything.</p>
             </div>
           )}
 
@@ -227,7 +227,7 @@ export default function BrainDump() {
           ) : history.length > 0 ? (
             history.map((item) => (
               <div key={item.id} className="p-4 bg-gray-50 rounded-2xl hover:bg-diner-cream transition-colors group">
-                <p className="text-sm text-gray-700 line-clamp-2 mb-2 font-serif">{item.message}</p>
+                <p className="text-sm text-gray-700 line-clamp-2 mb-2 font-sans">{item.message}</p>
                 <p className="text-[10px] text-gray-400 font-mono uppercase">
                   {format(new Date(item.timestamp), 'MMM d, h:mm a')}
                 </p>
@@ -235,7 +235,7 @@ export default function BrainDump() {
             ))
           ) : (
             <div className="h-full flex flex-col items-center justify-center text-center opacity-30 py-12">
-              <p className="text-sm font-serif italic">No history yet.</p>
+              <p className="text-sm font-sans">No history yet.</p>
             </div>
           )}
         </div>

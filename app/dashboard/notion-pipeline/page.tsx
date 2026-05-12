@@ -26,7 +26,7 @@ export default function NotionPipeline() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl text-diner-black mb-1">NOTION PIPELINE</h1>
-          <p className="text-gray-500 font-serif italic">Franchise operations and content pipeline</p>
+          <p className="text-gray-500 font-sans">Franchise operations and content pipeline</p>
         </div>
         <button className="bg-diner-black text-white px-6 py-3 rounded-xl font-display text-sm hover:bg-gray-800 transition-colors flex items-center gap-2">
           <Plus className="h-4 w-4" /> NEW TASK
@@ -83,7 +83,7 @@ export default function NotionPipeline() {
       <div className="p-12 text-center bg-white rounded-[2rem] border-4 border-dashed border-gray-100 mt-12">
         <Kanban className="h-12 w-12 text-gray-200 mx-auto mb-4" />
         <h3 className="text-xl text-gray-400 mb-2">NOTION API INTEGRATION</h3>
-        <p className="text-gray-400 font-serif italic max-w-md mx-auto">
+        <p className="text-gray-400 font-sans max-w-md mx-auto">
           Connect your Notion database to sync your content pipeline and tasks in real-time.
         </p>
       </div>

@@ -1,0 +1,387 @@
+{
+  "version": 1,
+  "title": "Daniel Operator Agreement & IP Ownership Tracker",
+  "updatedAt": "2026-05-09",
+  "summary": "Internal tracker for Daniel's operator agreement status, IP/menu/name ownership, lawyer touchpoints, and legal document dependencies.",
+  "sections": [
+    {
+      "id": "agreement-status",
+      "name": "Operator Agreement Status",
+      "items": [
+        {
+          "id": "operator-agreement-draft",
+          "title": "Operator Agreement Draft",
+          "owner": "John",
+          "status": "blocked",
+          "priority": "critical",
+          "blockedReason": "Requires legal counsel review before proceeding",
+          "summary": "Formal operator agreement defining Daniel's role, responsibilities, compensation structure, and termination conditions.",
+          "requiredDocuments": [
+            "Operator Agreement Template (requires lawyer review)",
+            "Compensation structure signed by both parties",
+            "Non-compete clause (requires lawyer review)"
+          ],
+          "nextAction": "John to engage lawyer for template review and customization",
+          "openQuestions": [
+            "Profit-sharing percentage vs fixed salary model?",
+            "Equipment damage liability - who pays?",
+            "Exit terms - notice period and transfer of operations?",
+            "Exclusivity - can Daniel operate other food businesses?"
+          ],
+          "lastUpdated": "2026-05-09"
+        },
+        {
+          "id": "background-check",
+          "title": "Background Check",
+          "owner": "John",
+          "status": "not-started",
+          "priority": "high",
+          "summary": "Formal background and employment verification for operator role.",
+          "requiredDocuments": [
+            "Background check consent form",
+            "Employment history verification"
+          ],
+          "nextAction": "Select background check provider and obtain Daniel's consent",
+          "dependencies": [],
+          "lastUpdated": "2026-05-09"
+        },
+        {
+          "id": "liability-insurance",
+          "title": "Liability Insurance Coverage",
+          "owner": "John",
+          "status": "blocked",
+          "priority": "critical",
+          "blockedReason": "Requires insurance broker consultation to determine coverage model",
+          "summary": "Determine whether Daniel needs separate liability coverage or is covered under Juke's policy.",
+          "requiredDocuments": [
+            "Operator liability requirements (requires insurance broker consult)",
+            "Certificate of Insurance updates if Daniel is added to policy"
+          ],
+          "nextAction": "John to consult Goosehead Insurance re: operator coverage structure",
+          "openQuestions": [
+            "Is Daniel covered under existing GL policy as an operator?",
+            "Does Daniel need separate coverage?",
+            "Who is named insured vs additional insured?"
+          ],
+          "lastUpdated": "2026-05-09"
+        }
+      ]
+    },
+    {
+      "id": "ip-ownership",
+      "name": "IP, Menu & Name Ownership",
+      "items": [
+        {
+          "id": "brand-name-rights",
+          "title": "Juke's Diner Brand Name Rights",
+          "owner": "John",
+          "status": "documented",
+          "priority": "critical",
+          "summary": "John retains 100% ownership of 'Juke's Diner' name, logo, branding. Daniel operates under license only.",
+          "requiredDocuments": [
+            "Trademark ownership documentation (if trademark is registered)",
+            "Brand licensing clause in operator agreement"
+          ],
+          "nextAction": "Confirm trademark registration status; include explicit licensing language in operator agreement",
+          "notes": "Daniel must understand he has zero ownership claim to the Juke's name or brand, even if he operates the business day-to-day.",
+          "lastUpdated": "2026-05-09"
+        },
+        {
+          "id": "menu-recipes-ownership",
+          "title": "Menu & Recipe Ownership",
+          "owner": "John",
+          "status": "documented",
+          "priority": "critical",
+          "summary": "All menu items, recipes, sourcing relationships, and 'secret sauce' formulas remain 100% John's property.",
+          "requiredDocuments": [
+            "Recipe confidentiality/non-disclosure clause in operator agreement",
+            "Trade secret protection clause"
+          ],
+          "nextAction": "Include explicit menu IP ownership and confidentiality clause in operator agreement",
+          "notes": "Daniel cannot take recipes, supplier contacts, or menu concepts to another business. Consider requiring signed NDA separate from operator agreement.",
+          "lastUpdated": "2026-05-09"
+        },
+        {
+          "id": "truck-equipment-ownership",
+          "title": "Truck & Equipment Ownership",
+          "owner": "John",
+          "status": "documented",
+          "priority": "high",
+          "summary": "Food truck, equipment, POS system, and all physical assets remain John's property. Daniel is custodian only.",
+          "requiredDocuments": [
+            "Asset custody clause in operator agreement",
+            "Damage liability and maintenance responsibility clause"
+          ],
+          "nextAction": "Define damage/loss liability split and required insurance coverage in operator agreement",
+          "openQuestions": [
+            "Who pays for normal wear-and-tear vs negligent damage?",
+            "What happens to equipment if Daniel exits?",
+            "Is Daniel required to maintain specific insurance on the truck?"
+          ],
+          "lastUpdated": "2026-05-09"
+        },
+        {
+          "id": "customer-data-ownership",
+          "title": "Customer Data & Bookings Ownership",
+          "owner": "John",
+          "status": "documented",
+          "priority": "medium",
+          "summary": "All customer contacts, booking history, email lists, and sales data remain 100% Juke's property.",
+          "requiredDocuments": [
+            "Data ownership clause in operator agreement",
+            "Non-solicitation clause (prevents Daniel from taking customers if he exits)"
+          ],
+          "nextAction": "Include explicit data ownership and non-solicitation language in operator agreement",
+          "notes": "Daniel cannot download customer lists or contact Juke's customers for competing businesses after exit.",
+          "lastUpdated": "2026-05-09"
+        }
+      ]
+    },
+    {
+      "id": "legal-touchpoints",
+      "name": "Lawyer Touchpoints (No Contact Yet)",
+      "items": [
+        {
+          "id": "lawyer-agreement-review",
+          "title": "Operator Agreement Legal Review",
+          "owner": "John",
+          "status": "pending",
+          "priority": "critical",
+          "summary": "Lawyer must review and customize operator agreement template before Daniel signs.",
+          "requiredDocuments": [
+            "Draft operator agreement",
+            "List of open questions for lawyer input"
+          ],
+          "nextAction": "John to schedule consultation with franchise or employment lawyer",
+          "estimatedCost": "$500-$1,500 for agreement review and customization",
+          "lawyerType": "Employment Law or Small Business Contract Attorney",
+          "notes": "DO NOT CONTACT LAWYER YET - this is flagged for John to initiate when ready.",
+          "lastUpdated": "2026-05-09"
+        },
+        {
+          "id": "lawyer-ip-protection",
+          "title": "IP Protection Legal Review",
+          "owner": "John",
+          "status": "pending",
+          "priority": "high",
+          "summary": "Lawyer review of IP protection clauses (name, menu, recipes, trade secrets).",
+          "requiredDocuments": [
+            "Current trademark status",
+            "List of trade secrets to protect (recipes, suppliers, pricing)",
+            "Non-compete and non-solicitation language for lawyer review"
+          ],
+          "nextAction": "John to compile list of IP assets and trade secrets for lawyer consultation",
+          "estimatedCost": "$300-$800 for IP clause review",
+          "lawyerType": "Intellectual Property or Small Business Attorney",
+          "notes": "Can be bundled with operator agreement review to save costs. DO NOT CONTACT LAWYER YET.",
+          "lastUpdated": "2026-05-09"
+        }
+      ]
+    },
+    {
+      "id": "documents-needed",
+      "name": "Documents Needed",
+      "items": [
+        {
+          "id": "operator-agreement-template",
+          "title": "Operator Agreement Template",
+          "status": "blocked",
+          "priority": "critical",
+          "blockedReason": "Requires lawyer to draft or review template",
+          "owner": "John",
+          "summary": "Core legal document defining Daniel's operator relationship with Juke's.",
+          "mustInclude": [
+            "Role definition and responsibilities",
+            "Compensation structure (profit share or salary)",
+            "IP ownership (name, menu, recipes - 100% John)",
+            "Equipment custody and damage liability",
+            "Customer data ownership",
+            "Non-compete and non-solicitation clauses",
+            "Termination conditions and notice period",
+            "Insurance and liability requirements",
+            "Confidentiality and NDA provisions"
+          ],
+          "nextAction": "John to engage lawyer for template creation or review",
+          "lastUpdated": "2026-05-09"
+        },
+        {
+          "id": "nda-standalone",
+          "title": "Standalone Non-Disclosure Agreement",
+          "status": "not-started",
+          "priority": "high",
+          "owner": "John",
+          "summary": "Separate NDA to protect recipes, supplier contacts, and business strategy.",
+          "mustInclude": [
+            "Definition of confidential information (recipes, suppliers, pricing, customer data)",
+            "Non-disclosure obligations during and after operator relationship",
+            "Return of confidential materials upon exit",
+            "Remedies for breach"
+          ],
+          "nextAction": "John to decide if standalone NDA is needed in addition to operator agreement confidentiality clause",
+          "notes": "May be redundant if operator agreement has strong confidentiality provisions. Lawyer can advise.",
+          "lastUpdated": "2026-05-09"
+        },
+        {
+          "id": "insurance-requirements-doc",
+          "title": "Insurance Requirements & Coverage Confirmation",
+          "status": "blocked",
+          "priority": "critical",
+          "blockedReason": "Requires insurance broker consultation",
+          "owner": "John",
+          "summary": "Document specifying insurance coverage for Daniel as operator (GL, auto, workers comp if applicable).",
+          "mustInclude": [
+            "General liability coverage confirmation (is Daniel covered under Juke's policy?)",
+            "Auto insurance for food truck (operator as driver)",
+            "Workers compensation requirements (if Daniel is considered employee vs contractor)",
+            "Certificate of insurance updates"
+          ],
+          "nextAction": "John to consult Goosehead Insurance (contact: Sarah Miller, (555) 019-8877)",
+          "lastUpdated": "2026-05-09"
+        },
+        {
+          "id": "background-check-consent",
+          "title": "Background Check Consent Form",
+          "status": "not-started",
+          "priority": "medium",
+          "owner": "John",
+          "summary": "Signed consent for background and employment verification check.",
+          "mustInclude": [
+            "Authorization for background check",
+            "Employment history verification consent",
+            "Compliance with Fair Credit Reporting Act (FCRA) if using third-party service"
+          ],
+          "nextAction": "John to select background check provider and prepare consent form",
+          "lastUpdated": "2026-05-09"
+        }
+      ]
+    },
+    {
+      "id": "timeline-milestones",
+      "name": "Timeline & Milestones",
+      "items": [
+        {
+          "id": "milestone-1",
+          "title": "Phase 1: Legal Consultation & Document Preparation",
+          "status": "not-started",
+          "owner": "John",
+          "priority": "critical",
+          "tasks": [
+            "Engage employment/small business lawyer",
+            "Review operator agreement template",
+            "Finalize IP protection clauses",
+            "Consult insurance broker re: operator coverage"
+          ],
+          "estimatedDuration": "2-4 weeks",
+          "blockers": [
+            "Lawyer selection",
+            "Insurance broker availability"
+          ],
+          "lastUpdated": "2026-05-09"
+        },
+        {
+          "id": "milestone-2",
+          "title": "Phase 2: Agreement Negotiation & Signatures",
+          "status": "not-started",
+          "owner": "John + Daniel",
+          "priority": "high",
+          "tasks": [
+            "Present operator agreement to Daniel",
+            "Negotiate terms (compensation, responsibilities, exit conditions)",
+            "Obtain Daniel's signature on agreement and NDA",
+            "Execute background check"
+          ],
+          "estimatedDuration": "1-2 weeks",
+          "dependencies": [
+            "Phase 1 completion"
+          ],
+          "lastUpdated": "2026-05-09"
+        },
+        {
+          "id": "milestone-3",
+          "title": "Phase 3: Insurance & Compliance Finalization",
+          "status": "not-started",
+          "owner": "John",
+          "priority": "high",
+          "tasks": [
+            "Update insurance policies to include Daniel as operator (if required)",
+            "Obtain updated certificates of insurance",
+            "File any required state/local operator registrations",
+            "Set up payroll or contractor payment structure"
+          ],
+          "estimatedDuration": "1-2 weeks",
+          "dependencies": [
+            "Phase 2 completion",
+            "Insurance broker recommendations"
+          ],
+          "lastUpdated": "2026-05-09"
+        },
+        {
+          "id": "milestone-4",
+          "title": "Phase 4: Operational Handoff & Monitoring",
+          "status": "not-started",
+          "owner": "John + Daniel",
+          "priority": "medium",
+          "tasks": [
+            "Complete operator onboarding and training",
+            "Hand over truck/equipment custody with signed inventory",
+            "Establish reporting cadence (weekly financials, operations updates)",
+            "Schedule 30/60/90 day check-ins to assess agreement terms"
+          ],
+          "estimatedDuration": "Ongoing",
+          "dependencies": [
+            "Phase 3 completion"
+          ],
+          "lastUpdated": "2026-05-09"
+        }
+      ]
+    }
+  ],
+  "riskFlags": [
+    {
+      "id": "risk-no-written-agreement",
+      "severity": "critical",
+      "title": "No Written Operator Agreement in Place",
+      "description": "Operating without a signed agreement exposes John to IP theft, liability claims, and unclear exit terms.",
+      "mitigation": "Prioritize Phase 1 legal consultation and agreement drafting immediately.",
+      "status": "active"
+    },
+    {
+      "id": "risk-unclear-insurance",
+      "severity": "critical",
+      "title": "Unclear Insurance Coverage for Operator",
+      "description": "If Daniel causes an accident or injury while operating the truck, unclear insurance coverage could leave John personally liable.",
+      "mitigation": "Consult insurance broker ASAP to confirm coverage and obtain certificates.",
+      "status": "active"
+    },
+    {
+      "id": "risk-ip-vulnerable",
+      "severity": "high",
+      "title": "Recipes & Menu IP Vulnerable to Theft",
+      "description": "Without signed NDA and IP ownership clauses, Daniel could take recipes, supplier contacts, and menu concepts to a competing business.",
+      "mitigation": "Include strong IP protection, confidentiality, and non-compete clauses in operator agreement. Consider standalone NDA.",
+      "status": "active"
+    },
+    {
+      "id": "risk-customer-data-loss",
+      "severity": "medium",
+      "title": "Customer Data Could Be Taken on Exit",
+      "description": "If Daniel exits without non-solicitation clause, he could download customer lists and contact Juke's customers for competing business.",
+      "mitigation": "Include explicit data ownership and non-solicitation clause in operator agreement. Limit Daniel's access to raw customer data.",
+      "status": "active"
+    }
+  ],
+  "metadata": {
+    "createdBy": "jukes-ops-agent",
+    "createdAt": "2026-05-09",
+    "lastReviewedBy": null,
+    "lastReviewedAt": null,
+    "nextReviewDate": "2026-05-16",
+    "tags": [
+      "legal",
+      "operator-agreement",
+      "ip-ownership",
+      "risk-management",
+      "daniel"
+    ]
+  }
+}

@@ -1,0 +1,5 @@
+date,location,item,quantity,unit,reason,cost_per_unit,total_cost,logged_by,notes
+2026-05-08,event-truck,Hot dogs,12,each,expired,0.40,4.80,Sarah,Past sell-by date
+2026-05-08,trailer-park,Tomatoes (diced),1,can,damaged,3.25,3.25,Mike,Dented can - swollen
+2026-05-08,event-truck,Cheese (shredded),2,lb,prep error,4.50,9.00,Sarah,Over-portioned
+2026-05-08,east-nashville,Soda (Coke),3,can,customer return,0.75,2.25,Alex,Opened but not consumed

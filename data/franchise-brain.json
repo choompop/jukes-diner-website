@@ -1,0 +1,315 @@
+{
+  "version": 1,
+  "title": "Juke's Diner Franchise Brain",
+  "updatedAt": "2026-05-09",
+  "layers": [
+    {
+      "id": "content-pipeline",
+      "name": "Content Pipeline",
+      "strapline": "What the brand says and ships",
+      "summary": "Capture, shape, schedule, and review the stories that keep the diner top of mind.",
+      "items": [
+        {
+          "id": "truck-story-capture",
+          "title": "Truck Story Capture",
+          "owner": "GM + Shift Lead",
+          "status": "active",
+          "priority": "high",
+          "cadence": "daily",
+          "summary": "Log customer moments, catering photos, and route surprises before the shift closes.",
+          "inputs": [
+            "Shift recap",
+            "Phone photos",
+            "Customer quotes"
+          ],
+          "outputs": [
+            "Content notes",
+            "Photo selects",
+            "Story hooks"
+          ]
+        },
+        {
+          "id": "weekly-content-calendar",
+          "title": "Weekly Content Calendar",
+          "owner": "Marketing Lead",
+          "status": "active",
+          "priority": "high",
+          "cadence": "weekly",
+          "summary": "Turn captured moments into a five-post plan across TikTok, Instagram, and local promos.",
+          "inputs": [
+            "Story hooks",
+            "Promo windows",
+            "Upcoming bookings"
+          ],
+          "outputs": [
+            "Posting schedule",
+            "Asset requests",
+            "CTA list"
+          ]
+        },
+        {
+          "id": "creative-approvals",
+          "title": "Creative Approvals",
+          "owner": "Founder",
+          "status": "active",
+          "priority": "medium",
+          "cadence": "twice weekly",
+          "summary": "Approve offers, visuals, and franchise talking points before publishing.",
+          "inputs": [
+            "Draft captions",
+            "Reel cuts",
+            "Offer copy"
+          ],
+          "outputs": [
+            "Approved assets",
+            "Revision notes"
+          ]
+        },
+        {
+          "id": "performance-feedback-loop",
+          "title": "Performance Feedback Loop",
+          "owner": "Marketing Analyst",
+          "status": "planned",
+          "priority": "medium",
+          "cadence": "weekly",
+          "summary": "Feed top-performing hooks and underperforming posts back into the next content batch.",
+          "inputs": [
+            "Reach report",
+            "Lead counts",
+            "Comment themes"
+          ],
+          "outputs": [
+            "Win list",
+            "Fix list",
+            "Next test ideas"
+          ]
+        }
+      ],
+      "referenceFiles": [
+        {
+          "id": "brand-voice",
+          "title": "Juke's Brand Voice + Retro Rules",
+          "type": "brand",
+          "path": "brain/files/brand-voice.md",
+          "summary": "Tone, phrases, visual language, and what Flo should sound like for public-facing work.",
+          "tags": [
+            "brand",
+            "voice",
+            "retro"
+          ]
+        },
+        {
+          "id": "content-calendar",
+          "title": "Content Calendar + Campaign Rhythm",
+          "type": "content",
+          "path": "brain/files/content-calendar.md",
+          "summary": "Weekly posting cadence, campaign lanes, approvals, and required assets.",
+          "tags": [
+            "content",
+            "calendar",
+            "metricool"
+          ]
+        },
+        {
+          "id": "offer-library",
+          "title": "Offer Library + Catering CTAs",
+          "type": "conversion",
+          "path": "brain/files/offer-library.md",
+          "summary": "Bookable offers, catering hooks, lead magnets, and approved calls to action.",
+          "tags": [
+            "catering",
+            "offers",
+            "conversion"
+          ]
+        },
+        {
+          "id": "performance-notes",
+          "title": "Performance Notes + Winning Hooks",
+          "type": "analytics",
+          "path": "brain/files/performance-notes.md",
+          "summary": "Top posts, weak posts, audience response, and what should be reused.",
+          "tags": [
+            "analytics",
+            "hooks",
+            "learning"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "internal-ops",
+      "name": "Internal Ops",
+      "strapline": "How operators stay aligned",
+      "summary": "Keep operators, training, and support decisions visible enough to scale without guesswork.",
+      "items": [
+        {
+          "id": "opening-playbook",
+          "title": "Opening Playbook",
+          "owner": "Operations Director",
+          "status": "active",
+          "priority": "high",
+          "cadence": "per launch",
+          "summary": "Bundle permitting, training, local supplier setup, and first-week milestones for each new operator.",
+          "inputs": [
+            "Launch checklist",
+            "City requirements",
+            "Vendor roster"
+          ],
+          "outputs": [
+            "Operator launch board",
+            "Week-one tasks"
+          ]
+        },
+        {
+          "id": "field-ops-scoreboard",
+          "title": "Field Ops Scoreboard",
+          "owner": "Area Coach",
+          "status": "active",
+          "priority": "high",
+          "cadence": "weekly",
+          "summary": "Track sales, ticket times, food cost, and catering close rate in one operating snapshot.",
+          "inputs": [
+            "POS export",
+            "Labor notes",
+            "Catering pipeline"
+          ],
+          "outputs": [
+            "Weekly scorecard",
+            "Escalation list"
+          ]
+        },
+        {
+          "id": "support-escalation-desk",
+          "title": "Support Escalation Desk",
+          "owner": "Support Lead",
+          "status": "active",
+          "priority": "medium",
+          "cadence": "daily",
+          "summary": "Route urgent operator questions into one queue with owner, SLA, and documented fix.",
+          "inputs": [
+            "Slack requests",
+            "Email tickets",
+            "Phone follow-ups"
+          ],
+          "outputs": [
+            "Resolved issues",
+            "Knowledge base updates"
+          ]
+        },
+        {
+          "id": "vendor-sync",
+          "title": "Vendor Sync",
+          "owner": "Procurement",
+          "status": "blocked",
+          "priority": "medium",
+          "cadence": "monthly",
+          "summary": "Consolidate distributor pricing and outage alerts before they hit store-level ordering.",
+          "inputs": [
+            "Supplier pricing",
+            "Stock alerts",
+            "Market notes"
+          ],
+          "outputs": [
+            "Approved substitutions",
+            "Cost watchlist"
+          ]
+        }
+      ],
+      "referenceFiles": [
+        {
+          "id": "ops-sops",
+          "title": "Internal Ops SOP Index",
+          "type": "sop",
+          "path": "brain/files/ops-sops.md",
+          "summary": "Opening, closing, prep, staffing, event service, and escalation SOPs.",
+          "tags": [
+            "ops",
+            "sop",
+            "training"
+          ]
+        },
+        {
+          "id": "team-roles",
+          "title": "Team Roles + Ownership Map",
+          "type": "people",
+          "path": "brain/files/team-roles.md",
+          "summary": "Who owns what across social, catering, field operations, support, and approvals.",
+          "tags": [
+            "team",
+            "owners",
+            "accountability"
+          ]
+        },
+        {
+          "id": "catering-intake",
+          "title": "Catering Intake + Follow-up Script",
+          "type": "sales",
+          "path": "brain/files/catering-intake.md",
+          "summary": "Required questions, qualification steps, response SLA, and handoff rules for leads.",
+          "tags": [
+            "catering",
+            "sales",
+            "lead"
+          ]
+        },
+        {
+          "id": "vendor-roster",
+          "title": "Vendor Roster + Substitution Rules",
+          "type": "vendor",
+          "path": "brain/files/vendor-roster.md",
+          "summary": "Approved vendors, backup items, pricing watchlist, and outage escalation notes.",
+          "tags": [
+            "vendor",
+            "cost",
+            "ops"
+          ]
+        }
+      ]
+    }
+  ],
+  "commandCenter": [
+    {
+      "id": "capture-inbox",
+      "title": "Capture Inbox",
+      "description": "Slack, DMs, field notes, customer comments, and loose ideas enter here first.",
+      "owner": "Flo + Shift Leads",
+      "itemIds": [
+        "truck-story-capture",
+        "support-escalation-desk"
+      ]
+    },
+    {
+      "id": "content-engine",
+      "title": "Content Engine",
+      "description": "Turns raw stories into approved, scheduled, measured social content.",
+      "owner": "Marketing Lead",
+      "itemIds": [
+        "weekly-content-calendar",
+        "creative-approvals",
+        "performance-feedback-loop"
+      ]
+    },
+    {
+      "id": "ops-control",
+      "title": "Ops Control",
+      "description": "Protects execution quality: launch readiness, weekly scoreboard, escalations, vendors.",
+      "owner": "Operations Director",
+      "itemIds": [
+        "opening-playbook",
+        "field-ops-scoreboard",
+        "vendor-sync"
+      ]
+    },
+    {
+      "id": "franchise-scale",
+      "title": "Franchise Scale",
+      "description": "Packages learning into playbooks future operators can repeat.",
+      "owner": "John",
+      "itemIds": [
+        "opening-playbook",
+        "field-ops-scoreboard",
+        "performance-feedback-loop"
+      ]
+    }
+  ]
+}

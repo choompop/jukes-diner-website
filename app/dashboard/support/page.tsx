@@ -24,7 +24,7 @@ export default function Support() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl text-diner-black mb-1">SUPPORT</h1>
-          <p className="text-gray-500 font-serif italic">We've got your back. Get help from Lexi or the corporate team.</p>
+          <p className="text-gray-500 font-sans">We've got your back. Get help from Lexi or the corporate team.</p>
         </div>
       </div>
 
@@ -40,7 +40,7 @@ export default function Support() {
                 <MessageSquare className="h-8 w-8" />
               </div>
               <h3 className="text-2xl mb-2">CHAT WITH LEXI</h3>
-              <p className="text-gray-500 font-serif italic text-sm mb-6">Context-aware AI support for all operational questions.</p>
+              <p className="text-gray-500 font-sans text-sm mb-6">Context-aware AI support for all operational questions.</p>
               <div className="flex items-center gap-2 text-diner-red font-display text-xs">
                 START CHAT <ChevronRight className="h-4 w-4" />
               </div>
@@ -51,7 +51,7 @@ export default function Support() {
                 <Mail className="h-8 w-8" />
               </div>
               <h3 className="text-2xl mb-2">EMAIL JOHN</h3>
-              <p className="text-gray-500 font-serif italic text-sm mb-6">Direct escalation for critical franchise issues.</p>
+              <p className="text-gray-500 font-sans text-sm mb-6">Direct escalation for critical franchise issues.</p>
               <div className="flex items-center gap-2 text-diner-teal font-display text-xs">
                 SEND EMAIL <ChevronRight className="h-4 w-4" />
               </div>
@@ -67,7 +67,7 @@ export default function Support() {
               {faqs.map((faq, i) => (
                 <div key={i} className="p-6 bg-gray-50 rounded-3xl space-y-2">
                   <h4 className="font-bold text-gray-800">{faq.q}</h4>
-                  <p className="text-sm text-gray-600 font-serif italic leading-relaxed">&ldquo;{faq.a}&rdquo;</p>
+                  <p className="text-sm text-gray-600 font-sans leading-relaxed">&ldquo;{faq.a}&rdquo;</p>
                 </div>
               ))}
             </div>

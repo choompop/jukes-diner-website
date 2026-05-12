@@ -31,7 +31,7 @@ export default function MenuManagement() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl text-diner-black mb-1">MENU MANAGEMENT</h1>
-          <p className="text-gray-500 font-serif italic">Control your offerings, pricing, and food costs.</p>
+          <p className="text-gray-500 font-sans">Control your offerings, pricing, and food costs.</p>
         </div>
         <button className="bg-diner-red text-white px-6 py-3 rounded-xl font-display text-sm hover:bg-red-700 transition-colors flex items-center gap-2 shadow-lg">
           <Plus className="h-4 w-4" /> ADD ITEM
@@ -70,7 +70,7 @@ export default function MenuManagement() {
               <div className="flex justify-between items-start">
                 <div>
                   <h3 className="text-xl font-bold">{item.name}</h3>
-                  <p className="text-xs text-gray-400 font-serif italic">{item.description}</p>
+                  <p className="text-xs text-gray-400 font-sans">{item.description}</p>
                 </div>
                 <div className="flex gap-2">
                   <button className="p-2 text-gray-300 hover:text-diner-teal transition-colors"><Edit2 className="h-4 w-4" /></button>
@@ -96,7 +96,7 @@ export default function MenuManagement() {
         <div className="relative z-10">
           <Sparkles className="h-12 w-12 text-diner-red mx-auto mb-6" />
           <h2 className="text-3xl mb-4">SEASONAL SPECIALS</h2>
-          <p className="text-gray-400 font-serif italic max-w-xl mx-auto mb-8">
+          <p className="text-gray-400 font-sans max-w-xl mx-auto mb-8">
             Planning a new limited-time offer? Lexi can help you calculate food costs and suggest pricing based on current market trends.
           </p>
           <button className="bg-diner-red text-white px-10 py-4 rounded-full font-display text-sm hover:bg-red-700 transition-colors">

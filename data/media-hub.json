@@ -1,0 +1,369 @@
+{
+  "version": 1,
+  "title": "Juke's Diner Media + Brand Hub",
+  "updatedAt": "2026-05-08",
+  "storage": {
+    "provider": "local-now-cloud-later",
+    "rootPath": "media/jukes-diner",
+    "roots": [
+      {
+        "id": "raw-capture",
+        "label": "Raw Capture",
+        "path": "media/jukes-diner/raw",
+        "owner": "Operators",
+        "rule": "Upload before judging; Flo can tag and route later."
+      },
+      {
+        "id": "approved-assets",
+        "label": "Approved Assets",
+        "path": "media/jukes-diner/approved",
+        "owner": "Brand lead",
+        "rule": "Only polished, reusable assets that can ship externally."
+      },
+      {
+        "id": "brand-board",
+        "label": "Brand Board",
+        "path": "media/jukes-diner/brand-board",
+        "owner": "Marketing lead",
+        "rule": "Visual references, palette, typography, and examples to keep the look cohesive."
+      },
+      {
+        "id": "operator-uploads",
+        "label": "Operator Uploads",
+        "path": "media/jukes-diner/operator-uploads",
+        "owner": "Unit operators",
+        "rule": "Field uploads that need tagging, approval, or follow-up."
+      }
+    ]
+  },
+  "brandBoard": {
+    "palette": [
+      {
+        "token": "diner-red",
+        "value": "#D62828",
+        "use": "primary CTA, urgency, classic diner accent"
+      },
+      {
+        "token": "diner-cream",
+        "value": "#FFF3D7",
+        "use": "background warmth, menu card feel"
+      },
+      {
+        "token": "diner-teal",
+        "value": "#0F8B8D",
+        "use": "secondary accent, operational trust"
+      },
+      {
+        "token": "diner-black",
+        "value": "#1E1E1E",
+        "use": "headlines, contrast, retro sign depth"
+      }
+    ],
+    "typography": [
+      {
+        "name": "Bebas Neue",
+        "role": "display",
+        "use": "bold diner headlines, readable from distance"
+      },
+      {
+        "name": "Inter",
+        "role": "sans",
+        "use": "operator UI, forms, labels, dashboards, body text"
+      }
+    ],
+    "voiceRules": [
+      "Retro diner energy without becoming costume-y or fake nostalgic.",
+      "Operator-real: show the work, the systems, the prep, and the service moments.",
+      "Food first: make burgers, fries, catering trays, and events feel craveable and bookable.",
+      "Use plain-spoken confidence; avoid agency jargon and generic influencer language."
+    ],
+    "contentPillars": [
+      {
+        "id": "food-proof",
+        "label": "Food Proof",
+        "purpose": "Make the product craveable and instantly bookable."
+      },
+      {
+        "id": "build-in-public",
+        "label": "Build in Public",
+        "purpose": "Show John building systems and a franchise-able operating model."
+      },
+      {
+        "id": "catering-conversion",
+        "label": "Catering Conversion",
+        "purpose": "Turn event/social proof into catering leads."
+      },
+      {
+        "id": "franchise-signal",
+        "label": "Franchise Signal",
+        "purpose": "Teach the business model and attract future operators."
+      }
+    ]
+  },
+  "assets": [
+    {
+      "id": "jukes-diner-logo-primary",
+      "title": "Juke's Diner Primary Logo",
+      "type": "logo",
+      "status": "approved",
+      "storagePath": "public/images/jukes-diner-logo.png",
+      "tags": [
+        "brand-board",
+        "logo",
+        "website"
+      ],
+      "channels": [
+        "website",
+        "instagram",
+        "facebook",
+        "linkedin"
+      ],
+      "owner": "Brand lead",
+      "addedAt": "2026-04-02"
+    },
+    {
+      "id": "jd-monogram",
+      "title": "JD Monogram Logo",
+      "type": "logo",
+      "status": "approved",
+      "storagePath": "public/images/jd-monogram.png",
+      "tags": [
+        "brand-board",
+        "logo",
+        "monogram"
+      ],
+      "channels": [
+        "website",
+        "instagram"
+      ],
+      "owner": "Brand lead",
+      "addedAt": "2026-04-02"
+    },
+    {
+      "id": "logo-png",
+      "title": "Logo PNG",
+      "type": "logo",
+      "status": "approved",
+      "storagePath": "public/images/logo.png",
+      "tags": [
+        "brand-board",
+        "logo"
+      ],
+      "channels": [
+        "website"
+      ],
+      "owner": "Brand lead",
+      "addedAt": "2026-04-02"
+    },
+    {
+      "id": "logo-jpg",
+      "title": "Logo JPG",
+      "type": "logo",
+      "status": "approved",
+      "storagePath": "public/images/logo.jpg",
+      "tags": [
+        "brand-board",
+        "logo"
+      ],
+      "channels": [
+        "website"
+      ],
+      "owner": "Brand lead",
+      "addedAt": "2026-03-31"
+    },
+    {
+      "id": "badge",
+      "title": "Badge Logo",
+      "type": "logo",
+      "status": "approved",
+      "storagePath": "public/images/badge.jpg",
+      "tags": [
+        "brand-board",
+        "badge",
+        "logo"
+      ],
+      "channels": [
+        "website",
+        "instagram"
+      ],
+      "owner": "Brand lead",
+      "addedAt": "2026-03-31"
+    },
+    {
+      "id": "route-615-png",
+      "title": "Route 615 Branding",
+      "type": "logo",
+      "status": "approved",
+      "storagePath": "public/images/route-615.png",
+      "tags": [
+        "brand-board",
+        "route-615",
+        "location"
+      ],
+      "channels": [
+        "website",
+        "instagram"
+      ],
+      "owner": "Brand lead",
+      "addedAt": "2026-04-02"
+    },
+    {
+      "id": "route615-jpg",
+      "title": "Route 615 Badge",
+      "type": "logo",
+      "status": "approved",
+      "storagePath": "public/images/route615.jpg",
+      "tags": [
+        "brand-board",
+        "route-615",
+        "location"
+      ],
+      "channels": [
+        "website"
+      ],
+      "owner": "Brand lead",
+      "addedAt": "2026-03-31"
+    },
+    {
+      "id": "food-photo-jpg",
+      "title": "Food Photo",
+      "type": "photo",
+      "status": "approved",
+      "storagePath": "public/images/food-photo.jpg",
+      "tags": [
+        "food-proof",
+        "menu",
+        "burger"
+      ],
+      "channels": [
+        "website",
+        "instagram",
+        "facebook"
+      ],
+      "owner": "Operator",
+      "addedAt": "2026-04-02"
+    },
+    {
+      "id": "food-png",
+      "title": "Food PNG",
+      "type": "photo",
+      "status": "approved",
+      "storagePath": "public/images/food.png",
+      "tags": [
+        "food-proof",
+        "menu"
+      ],
+      "channels": [
+        "website"
+      ],
+      "owner": "Operator",
+      "addedAt": "2026-04-02"
+    },
+    {
+      "id": "truck-png",
+      "title": "Food Truck Photo",
+      "type": "photo",
+      "status": "approved",
+      "storagePath": "public/images/truck.png",
+      "tags": [
+        "catering-conversion",
+        "build-in-public",
+        "truck",
+        "event"
+      ],
+      "channels": [
+        "website",
+        "instagram",
+        "facebook"
+      ],
+      "owner": "Operator",
+      "addedAt": "2026-04-02"
+    },
+    {
+      "id": "truck-jpg",
+      "title": "Food Truck JPG",
+      "type": "photo",
+      "status": "approved",
+      "storagePath": "public/images/truck.jpg",
+      "tags": [
+        "catering-conversion",
+        "build-in-public",
+        "truck"
+      ],
+      "channels": [
+        "website"
+      ],
+      "owner": "Operator",
+      "addedAt": "2026-03-31"
+    },
+    {
+      "id": "concept",
+      "title": "Concept Design",
+      "type": "image",
+      "status": "approved",
+      "storagePath": "public/images/concept.png",
+      "tags": [
+        "brand-board",
+        "design",
+        "concept"
+      ],
+      "channels": [
+        "internal"
+      ],
+      "owner": "Brand lead",
+      "addedAt": "2026-04-02"
+    }
+  ],
+  "captureRequests": [
+    {
+      "id": "capture-catering-proof",
+      "priority": "urgent",
+      "request": "Shoot 6 clean horizontal and vertical catering setup clips before guests arrive.",
+      "owner": "Catering owner",
+      "channelUse": "Website catering page + Instagram proof"
+    },
+    {
+      "id": "capture-vertical-prep",
+      "priority": "high",
+      "request": "Capture vertical video of prep, line checks, and handoff moments every operating day.",
+      "owner": "Shift lead",
+      "channelUse": "TikTok build-in-public series"
+    },
+    {
+      "id": "capture-franchise-proof",
+      "priority": "high",
+      "request": "Record John explaining one operating system: COGS, labor, training, or bookings.",
+      "owner": "John",
+      "channelUse": "LinkedIn + franchise interest funnel"
+    },
+    {
+      "id": "capture-customer-reactions",
+      "priority": "normal",
+      "request": "Collect customer reaction photos/videos with permission at busy events.",
+      "owner": "Event operator",
+      "channelUse": "Social proof library"
+    }
+  ],
+  "repurposingRules": [
+    {
+      "tag": "food-proof",
+      "output": "Instagram carousel",
+      "prompt": "Turn approved food photos into a craveable menu/story post with a catering CTA."
+    },
+    {
+      "tag": "catering-conversion",
+      "output": "Website proof block",
+      "prompt": "Create a trust-building event recap with headcount, service style, and booking CTA."
+    },
+    {
+      "tag": "build-in-public",
+      "output": "TikTok script",
+      "prompt": "Cut a raw founder/operator lesson with hook, conflict, system, and lesson."
+    },
+    {
+      "tag": "franchise-signal",
+      "output": "Franchise proof card",
+      "prompt": "Turn operational footage into a simple proof point about replicable systems."
+    }
+  ]
+}

@@ -40,7 +40,7 @@ export default function TrainingCenter() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl text-diner-black mb-1">TRAINING CENTER</h1>
-          <p className="text-gray-500 font-serif italic">Master the Juke&apos;s way. Training for cooks, cashiers, and operators.</p>
+          <p className="text-gray-500 font-sans">Master the Juke&apos;s way. Training for cooks, cashiers, and operators.</p>
         </div>
         <div className="relative">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
@@ -88,7 +88,7 @@ export default function TrainingCenter() {
             <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent">
               <span className="text-[10px] font-display text-diner-red uppercase tracking-widest mb-2 block">Featured Training</span>
               <h2 className="text-3xl text-white mb-2">THE 3-PART EXPO SYSTEM</h2>
-              <p className="text-white/70 font-serif italic">Critical Path, Staging, and Batching. The secret to our speed.</p>
+              <p className="text-white/70 font-sans">Critical Path, Staging, and Batching. The secret to our speed.</p>
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ export default function TrainingCenter() {
               <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
                 <div className="h-full bg-diner-red w-[26%]" />
               </div>
-              <p className="text-[10px] text-gray-400 font-serif italic">Keep going! You&apos;re 3 videos away from your next badge.</p>
+              <p className="text-[10px] text-gray-400 font-sans">Keep going! You&apos;re 3 videos away from your next badge.</p>
             </div>
           </div>
         </div>

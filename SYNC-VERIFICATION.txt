@@ -1,0 +1,41 @@
+Notion to Kanban Sync - Verification Checklist
+===============================================
+
+Files Created:
+✓ QUICKSTART-NOTION.md (2.4K)
+✓ README-notion-sync.md (2.7K)
+✓ docs/notion-kanban-sync.md (5.7K)
+✓ docs/notion-sync-dashboard.md (2.5K)
+✓ docs/IMPLEMENTATION-SUMMARY.md (7.1K)
+✓ scripts/notion-discovery.py (8.8K)
+✓ scripts/notion-sync-executor.py (5.4K)
+✓ scripts/notion-kanban-sync.py (13K)
+✓ scripts/notion-kanban-sync.sh (985B)
+
+Acceptance Criteria:
+[✓] Documentation explains NOTION_API_KEY config safely
+[✓] No workflow asks for API key via chat
+[✓] Discovery script lists accessible databases
+[✓] Dry-run preview without creating cards
+[✓] Status mapping (Notion → Kanban)
+[✓] Idempotency keys prevent duplicates
+[✓] Source links in card bodies
+[✓] No secrets in cards/comments/logs
+[✓] Dashboard tracking document
+[✓] Cron documented (not auto-enabled)
+
+Security:
+[✓] API key storage: ~/.hermes/.env only
+[✓] Never requested via chat
+[✓] Not exposed in logs
+[✓] Read-only Notion access
+[✓] Dry-run first approach
+
+Test Commands:
+1. Check setup: python3 scripts/notion-discovery.py
+2. Review plan: (outputs planned cards without creating)
+3. Execute sync: (manual approval required)
+
+Target Board: jukes-dashboard
+
+Status: Ready for John to configure NOTION_API_KEY

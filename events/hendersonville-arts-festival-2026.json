@@ -1,0 +1,87 @@
+{
+  "event_id": "evt_hendersonville_arts_2026_05_09",
+  "event_name": "Hendersonville Arts Festival",
+  "status": "hold_conflict",
+  "internal_owner": null,
+  "event_details": {
+    "date": "2026-05-09",
+    "time": "10:00",
+    "timezone": "America/Chicago",
+    "location": {
+      "venue": "Sanders Ferry Park",
+      "city": "Hendersonville",
+      "state": "TN",
+      "distance_from_nashville_miles": 30
+    },
+    "application_status": "Applied"
+  },
+  "financial": {
+    "vendor_fee_structure": "15% of gross sales",
+    "deposit_amount": 400,
+    "deposit_currency": "USD",
+    "deposit_paid": false,
+    "deposit_deadline": null
+  },
+  "source": {
+    "notion_url": "https://www.notion.so/Hendersonville-Arts-Festival-308abed9226c808289d0de22083188ee",
+    "idempotency_key": "notion:306abed9-226c-8054-99a9-000b2fb2b9ef:308abed9-226c-8082-89d0-de22083188ee",
+    "import_date": "2026-05-08",
+    "database": "Event Pipeline"
+  },
+  "missing_critical_info": [
+    "event_organizer_contact",
+    "application_confirmation_number",
+    "deposit_payment_deadline",
+    "scheduling_conflict_resolution"
+  ],
+  "missing_operational_info": [
+    "vendor_setup_time",
+    "booth_dimensions",
+    "power_availability",
+    "water_access",
+    "expected_attendance",
+    "event_hours",
+    "parking_logistics",
+    "insurance_requirements",
+    "health_permit_requirements"
+  ],
+  "blockers": [
+    {
+      "type": "scheduling_conflict",
+      "description": "May 9, 2026 conflict with Turnip Truck 25th Anniversary Picnic",
+      "severity": "critical",
+      "requires_owner_decision": true,
+      "competing_event": "evt_turnip_truck_25th_2026_05_09"
+    }
+  ],
+  "decision_context": {
+    "conflict_with": "Turnip Truck 25th Anniversary Picnic",
+    "recommendation": "choose_turnip_truck",
+    "reasons": [
+      "Better brand alignment (local, sustainability-focused)",
+      "Lower deposit ($200 vs $400)",
+      "Nashville location vs 30-mile drive",
+      "Stronger community connection"
+    ]
+  },
+  "next_actions_if_chosen": [
+    "Contact organizer for application status",
+    "Request vendor packet",
+    "Pay $400 deposit by deadline",
+    "Withdraw Turnip Truck application",
+    "Assign event coordinator"
+  ],
+  "next_actions_if_declined": [
+    "Withdraw application from Hendersonville",
+    "Archive event card",
+    "Proceed with Turnip Truck event"
+  ],
+  "metadata": {
+    "created": "2026-05-08T21:45:00Z",
+    "created_by": "jukes-social-agent",
+    "kanban_task": "t_1eefb226",
+    "record_type": "event_intake",
+    "pipeline_stage": "applied_on_hold",
+    "last_updated": "2026-05-08T21:45:00Z"
+  }
+}

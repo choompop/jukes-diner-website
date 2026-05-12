@@ -1,45 +1,44 @@
-'use client'
+import Link from 'next/link'
+import { CalendarDays, MapPin, Truck } from 'lucide-react'
 
-import Navbar from '@/components/navbar'
-import Footer from '@/components/footer'
+const stops = [
+  { name: 'Private events', status: 'Booking now', body: 'Bring the truck to offices, weddings, festivals, neighborhoods, and late-night parties.' },
+  { name: 'Weekly pop-ups', status: 'Schedule updated here', body: 'Check the calendar for public stops, special drops, and local events.' },
+  { name: 'Nashville area', status: 'More dates soon', body: "We are adding more public stops as the route grows. Follow Juke's for the latest." },
+]
 
 export default function FindUs() {
   return (
-    <>
-      <Navbar />
-
-      <div className="mx-auto max-w-[1000px] px-6 py-20">
-        <h1 className="mb-2 text-center text-[56px] text-red">Where&apos;s the Truck?</h1>
-        <p className="mx-auto mb-12 max-w-[600px] text-center text-gray-500">
-          We cruise through Nashville hitting pop-ups, private events, and late-night hot spots. Check our calendar below.
-        </p>
-
-        <div className="mb-12 rounded-2xl border-2 border-gray-200 bg-white p-4">
-          <iframe
-            src="https://calendar.google.com/calendar/embed?src=wafflewheelsdiner%40gmail.com&ctz=America%2FChicago"
-            className="h-[500px] w-full rounded-lg border-0"
-            frameBorder="0"
-          />
+    <main className="bg-diner-cream">
+      <section className="border-b-4 border-diner-black bg-diner-red py-12 text-center text-white md:py-16">
+        <MapPin className="mx-auto mb-4 h-12 w-12" />
+        <h1 className="text-7xl text-white md:text-9xl">FIND US</h1>
+        <p className="mx-auto mt-5 max-w-2xl px-4 text-lg font-bold text-white">Find the next public stop, check upcoming events, or book the truck for your own crowd.</p>
+        <Link href="/book" className="retro-button mt-6 bg-diner-cream text-diner-black">Ask about a date</Link>
+        <img src="/images/truck.jpg" alt="Juke's Diner trailer on the road for pop-ups and events" className="mx-auto mt-8 h-56 max-w-4xl rounded-[1.5rem] border-4 border-white object-cover shadow-[8px_8px_0_#171717] md:mt-10 md:h-72" />
+      </section>
+      <section className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="retro-card mb-10 bg-white p-8 text-center">
+          <h2 className="text-5xl text-diner-red">Schedule coming together</h2>
+          <p className="mx-auto mt-4 max-w-2xl leading-7 text-diner-black">We are updating the public calendar now. For current stops or event availability, email contact@jukesdiner.com or send a booking inquiry.</p>
+          <Link href="/book" className="retro-button mt-6 bg-diner-red text-white">Ask about a date</Link>
         </div>
-
         <div className="grid gap-6 md:grid-cols-3">
-          {[
-            { name: 'Event Truck', desc: 'Festivals, corporate events, private parties. Book us anywhere in Nashville.', status: 'Booking Now', color: 'bg-red' },
-            { name: 'Trailer Park', desc: 'Our permanent location. Come hungry.', status: 'Open', color: 'bg-teal' },
-            { name: 'New Locations', desc: 'More spots dropping this summer. Stay tuned.', status: 'Summer 2026', color: 'bg-gray-400' },
-          ].map((loc, i) => (
-            <div key={i} className="rounded-xl border-2 border-gray-200 bg-cream-dark p-7">
-              <div className="mb-3 flex items-center justify-between">
-                <h3 className="text-[22px] text-teal">{loc.name}</h3>
-                <span className={`${loc.color} rounded-full px-3 py-1 text-xs font-semibold text-white`}>{loc.status}</span>
-              </div>
-              <p className="leading-relaxed text-gray-500">{loc.desc}</p>
-            </div>
+          {stops.map((stop) => (
+            <article key={stop.name} className="retro-card p-7">
+              <Truck className="mb-4 h-9 w-9 text-diner-teal" />
+              <h2 className="text-4xl text-diner-red">{stop.name}</h2>
+              <p className="mt-2 inline-block rounded-full bg-diner-black px-3 py-1 text-xs font-black uppercase tracking-widest text-white">{stop.status}</p>
+              <p className="mt-4 leading-7 text-diner-black">{stop.body}</p>
+            </article>
           ))}
         </div>
-      </div>
-
-      <Footer />
-    </>
+        <div className="mt-12 rounded-[2rem] border-4 border-diner-black bg-diner-teal p-8 text-center text-diner-black shadow-[8px_8px_0_#171717]">
+          <CalendarDays className="mx-auto mb-4 h-10 w-10" />
+          <h2 className="text-5xl">Want Juke&apos;s at your spot?</h2>
+          <Link href="/book" className="retro-button mt-6 bg-diner-cream text-diner-black">Book the Truck</Link>
+        </div>
+      </section>
+    </main>
   )
 }

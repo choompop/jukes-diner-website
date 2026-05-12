@@ -1,0 +1,375 @@
+{
+  "version": 1,
+  "title": "Juke's Diner Financial Management",
+  "updatedAt": "2026-05-08",
+  "period": {
+    "label": "Current operating week",
+    "startDate": "2026-05-04",
+    "endDate": "2026-05-10"
+  },
+  "snapshot": {
+    "weeklySales": 8420,
+    "averageTicket": 18.75,
+    "transactions": 449,
+    "cashOnHand": 38400,
+    "foodCostPercent": 28.4,
+    "laborCostPercent": 18.2,
+    "controllableOpsPercent": 12,
+    "estimatedOperatingProfitPercent": 32,
+    "royaltyPercent": 6,
+    "marketingFundPercent": 2,
+    "debtServiceWeekly": 725
+  },
+  "obligations": [
+    {
+      "id": "tn-franchise-tax-2027",
+      "title": "TN Franchise & Excise Tax (Annual)",
+      "amount": 100,
+      "dueDate": "2027-03-01",
+      "priority": "normal",
+      "owner": "Owner/CFO",
+      "status": "future",
+      "category": "tax-obligations",
+      "notes": "Annual TN franchise tax. Reminder set for Feb 15, 2027. File via TNTap (tntap.tn.gov)."
+    },
+    {
+      "id": "sales-tax-reserve",
+      "title": "Sales tax reserve",
+      "amount": 1850,
+      "dueDate": "2026-05-15",
+      "priority": "high",
+      "owner": "Owner/CFO",
+      "status": "open"
+    },
+    {
+      "id": "royalty-payment",
+      "title": "Royalty payment",
+      "amount": 505,
+      "dueDate": "2026-05-12",
+      "priority": "normal",
+      "owner": "Franchisor",
+      "status": "open"
+    },
+    {
+      "id": "marketing-fund-payment",
+      "title": "Marketing fund payment",
+      "amount": 168,
+      "dueDate": "2026-05-12",
+      "priority": "low",
+      "owner": "Franchisor",
+      "status": "open"
+    },
+    {
+      "id": "vendor-produce-invoice",
+      "title": "Produce vendor invoice",
+      "amount": 1597,
+      "dueDate": "2026-05-10",
+      "priority": "urgent",
+      "owner": "Operator",
+      "status": "open"
+    }
+  ],
+  "documents": [
+    {
+      "id": "pos-sales-summary",
+      "title": "POS sales summary",
+      "category": "sales",
+      "required": true,
+      "status": "complete",
+      "owner": "Operator"
+    },
+    {
+      "id": "deposit-proof",
+      "title": "Deposit proof",
+      "category": "cash",
+      "required": true,
+      "status": "complete",
+      "owner": "Operator"
+    },
+    {
+      "id": "refund-discount-report",
+      "title": "Refund and discount report",
+      "category": "sales",
+      "required": true,
+      "status": "complete",
+      "owner": "Operator"
+    },
+    {
+      "id": "catering-invoices",
+      "title": "Catering invoices",
+      "category": "revenue",
+      "required": true,
+      "status": "complete",
+      "owner": "Catering Owner"
+    },
+    {
+      "id": "tax-reserve-record",
+      "title": "Tax reserve record",
+      "category": "compliance",
+      "required": true,
+      "status": "complete",
+      "owner": "Owner/CFO"
+    },
+    {
+      "id": "labor-report",
+      "title": "Labor report",
+      "category": "labor",
+      "required": true,
+      "status": "missing",
+      "owner": "Operator"
+    },
+    {
+      "id": "vendor-invoices",
+      "title": "Vendor invoices",
+      "category": "food-cost",
+      "required": true,
+      "status": "missing",
+      "owner": "Kitchen/Ops"
+    },
+    {
+      "id": "royalty-calculation",
+      "title": "Royalty calculation",
+      "category": "franchise",
+      "required": true,
+      "status": "missing",
+      "owner": "Franchisor"
+    }
+  ],
+  "financeActions": [
+    {
+      "id": "review-labor-schedule",
+      "title": "Review next week labor schedule against sales forecast",
+      "priority": "urgent",
+      "owner": "Operator",
+      "status": "open",
+      "source": "exception"
+    },
+    {
+      "id": "attach-source-docs",
+      "title": "Attach missing finance source documents before weekly close",
+      "priority": "high",
+      "owner": "Flo + Finance Lead",
+      "status": "open",
+      "source": "document-readiness"
+    }
+  ],
+  "layers": [
+    {
+      "id": "sales-and-cash",
+      "name": "Sales + Cash Visibility",
+      "summary": "Daily sales, deposits, cash runway, receivables, and close-of-day variance.",
+      "metrics": [
+        {
+          "id": "weekly-sales",
+          "label": "Weekly Sales",
+          "value": 8420,
+          "format": "currency",
+          "target": 9000,
+          "direction": "higher",
+          "owner": "Operator"
+        },
+        {
+          "id": "average-ticket",
+          "label": "Average Ticket",
+          "value": 18.75,
+          "format": "currency",
+          "target": 20,
+          "direction": "higher",
+          "owner": "Operator"
+        },
+        {
+          "id": "cash-on-hand",
+          "label": "Cash On Hand",
+          "value": 38400,
+          "format": "currency",
+          "target": 30000,
+          "direction": "higher",
+          "owner": "Owner/CFO"
+        }
+      ]
+    },
+    {
+      "id": "prime-costs",
+      "name": "Prime Cost Control",
+      "summary": "Food cost, labor cost, waste, overtime, scheduling discipline, and substitution pressure.",
+      "metrics": [
+        {
+          "id": "food-cost-percent",
+          "label": "Food Cost %",
+          "value": 28.4,
+          "format": "percent",
+          "target": 30,
+          "direction": "lower",
+          "owner": "Kitchen/Ops"
+        },
+        {
+          "id": "labor-cost-percent",
+          "label": "Labor Cost %",
+          "value": 18.2,
+          "format": "percent",
+          "target": 17,
+          "direction": "lower",
+          "owner": "Operator"
+        },
+        {
+          "id": "prime-cost-percent",
+          "label": "Prime Cost %",
+          "value": 46.6,
+          "format": "percent",
+          "target": 55,
+          "direction": "lower",
+          "owner": "Operator"
+        }
+      ]
+    },
+    {
+      "id": "unit-economics",
+      "name": "Unit Economics",
+      "summary": "Contribution margin, catering close rate, breakeven sales, four-wall EBITDA, and payback visibility.",
+      "metrics": [
+        {
+          "id": "operating-profit-percent",
+          "label": "Operating Profit %",
+          "value": 32,
+          "format": "percent",
+          "target": 25,
+          "direction": "higher",
+          "owner": "Owner/CFO"
+        },
+        {
+          "id": "breakeven-weekly-sales",
+          "label": "Weekly Breakeven Sales",
+          "value": 5200,
+          "format": "currency",
+          "target": 5000,
+          "direction": "lower",
+          "owner": "Owner/CFO"
+        },
+        {
+          "id": "catering-close-rate",
+          "label": "Catering Close Rate",
+          "value": 24,
+          "format": "percent",
+          "target": 35,
+          "direction": "higher",
+          "owner": "Catering Owner"
+        }
+      ]
+    },
+    {
+      "id": "compliance-and-royalties",
+      "name": "Compliance + Royalties",
+      "summary": "Royalty, marketing fund, tax reserve, insurance, licensing, and document readiness.",
+      "metrics": [
+        {
+          "id": "royalty-percent",
+          "label": "Royalty %",
+          "value": 6,
+          "format": "percent",
+          "target": 6,
+          "direction": "fixed",
+          "owner": "Franchisor"
+        },
+        {
+          "id": "marketing-fund-percent",
+          "label": "Marketing Fund %",
+          "value": 2,
+          "format": "percent",
+          "target": 2,
+          "direction": "fixed",
+          "owner": "Franchisor"
+        },
+        {
+          "id": "tax-reserve-percent",
+          "label": "Tax Reserve %",
+          "value": 8,
+          "format": "percent",
+          "target": 8,
+          "direction": "higher",
+          "owner": "Owner/CFO"
+        }
+      ]
+    }
+  ],
+  "visibilitySections": [
+    {
+      "id": "operator-daily-view",
+      "title": "Operator Daily View",
+      "owner": "Unit Operator",
+      "summary": "What changed today and what needs correction before tomorrow.",
+      "questions": [
+        "Did sales beat plan?",
+        "Did labor or food cost drift?",
+        "Are deposits and close-out clean?"
+      ]
+    },
+    {
+      "id": "owner-cash-view",
+      "title": "Owner Cash View",
+      "owner": "Owner/CFO",
+      "summary": "Cash runway, upcoming obligations, debt service, and distribution readiness.",
+      "questions": [
+        "How many weeks of cash runway remain?",
+        "What bills or taxes are due?",
+        "Can cash be distributed safely?"
+      ]
+    },
+    {
+      "id": "franchisor-scoreboard",
+      "title": "Franchisor Scoreboard",
+      "owner": "Franchise Support",
+      "summary": "Comparable unit health, royalty visibility, coaching needs, and repeatable best practices.",
+      "questions": [
+        "Which units are off-model?",
+        "Where is coaching needed?",
+        "What best practice should be copied?"
+      ]
+    },
+    {
+      "id": "exception-review",
+      "title": "Exception Review",
+      "owner": "Flo + Finance Lead",
+      "summary": "Only the variances and missing documents that require human attention.",
+      "questions": [
+        "What is outside threshold?",
+        "Who owns the fix?",
+        "What source document is missing?"
+      ]
+    }
+  ],
+  "referenceFiles": [
+    {
+      "id": "weekly-finance-rhythm",
+      "title": "Weekly Finance Rhythm",
+      "path": "brain/files/weekly-finance-rhythm.md",
+      "summary": "Operator cadence for sales, deposits, cost review, royalties, and cash decisions.",
+      "tags": [
+        "finance",
+        "weekly",
+        "cash"
+      ]
+    },
+    {
+      "id": "financial-kpi-dictionary",
+      "title": "Financial KPI Dictionary",
+      "path": "brain/files/financial-kpi-dictionary.md",
+      "summary": "Definitions for prime cost, four-wall EBITDA, breakeven, royalty, and cash runway.",
+      "tags": [
+        "finance",
+        "kpi",
+        "definitions"
+      ]
+    },
+    {
+      "id": "document-retention-checklist",
+      "title": "Financial Document Retention Checklist",
+      "path": "brain/files/document-retention-checklist.md",
+      "summary": "What receipts, invoices, statements, tax docs, licenses, and media evidence must be stored.",
+      "tags": [
+        "documents",
+        "compliance",
+        "storage"
+      ]
+    }
+  ]
+}

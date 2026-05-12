@@ -1,0 +1,5 @@
+date,vendor,order_number,item,quantity,unit,damaged,missing,invoice_total,receiver,storage_location,notes
+2026-05-08,Sysco,SO-123456,Hot dogs (all-beef),2,case,0,0,156.00,Sarah,Walk-in cooler,Good condition
+2026-05-08,Sysco,SO-123456,Onions (yellow),10,lb,0,0,,Sarah,Dry storage,
+2026-05-08,US Foods,UF-789012,Bacon,15,lb,0,2,89.50,Mike,Walk-in cooler,Short 2 lb - vendor credited
+2026-05-08,Eco-Products,EP-456789,Hot dog trays,1,case,0,0,47.25,Sarah,Dry storage,

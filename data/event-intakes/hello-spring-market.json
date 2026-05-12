@@ -1,0 +1,178 @@
+{
+  "id": "intake_hello_spring_market_2026",
+  "idempotency_key": "notion:308abed9-226c-8042-b746-ddb56c3f8c46",
+  "notion_url": "https://www.notion.so/6th-Annual-Hello-Spring-Market-308abed9226c8042b746ddb56c3f8c46",
+  "type": "vendor_event",
+  "status": "PAST_EVENT_UNRECONCILED",
+  "created_at": "2026-02-15T23:01:00.000Z",
+  "updated_at": "2026-02-19T17:24:00.000Z",
+  "critical_flag": "EVENT_ALREADY_OCCURRED",
+  
+  "event": {
+    "name": "6th Annual Hello Spring Market",
+    "date": "2026-03-28",
+    "start_time": "10:00 AM",
+    "end_time": "4:00 PM",
+    "duration_hours": 6,
+    "timezone": "America/Chicago",
+    "location": {
+      "venue": "Putnam County Fairgrounds",
+      "city": "Cookeville",
+      "state": "TN",
+      "full_address": "Putnam County Fairgrounds in Cookeville, TN"
+    },
+    "organizer_email": "southernmarketplaceevents@gmail.com",
+    "days_since_event": 41,
+    "event_occurred": "2026-03-28"
+  },
+  
+  "financial": {
+    "deposit_required": true,
+    "deposit_amount": 175,
+    "deposit_currency": "USD",
+    "deposit_received": false,
+    "deposit_deadline": null,
+    "notion_status": "Deposit Paid",
+    "discrepancy_flagged": true,
+    "discrepancy_details": "Notion status shows 'Deposit Paid' but 'Deposit Received' checkbox is FALSE",
+    "estimated_revenue": null,
+    "actual_revenue": null,
+    "reconciliation_needed": true,
+    "notes": "$175 deposit fee recorded, but payment status unclear. Event occurred 41 days ago - needs post-event reconciliation."
+  },
+  
+  "ownership": {
+    "internal_owner": "NEEDS_ASSIGNMENT",
+    "recommended_owner": "John",
+    "needs_decision_from": "John",
+    "decision_type": "post_event_reconciliation_and_closeout"
+  },
+  
+  "next_steps": {
+    "priority": "HIGH",
+    "urgency": "URGENT",
+    "urgency_reason": "Event occurred 41 days ago (March 28) with unreconciled payment status and no revenue data",
+    "immediate_action": "Post-event reconciliation and financial closeout",
+    "critical_questions": [
+      "Did Juke's Diner actually participate in this event?",
+      "Was the $175 deposit paid before the event?",
+      "If attended, what was the actual revenue?",
+      "Are there any outstanding invoices or payments related to this event?",
+      "Should this event be considered for next year (7th annual)?"
+    ],
+    "reconciliation_checklist": [
+      {
+        "action": "Verify participation",
+        "details": "Check calendar, photos, team schedules for March 28, 2026",
+        "owner": "John"
+      },
+      {
+        "action": "Reconcile deposit payment",
+        "details": "Check QuickBooks and bank records for $175 payment to southernmarketplaceevents@gmail.com",
+        "owner": "John"
+      },
+      {
+        "action": "Record actual revenue",
+        "details": "If attended, pull sales data from Toast/Square for March 28, 2026",
+        "owner": "John"
+      },
+      {
+        "action": "Update Notion pipeline",
+        "details": "Mark as complete/reconciled or archive if did not attend",
+        "owner": "jukes-ops-agent"
+      },
+      {
+        "action": "Assess for 2027",
+        "details": "If attended and profitable, add to 2027 event calendar planning",
+        "owner": "John"
+      }
+    ],
+    "follow_up_actions": [
+      {
+        "action": "Close out event record",
+        "trigger": "After reconciliation complete",
+        "owner": "jukes-ops-agent",
+        "approval_required": false
+      },
+      {
+        "action": "Archive or mark for next year",
+        "trigger": "After performance assessment",
+        "owner": "John",
+        "approval_required": true
+      }
+    ]
+  },
+  
+  "acceptance_criteria": {
+    "event_name_recorded": true,
+    "event_datetime_recorded": true,
+    "location_recorded": true,
+    "contact_recorded": true,
+    "status_recorded": true,
+    "deposit_status_recorded": true,
+    "discrepancy_flagged": true,
+    "notion_metadata_preserved": true,
+    "internal_owner_assigned": false,
+    "next_step_defined": true,
+    "no_external_communication_sent": true,
+    "past_event_status_identified": true
+  },
+  
+  "metadata": {
+    "source": "Notion Event Pipeline",
+    "import_date": "2026-05-08",
+    "enriched_by": "jukes-social-agent",
+    "enriched_at": "2026-05-08T21:47:00.000Z",
+    "event_timeline": "PAST_EVENT",
+    "days_since_event": 41,
+    "reconciliation_status": "PENDING",
+    "related_documents": [
+      "events/hello-spring-market.md"
+    ],
+    "tags": [
+      "vendor-event",
+      "past-event",
+      "unreconciled",
+      "deposit-discrepancy",
+      "spring-market",
+      "cookeville-tn",
+      "putnam-county-fairgrounds",
+      "southernmarketplaceevents"
+    ]
+  },
+  
+  "notes": [
+    {
+      "timestamp": "2026-05-08T21:47:00.000Z",
+      "author": "jukes-social-agent",
+      "type": "critical_finding",
+      "content": "CRITICAL: This event occurred 41 days ago (March 28, 2026). Current date is May 8, 2026. This is NOT a future event requiring scheduling - this is a PAST event requiring post-event reconciliation and closeout."
+    },
+    {
+      "timestamp": "2026-05-08T21:47:00.000Z",
+      "author": "jukes-social-agent",
+      "type": "enrichment",
+      "content": "Enriched intake record created from Notion pipeline data. Payment status discrepancy identified: Notion status shows 'Deposit Paid' but 'Deposit Received' checkbox is FALSE. Event has already occurred - needs financial reconciliation, not event planning."
+    },
+    {
+      "timestamp": "2026-05-08T21:47:00.000Z",
+      "author": "jukes-social-agent",
+      "type": "context",
+      "content": "This is the 6th annual iteration of this spring market, suggesting it's an established recurring event. Organizer (southernmarketplaceevents@gmail.com) appears to run multiple events at Putnam County Fairgrounds. If participation was successful, should consider early commitment for 7th annual in 2027."
+    },
+    {
+      "timestamp": "2026-05-08T21:47:00.000Z",
+      "author": "jukes-social-agent",
+      "type": "action_required",
+      "content": "John needs to: (1) Confirm whether Juke's participated, (2) Verify deposit payment status, (3) Record actual revenue if attended, (4) Decide whether to pursue 7th annual in 2027."
+    }
+  ],
+  
+  "questions_for_john": [
+    "Did we participate in this event on March 28, 2026?",
+    "Do you recall this spring market at the Putnam County Fairgrounds?",
+    "Was the $175 deposit paid before the event?",
+    "If we attended, how did it perform (revenue, customer feedback)?",
+    "Should we consider this for our 2027 event calendar?"
+  ]
+}

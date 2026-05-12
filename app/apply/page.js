@@ -1,57 +1,33 @@
-'use client'
-
-import Navbar from '@/components/navbar'
-import Footer from '@/components/footer'
+import Link from 'next/link'
+import { BriefcaseBusiness, Store, Users } from 'lucide-react'
 
 export default function Apply() {
   return (
-    <>
-      <Navbar />
-
-      <div className="min-h-screen bg-brand-black text-cream">
-        <div className="mx-auto max-w-[800px] px-6 py-20">
-          <h1 className="mb-4 text-center text-[56px]">Join the Team</h1>
-          <p className="mb-12 text-center text-lg text-gray-400">
-            Juke&apos;s Diner is more than a food truck. It&apos;s a rolling diner built on flavor, energy, and people who care.
-          </p>
-
-          <div className="mb-12 grid gap-8 md:grid-cols-2">
-            {/* Work With Us */}
-            <div className="rounded-2xl border border-gray-700 bg-[#1a1a2e] p-8">
-              <h3 className="mb-4 text-2xl text-teal">Work With Us</h3>
-              <p className="mb-6 leading-relaxed text-gray-500">
-                We&apos;re looking for cooks, servers, and leaders who want to grow. Flexible hours, good vibes, real experience in the food industry.
-              </p>
-              <a
-                href="mailto:wafflewheelsdiner@gmail.com?subject=Job Application"
-                className="inline-block rounded-lg bg-teal px-7 py-3 text-[15px] font-semibold text-white no-underline transition-opacity hover:opacity-90"
-              >
-                Apply Now
-              </a>
-            </div>
-
-            {/* Franchise */}
-            <div className="rounded-2xl border border-gold bg-[#1a1a2e] p-8">
-              <h3 className="mb-4 text-2xl text-gold">Franchise With Us</h3>
-              <p className="mb-6 leading-relaxed text-gray-500">
-                Want to run your own Juke&apos;s Diner? We provide the truck, the playbook, the training, and the brand. You run it. We grow together.
-              </p>
-              <a
-                href="mailto:wafflewheelsdiner@gmail.com?subject=Franchise Inquiry"
-                className="inline-block rounded-lg bg-gold px-7 py-3 text-[15px] font-semibold text-brand-black no-underline transition-opacity hover:opacity-90"
-              >
-                Learn More
-              </a>
-            </div>
-          </div>
-
-          <div className="text-center text-gray-600">
-            <p>Questions? Email us at wafflewheelsdiner@gmail.com</p>
-          </div>
+    <main className="bg-diner-cream">
+      <section className="border-b-4 border-diner-black bg-diner-teal py-12 text-center text-diner-black md:py-20">
+        <p className="font-black uppercase tracking-[0.25em] text-diner-black">Jobs + franchise</p>
+        <h1 className="mt-3 text-7xl md:text-9xl">GROW WITH JUKE&apos;S</h1>
+        <p className="mx-auto mt-5 max-w-3xl px-4 text-lg font-bold leading-8 text-diner-black">Work the truck, join the event crew, or ask about future franchise opportunities as Juke&apos;s grows.</p>
+        <Link href="mailto:contact@jukesdiner.com?subject=Juke%27s%20Franchise%20Inquiry" className="retro-button mt-6 bg-diner-black text-white">Ask about franchise</Link>
+        <div className="mx-auto mt-8 grid max-w-5xl gap-6 px-4 md:mt-10 md:grid-cols-2">
+          <img src="/images/truck.jpg" alt="Juke's Diner trailer concept for operators" className="h-48 w-full rounded-[1.5rem] border-4 border-diner-black object-cover shadow-[8px_8px_0_#171717] md:h-64" />
+          <img src="/images/drive/truck-window-prep.jpg" alt="Juke's Diner food prep inside the truck workflow" className="hidden h-64 w-full rounded-[1.5rem] border-4 border-diner-black object-cover shadow-[8px_8px_0_#d62828] md:block" />
         </div>
-      </div>
-
-      <Footer />
-    </>
+      </section>
+      <section className="mx-auto grid max-w-7xl gap-6 px-4 py-16 sm:px-6 md:grid-cols-3 lg:px-8">
+        {[
+          ['Work with us', 'Cooks, window staff, operators, content help, and event crew.', BriefcaseBusiness, 'mailto:contact@jukesdiner.com?subject=Juke%27s%20Job%20Application', 'Apply by email'],
+          ['Franchise path', "Brand, training, menu standards, event playbooks, and the practical details of running a Juke's truck.", Store, 'mailto:contact@jukesdiner.com?subject=Juke%27s%20Franchise%20Inquiry', 'Ask about franchise'],
+          ['Book the truck', "Want to meet Juke's as a customer first? Bring the truck to an event and see how it runs.", Users, '/book', 'Book the truck'],
+        ].map(([title, copy, Icon, href, cta]) => (
+          <article key={title} className="retro-card p-8">
+            <Icon className="mb-5 h-10 w-10 text-diner-red" />
+            <h2 className="text-5xl">{title}</h2>
+            <p className="mt-4 leading-7 text-diner-black">{copy}</p>
+            <Link href={href} className="retro-button mt-6 bg-diner-black text-white">{cta}</Link>
+          </article>
+        ))}
+      </section>
+    </main>
   )
 }

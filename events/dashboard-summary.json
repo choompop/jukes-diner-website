@@ -1,0 +1,68 @@
+{
+  "dashboard_summary": {
+    "generated_at": "2026-05-08T21:45:00Z",
+    "total_events": 1,
+    "events_by_status": {
+      "hold_conflict": 1,
+      "applied": 0,
+      "confirmed": 0,
+      "in_progress": 0,
+      "completed": 0,
+      "declined": 0
+    },
+    "critical_decisions_needed": 1,
+    "total_deposits_at_risk": 0,
+    "total_deposits_paid": 0
+  },
+  "events": [
+    {
+      "event_id": "evt_hendersonville_arts_2026_05_09",
+      "event_name": "Hendersonville Arts Festival",
+      "date": "2026-05-09",
+      "status": "hold_conflict",
+      "deposit_amount": 400,
+      "deposit_paid": false,
+      "blocker_summary": "May 9 scheduling conflict with Turnip Truck event",
+      "recommendation": "Choose Turnip Truck instead (lower deposit, better brand fit)",
+      "decision_required": true,
+      "decision_owner": "John (owner)",
+      "files": {
+        "markdown": "/Users/lexi/projects/jukes-diner-website/events/hendersonville-arts-festival-2026.md",
+        "json": "/Users/lexi/projects/jukes-diner-website/events/hendersonville-arts-festival-2026.json"
+      }
+    }
+  ],
+  "decisions_required": [
+    {
+      "decision_id": "dec_may9_event_conflict",
+      "urgency": "high",
+      "description": "Choose between Hendersonville Arts Festival ($400) and Turnip Truck Picnic ($200) for May 9, 2026",
+      "recommendation": "Turnip Truck - better brand fit, lower financial risk, Nashville location",
+      "impact": "Cannot proceed with either event until conflict is resolved",
+      "owner": "John",
+      "related_events": [
+        "evt_hendersonville_arts_2026_05_09",
+        "evt_turnip_truck_25th_2026_05_09"
+      ]
+    }
+  ],
+  "missing_critical_info_summary": {
+    "events_missing_organizer_contact": 1,
+    "events_missing_deposit_deadline": 1,
+    "events_missing_vendor_packet": 1
+  },
+  "next_actions": [
+    {
+      "action": "Resolve May 9 scheduling conflict",
+      "owner": "John",
+      "urgency": "high",
+      "blocking_events": 2
+    },
+    {
+      "action": "Contact Hendersonville organizer for details (if event is chosen)",
+      "owner": "TBD - operations coordinator",
+      "urgency": "medium",
+      "conditional": "Only if Hendersonville is chosen over Turnip Truck"
+    }
+  ]
+}

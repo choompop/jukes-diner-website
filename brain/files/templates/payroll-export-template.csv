@@ -1,0 +1,5 @@
+pay_period_start,pay_period_end,location,employee_id,employee_name,regular_hours,overtime_hours,hourly_rate,gross_wages,payroll_taxes,tips,total_labor_cost
+2026-05-01,2026-05-07,event-truck,EMP001,Sarah Johnson,40,0,15.00,600.00,91.80,45.00,736.80
+2026-05-01,2026-05-07,event-truck,EMP002,Mike Davis,35,0,14.00,490.00,74.97,32.00,596.97
+2026-05-01,2026-05-07,trailer-park,EMP003,Alex Martinez,38,2,15.50,634.00,96.99,0.00,730.99
+2026-05-01,2026-05-07,east-nashville,EMP004,Jamie Lee,40,5,16.00,760.00,116.28,58.00,934.28

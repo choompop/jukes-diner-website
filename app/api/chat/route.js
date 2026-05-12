@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
+import { requireDashboardApiAuth } from '@/lib/dashboard-auth.mjs';
 import { getSupabase } from '@/lib/supabase';
 
 const SYSTEM_PROMPT = `You are Lexi, the AI assistant for Juke's Diner. You help operators (Daniel, Justin, John, and future franchisees) manage the business by being a brain dump partner, answering questions, and capturing important context.
@@ -102,6 +103,9 @@ function stripCategoryTag(text) {
 }
 
 export async function POST(request) {
+  const auth = requireDashboardApiAuth(request);
+  if (!auth.ok) return NextResponse.json({ error: auth.error }, { status: auth.status });
+
   try {
     const { message, user, history } = await request.json();
 

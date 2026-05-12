@@ -1,0 +1,123 @@
+{
+  "id": "intake_east_nashville_beer_fest",
+  "idempotency_key": "notion:308abed9-226c-803f-a0d7-f7fb0d1d8fad",
+  "notion_url": "https://www.notion.so/East-Nashville-Beer-Fest-308abed9226c803fa0d7f7fb0d1d8fad",
+  "type": "vendor_event",
+  "status": "applied",
+  "created_at": "2026-05-08T21:44:00.000Z",
+  "updated_at": "2026-05-08T21:44:00.000Z",
+  
+  "event": {
+    "name": "East Nashville Beer Fest",
+    "date": "2026-04-11",
+    "time": "12:00 PM",
+    "timezone": "America/Chicago",
+    "location": {
+      "address": "700 Woodland Street",
+      "city": "Nashville",
+      "state": "TN",
+      "zip": "37206",
+      "venue": "East Nashville"
+    },
+    "vendor_contact_url": "https://www.eastnashvillebeerfest.com/vendors",
+    "days_until_event": 32
+  },
+  
+  "financial": {
+    "deposit_required": true,
+    "deposit_amount": 150,
+    "deposit_currency": "USD",
+    "deposit_received": false,
+    "deposit_deadline": null,
+    "total_fees": null,
+    "notes": "$150 deposit required per vendor application"
+  },
+  
+  "ownership": {
+    "internal_owner": "NEEDS_ASSIGNMENT",
+    "recommended_owner": "jukes-ops-agent",
+    "needs_decision_from": "John",
+    "decision_type": "owner_assignment"
+  },
+  
+  "next_steps": {
+    "priority": "HIGH",
+    "urgency": "URGENT",
+    "urgency_reason": "Event is 32 days away, deposit deadline unknown",
+    "immediate_action": "Confirm acceptance status and deposit deadline",
+    "draft_communication": {
+      "channel": "email",
+      "recipient": "Event organizer via vendor contact form",
+      "subject": "Juke's Diner - Vendor Application Status for East Nashville Beer Fest",
+      "body_template": "Hi there,\n\nWe submitted a vendor application for Juke's Diner to participate in the East Nashville Beer Fest on April 11th. Could you please confirm:\n\n1. Status of our application\n2. Deposit deadline ($150 noted)\n3. Any additional requirements or next steps\n\nWe're excited about the opportunity to serve your festival and want to make sure we complete everything on time.\n\nThanks,\nJohn Jukes\nJuke's Diner\n[contact info]",
+      "approval_required": true,
+      "approved_by": null,
+      "sent_at": null
+    },
+    "follow_up_actions": [
+      {
+        "action": "Process $150 deposit payment",
+        "trigger": "Upon acceptance confirmation",
+        "owner": "John",
+        "approval_required": true
+      },
+      {
+        "action": "Gather event logistics",
+        "trigger": "After acceptance confirmation",
+        "owner": "TBD"
+      },
+      {
+        "action": "Update Notion pipeline status",
+        "trigger": "After status confirmation",
+        "owner": "jukes-ops-agent"
+      }
+    ]
+  },
+  
+  "acceptance_criteria": {
+    "event_name_recorded": true,
+    "event_datetime_recorded": true,
+    "location_recorded": true,
+    "vendor_contact_recorded": true,
+    "status_recorded": true,
+    "deposit_status_recorded": true,
+    "notion_metadata_preserved": true,
+    "internal_owner_assigned": false,
+    "next_step_defined": true,
+    "no_external_communication_sent": true
+  },
+  
+  "metadata": {
+    "source": "Notion Event Pipeline",
+    "import_date": "2026-05-08",
+    "enriched_by": "jukes-social-agent",
+    "enriched_at": "2026-05-08T21:44:00.000Z",
+    "related_documents": [
+      "event-pipeline-follow-up-plan.md",
+      "booking-calendar-review-agenda.md"
+    ],
+    "tags": [
+      "vendor-event",
+      "applied",
+      "deposit-required",
+      "urgent",
+      "beer-festival",
+      "east-nashville"
+    ]
+  },
+  
+  "notes": [
+    {
+      "timestamp": "2026-05-08T21:44:00.000Z",
+      "author": "jukes-social-agent",
+      "type": "enrichment",
+      "content": "Enriched intake record created from Notion pipeline data. Event is 32 days away with unknown deposit deadline - marked as URGENT priority. Draft follow-up communication prepared but flagged for John's approval before sending."
+    },
+    {
+      "timestamp": "2026-05-08T21:44:00.000Z",
+      "author": "jukes-social-agent",
+      "type": "context",
+      "content": "This is a vendor application for a beer festival. Strong brand alignment with Juke's Southern food truck concept. Event is time-sensitive due to proximity (32 days) and unknown deposit deadline."
+    }
+  ]
+}

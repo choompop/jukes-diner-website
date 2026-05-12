@@ -13,5 +13,10 @@ export default function DashboardRedirect() {
       router.push('/dashboard/command-center');
     }
   }, []);
-  return null;
+  return (
+    <div className="sr-only" aria-live="polite">
+      <h1>Juke&apos;s Diner Dashboard</h1>
+      <p>Redirecting to your dashboard.</p>
+    </div>
+  );
 }

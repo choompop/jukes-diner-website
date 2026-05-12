@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Metric Cards Responsive Test</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background: #f3f4f6;
+    }
+    
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    
+    .viewport-info {
+      background: white;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    .viewport-info h2 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    
+    .viewport-info p {
+      font-size: 14px;
+      color: #666;
+    }
+    
+    #width-display {
+      font-weight: bold;
+      color: #dc2626;
+      font-size: 24px;
+    }
+    
+    #expected-layout {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #059669;
+    }
+    
+    /* Metric cards container - simulating the responsive grid */
+    .metric-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    
+    @media (min-width: 768px) {
+      .metric-cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .metric-cards {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+    }
+    
+    .metric-card {
+      background: white;
+      padding: 20px;
+      min-height: 80px;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border: 1px solid #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    @media (min-width: 768px) {
+      .metric-card {
+        padding: 24px;
+        min-height: 100px;
+      }
+      
+      .metric-card:nth-child(5) {
+        grid-column: span 2;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .metric-card {
+        min-height: 120px;
+      }
+      
+      .metric-card:nth-child(5) {
+        grid-column: span 1;
+      }
+    }
+    
+    .metric-number {
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+    
+    @media (min-width: 768px) {
+      .metric-number {
+        font-size: 36px;
+      }
+    }
+    
+    .metric-label {
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: #6b7280;
+      line-height: 1.4;
+    }
+    
+    @media (min-width: 1024px) {
+      .metric-label {
+        font-size: 12px;
+      }
+    }
+    
+    .card-urgent .metric-number { color: #dc2626; }
+    .card-bookings .metric-number { color: #14b8a6; }
+    .card-issues .metric-number { color: #ea580c; }
+    .card-media .metric-number { color: #9333ea; }
+    .card-weather .metric-number { color: #1f2937; }
+  </style>
+</head>
+<body>
+  <h1>Metric Cards Responsive Layout Test</h1>
+  
+  <div class="viewport-info">
+    <h2>Current Viewport</h2>
+    <p>Width: <span id="width-display">--</span>px</p>
+    <p id="expected-layout">Expected layout: --</p>
+  </div>
+  
+  <div class="metric-cards">
+    <div class="metric-card card-urgent">
+      <div class="metric-number">1</div>
+      <div class="metric-label">Urgent Tasks</div>
+    </div>
+    
+    <div class="metric-card card-bookings">
+      <div class="metric-number">1</div>
+      <div class="metric-label">Today Bookings</div>
+    </div>
+    
+    <div class="metric-card card-issues">
+      <div class="metric-number">4</div>
+      <div class="metric-label">Open Issues</div>
+    </div>
+    
+    <div class="metric-card card-media">
+      <div class="metric-number">3</div>
+      <div class="metric-label">Media Approvals</div>
+    </div>
+    
+    <div class="metric-card card-weather">
+      <div class="metric-number">64°F</div>
+      <div class="metric-label">Clear</div>
+    </div>
+  </div>
+  
+  <script>
+    function updateViewportInfo() {
+      const width = window.innerWidth;
+      const widthDisplay = document.getElementById('width-display');
+      const layoutDisplay = document.getElementById('expected-layout');
+      
+      widthDisplay.textContent = width;
+      
+      if (width < 768) {
+        layoutDisplay.textContent = 'Expected layout: 1 column (Mobile)';
+        layoutDisplay.style.color = '#dc2626';
+      } else if (width < 1024) {
+        layoutDisplay.textContent = 'Expected layout: 2 columns (Tablet) - Weather spans 2 cols';
+        layoutDisplay.style.color = '#ea580c';
+      } else {
+        layoutDisplay.textContent = 'Expected layout: 4 columns (Desktop)';
+        layoutDisplay.style.color = '#059669';
+      }
+    }
+    
+    updateViewportInfo();
+    window.addEventListener('resize', updateViewportInfo);
+  </script>
+</body>
+</html>

@@ -1,0 +1,366 @@
+/**
+ * Interactive States - WCAG 2.1 AA Compliant
+ * 
+ * Comprehensive hover, focus, active, loading, and disabled states
+ * for Juke's Dashboard interactive elements.
+ * 
+ * Priority:
+ * 1. Focus indicators (WCAG requirement - HIGH priority)
+ * 2. Hover states (UX expectation - MEDIUM priority)
+ * 3. Loading states (prevents confusion - MEDIUM priority)
+ * 4. Disabled states (visual clarity - LOW priority)
+ */
+
+@layer components {
+  /* ====================================================================
+   * FOCUS INDICATORS (WCAG 2.1 Level AA - Success Criterion 2.4.7)
+   * ==================================================================== */
+
+  /**
+   * Remove default browser focus outline globally,
+   * then add custom accessible focus rings below.
+   */
+  *:focus {
+    outline: none;
+  }
+
+  /**
+   * Primary focus indicator for all interactive elements.
+   * - 2px solid outline (exceeds 1px minimum)
+   * - Uses Juke's brand red (#d62828)
+   * - 2px offset for breathing room
+   * - Only shows on keyboard focus (not mouse clicks)
+   */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [role="button"]:focus-visible,
+  [role="link"]:focus-visible,
+  [tabindex]:not([tabindex="-1"]):focus-visible {
+    outline: 2px solid var(--color-diner-red);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /**
+   * Alternative focus style for dark backgrounds
+   * (navigation, dark cards, colored sections)
+   */
+  .focus-light:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+
+  /**
+   * Cards and larger interactive containers get a subtle shadow ring
+   * instead of a hard outline for better aesthetics.
+   */
+  .card-focus:focus-within {
+    box-shadow: 0 0 0 3px rgba(214, 40, 40, 0.2);
+  }
+
+  /* ====================================================================
+   * HOVER STATES (UX Best Practice)
+   * ==================================================================== */
+
+  /**
+   * Card hover effect - lift and shadow
+   * Applies to task cards, booking cards, issue cards, etc.
+   */
+  .card-hover {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  /**
+   * Subtle card hover - for nested cards or compact views
+   */
+  .card-hover-subtle {
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  .card-hover-subtle:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /**
+   * Link hover states
+   */
+  .link-hover {
+    transition: color 0.15s ease-in-out;
+  }
+
+  .link-hover:hover {
+    color: var(--color-diner-red);
+    text-decoration: underline;
+  }
+
+  /**
+   * Icon button hover (for toolbar actions, etc.)
+   */
+  .icon-button-hover {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .icon-button-hover:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    transform: scale(1.05);
+  }
+
+  /* ====================================================================
+   * BUTTON STATES (Hover, Active, Disabled)
+   * ==================================================================== */
+
+  /**
+   * Primary button states
+   */
+  .btn-primary {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-primary:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /**
+   * Secondary button states (lighter style)
+   */
+  .btn-secondary {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-secondary:hover:not(:disabled) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .btn-secondary:active:not(:disabled) {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .btn-secondary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /**
+   * Danger/destructive button states
+   */
+  .btn-danger {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .btn-danger:hover:not(:disabled) {
+    filter: brightness(0.9);
+  }
+
+  .btn-danger:active:not(:disabled) {
+    filter: brightness(0.85);
+  }
+
+  .btn-danger:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* ====================================================================
+   * LOADING STATES
+   * ==================================================================== */
+
+  /**
+   * Skeleton loader animation
+   * Use for initial page load placeholders
+   */
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.05) 25%,
+      rgba(0, 0, 0, 0.08) 50%,
+      rgba(0, 0, 0, 0.05) 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton-loading 1.5s infinite;
+    border-radius: 8px;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  /**
+   * Spinner animation
+   * Use for inline loading indicators in buttons or actions
+   */
+  .spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spinner-rotate 0.75s linear infinite;
+  }
+
+  @keyframes spinner-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /**
+   * Pulse animation for loading states
+   */
+  .pulse-slow {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  @keyframes pulse {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  /* ====================================================================
+   * DISABLED STATES
+   * ==================================================================== */
+
+  /**
+   * Generic disabled state for any interactive element
+   */
+  .disabled,
+  [disabled],
+  [aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    pointer-events: none;
+  }
+
+  /**
+   * Disabled input fields (don't reduce pointer-events to allow focus)
+   */
+  input:disabled,
+  select:disabled,
+  textarea:disabled {
+    pointer-events: auto;
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+
+  /* ====================================================================
+   * ACTIVE/PRESSED STATES
+   * ==================================================================== */
+
+  /**
+   * Generic active state for clickable items
+   */
+  .active-press {
+    transition: all 0.1s ease-in-out;
+  }
+
+  .active-press:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+
+  /* ====================================================================
+   * TOUCH-FRIENDLY STATES (Mobile)
+   * ==================================================================== */
+
+  /**
+   * Ensure minimum touch target size (44x44px per iOS HIG / Material Design)
+   */
+  .touch-target {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /**
+   * Active state for touch devices
+   */
+  @media (hover: none) and (pointer: coarse) {
+    .card-hover:active {
+      background-color: rgba(0, 0, 0, 0.05);
+    }
+
+    .btn-primary:active:not(:disabled) {
+      opacity: 0.8;
+    }
+  }
+}
+
+/* ====================================================================
+ * UTILITY CLASSES (Compose multiple states)
+ * ==================================================================== */
+
+/**
+ * Full interactive card
+ * Combines hover, focus, and active states for clickable cards
+ */
+.interactive-card {
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.interactive-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.interactive-card:focus-within {
+  box-shadow: 0 0 0 3px rgba(214, 40, 40, 0.2);
+}
+
+.interactive-card:active {
+  transform: scale(0.98);
+}
+
+/**
+ * Interactive list item
+ */
+.interactive-list-item {
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.interactive-list-item:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.interactive-list-item:active {
+  transform: scale(0.98);
+}
+
+/**
+ * Standard button base
+ */
+.btn-base {
+  transition: all 0.2s ease-in-out;
+  min-height: 44px;
+  min-width: 44px;
+}

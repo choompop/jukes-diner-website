@@ -16,7 +16,7 @@ export default function DriveViewer() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl text-diner-black mb-1">GOOGLE DRIVE</h1>
-          <p className="text-gray-500 font-serif italic">Centralized franchise assets and documents</p>
+          <p className="text-gray-500 font-sans">Centralized franchise assets and documents</p>
         </div>
         <button className="bg-diner-teal text-white px-6 py-3 rounded-xl font-display text-sm hover:bg-teal-700 transition-colors flex items-center gap-2">
           <ExternalLink className="h-4 w-4" /> OPEN IN DRIVE
@@ -55,7 +55,7 @@ export default function DriveViewer() {
                 <th className="px-8 py-4"></th>
               </tr>
             </thead>
-            <tbody className="font-serif">
+            <tbody className="font-sans">
               {mockFiles.map((file, i) => (
                 <tr key={i} className="border-b border-gray-50 hover:bg-diner-cream/30 transition-colors group">
                   <td className="px-8 py-4">
@@ -86,7 +86,7 @@ export default function DriveViewer() {
         <div className="p-12 text-center border-t border-gray-50 bg-gray-50/20">
           <HardDrive className="h-12 w-12 text-gray-200 mx-auto mb-4" />
           <h3 className="text-xl text-gray-400 mb-2">GOOGLE DRIVE INTEGRATION</h3>
-          <p className="text-gray-400 font-serif italic max-w-md mx-auto">
+          <p className="text-gray-400 font-sans max-w-md mx-auto">
             This is a live preview of your franchise Google Drive folder. Connect your Google Cloud project to enable real-time file management.
           </p>
         </div>

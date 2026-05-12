@@ -76,7 +76,7 @@ export default function Onboarding() {
     <div className="space-y-8">
       <div>
         <h1 className="text-3xl text-diner-black mb-1">GETTING STARTED</h1>
-        <p className="text-gray-500 font-serif italic">Your journey to launch. Justin's current permit journey feeds this in real time.</p>
+        <p className="text-gray-500 font-sans">Your journey to launch. Justin's current permit journey feeds this in real time.</p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -179,11 +179,11 @@ export default function Onboarding() {
 
               <div className="space-y-4">
                 <h3 className="font-display text-sm uppercase tracking-widest text-gray-400">Instructions</h3>
-                <p className="text-lg text-gray-700 font-serif leading-relaxed italic">
+                <p className="text-lg text-gray-700 font-sans leading-relaxed">
                   &ldquo;{steps[selectedStep].instructions}&rdquo;
                 </p>
                 <div className="p-4 bg-diner-cream/50 rounded-2xl border border-diner-chrome/30">
-                  <p className="text-sm text-gray-600 font-serif">
+                  <p className="text-sm text-gray-600 font-sans">
                     <span className="font-bold text-diner-red">Pro Tip:</span> {steps[selectedStep].details}
                   </p>
                 </div>
@@ -193,7 +193,7 @@ export default function Onboarding() {
                 <h3 className="font-display text-sm uppercase tracking-widest text-gray-400 mb-4">Proof of Completion</h3>
                 <div className="border-2 border-dashed border-gray-200 rounded-3xl p-12 text-center hover:border-diner-teal transition-colors cursor-pointer group">
                   <Upload className="h-12 w-12 text-gray-300 mx-auto mb-4 group-hover:text-diner-teal transition-colors" />
-                  <p className="text-sm text-gray-500 font-serif italic">Drag and drop your permit or receipt here, or click to browse.</p>
+                  <p className="text-sm text-gray-500 font-sans">Drag and drop your permit or receipt here, or click to browse.</p>
                 </div>
               </div>
             </motion.div>
@@ -201,7 +201,7 @@ export default function Onboarding() {
             <div className="h-full flex flex-col items-center justify-center text-center opacity-30">
               <Rocket className="h-24 w-24 mb-6" />
               <h2 className="text-3xl font-display">SELECT A STEP</h2>
-              <p className="font-serif italic max-w-xs">Choose a task from the checklist to see detailed instructions and requirements.</p>
+              <p className="font-sans max-w-xs">Choose a task from the checklist to see detailed instructions and requirements.</p>
             </div>
           )}
         </div>

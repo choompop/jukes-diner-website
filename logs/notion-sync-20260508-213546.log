@@ -1,0 +1,1385 @@
+============================================================
+Notion to Kanban Sync Report
+============================================================
+Timestamp: 2026-05-08T21:35:46.627654
+Target board: jukes-dashboard
+Mode: DRY RUN
+Database filter: NONE (syncing all accessible databases)
+
+Discovered Databases:
+  - Atlas OS — Loops (c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b)
+  - 🏋️ Sets (1f2675d1-f05c-4401-8c11-d5f1d010923b)
+  - Projects (2f4abed9-226c-8031-b45e-000b581a135c)
+  - Projects (2f4abed9-226c-806b-860d-000b9de2e1a3)
+  - Content Calendar (2f4abed9-226c-800c-af5c-000bbaeaf213)
+  - Trailer Park Operations (306abed9-226c-8009-b667-000b86190456)
+  - Event Pipeline (306abed9-226c-8054-99a9-000b2fb2b9ef)
+  - Loop List (317abed9-226c-8035-8480-000b6be2667b)
+  - Supplements (3a9f9c05-d584-4eae-8f65-56f5ce5d4ab8)
+  - Atlas OS — Journal (0a02e23b-ae86-45e5-bf36-352866d747fd)
+  - Workouts (beee62c3-f2ec-4d87-b202-ab568cdcf0cc)
+  - Weigh-ins (7bf5d946-7245-45ab-b103-42d8c53b4b79)
+  - Slack Notebook (ef945c27-6f71-413d-a5e4-e5481c1c04fa)
+  - Weekly Eating Ritual (83117b35-5b61-4905-9ccf-1539509ead28)
+  - Atlas OS — Nano Scorecard (d10e16ae-bf4d-49f3-9dfa-c39e5a9d3379)
+  - Master Punch List (9bd73487-0859-42fd-beee-80b106222297)
+
+Planned Cards: 452
+  - [triage] Ensure TPATCK kitchen shutdown checklist includes hood/backlight + cleanup (Kitchen 7)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:0190b5b1-f420-441d-8dd2-21fdc0e52097
+  - [triage] MAX 2026: confirm agenda + logistics (badge pickup, networking events)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:02cee8d9-d4b4-487a-abc8-275bde50dbed
+  - [triage] Choose American Airlines Loyalty Point Reward
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:03ad86db-85eb-4097-9401-479f12ea3359
+  - [triage] Brentwood permit — confirm if we can serve + steps to obtain
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:045f710f-216f-4b8d-8b99-c97610295f55
+  - [triage] Secure WW Diner domains
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:053fbd04-49ff-4e11-a3c1-04c0f60dd01d
+  - [triage] Test LinkedIn Company Page Target Audience feature
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:059ce573-12e1-4352-8848-6e8941f0d616
+  - [triage] Prep for Food Truck Conference
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:074e7dd1-c0c9-4c87-8449-7d4cbaec6718
+  - [triage] Pay TN franchise/excise minimum tax ($100)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:07a3a438-bd5a-40f9-8e24-b9c16be03334
+  - [triage] Complete Reflected Best Self Exercise for Zachary Vest
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:08220df5-e076-421b-bbff-0b2cdc46568d
+  - [triage] QuickBooks: resubmit payment for subscription (bank feeds)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:09147172-a368-4572-a75f-ca181b29301d
+  - [triage] Send BizBud Justin’s completed 2025 W-9 (for 1099 filing)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:0b073f84-ca02-4daa-b89e-c350dc9e3996
+  - [triage] Toast invoice INV8890296 — verify autopay + file PDF
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:0c346a0b-306f-4164-9bc0-a36413d1808a
+  - [triage] Review TPATCK housekeeping policies + brief team (cleaning, smoking/vaping, gate, dumpster rules)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:0c395d14-d1c5-4e4e-8d1f-90caeac81159
+  - [triage] Send private event engagement contract + deposit invoice
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:0dcbd56e-ff64-466c-93f8-4ab822f53d43
+  - [triage] Reply / decide next steps on Management Agreement (Joel)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:0e0ffe41-86fe-4817-be79-f494b31103b5
+  - [triage] Schedule Lebanon Fire Dept inspection for food truck
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:0f6b27d3-f41d-423a-8961-036c7dd14c72
+  - [triage] Prepare for “Meet with Jordan” (Elegy Coffee)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:1042460f-da8a-4c4b-91c9-b49f35ec9d48
+  - [triage] Reply to Wayne Leuchters (Indeed)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:1089d3bd-ad39-402b-9c23-3c2bcde00d9c
+  - [triage] Deep clean + prep truck with Tony (tomorrow)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:10a0c56a-d242-4af8-9817-23301c11faae
+  - [triage] BSE: Confirm medical insurance coverage for Barcelona stay
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:11996f20-4be2-4cef-b1b0-938fd4b17124
+  - [triage] Candidate Collective invite — decide whether to join
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:12e1aa2b-2f96-4751-8fa7-a096cb652b5f
+  - [triage] Complete Checkr background check (portal)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:133cafc4-03c2-4a36-ac9e-0b0850a5cb39
+  - [triage] Decide/cancel QR Code Generator Pro renewal
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:138b59af-d8c2-4ddb-8961-35cf3196fbf2
+  - [triage] Have Daniel place Sysco will-call pickup order
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:14fc7047-4ccc-47cf-91ff-17cf9f975e73
+  - [triage] Reply to Dan Otis (Brickstone) — keep door open
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:15d614fd-6d82-4baf-9dae-f7f3d00d2e64
+  - [triage] Trademark
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:160535f3-5346-4633-adf7-b2bef5a52cd4
+  - [triage] Integrate Daniel with booking calendar and email
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:1669729b-633a-4210-a05d-5bba9f3204e0
+  - [triage] Submit propane order to Holston Gases
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:199d093c-6d4e-44df-bdc4-740ecd359a7e
+  - [triage] Set up recurring charges equation with CPA
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:1a8684fd-f3c6-479d-a048-bafb6e3c8e22
+  - [triage] Sign document on Verifyle from Kelly
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:1b0e278d-265c-4024-b7aa-b70e3ccbcb2f
+  - [triage] BizBud: grant Daniel Fabian required permissions (BizBud portal)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:1bde9290-a74b-462c-aee4-0a875abb9339
+  - [triage] BizBud onboarding Step 6: decide + complete (IG/YT) so they move us to final step
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:1c730810-ab1b-4716-ad4a-5d6be9b00bea
+  - [triage] Prepare for LKQ interview (Mar 11)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:1ef6bf86-90a6-4746-9a30-0b799664262e
+  - [triage] Send feedback to Jack on TSG Active neck tag concept (icon + “Engineering for movement”)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:2042e679-4f55-4309-9989-19afcbfd4894
+  - [triage] Grant BizBud access to Toast + confirm journal entry approach
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:221ba959-f7b6-4c3d-8046-914ba9c582c7
+  - [triage] Send BizBud payroll numbers update
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:235e3ae1-9489-4329-972a-538f1f646eff
+  - [triage] LSM: confirm May 4 social hard launch + coordinate page name change with rebrand
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:25031cf6-b335-44ed-9f94-074e22cb8e1b
+  - [triage] Integrate Google Calendar with Notion agents for seamless workflow
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:295dbad7-23fb-4882-99c0-d35f5f5fc7ea
+  - [triage] Respond to franchise operator inquiries
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:299e0b5d-d3cf-49b8-8a01-ef029c5a6255
+  - [triage] Decide Instacart+ renewal (keep/cancel)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:2c0388f1-813b-4eed-bdbc-b8740eb73000
+  - [triage] Review Fridays by the River opportunity
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:2ca624ba-247d-4750-9f11-0b2fb51006dc
+  - [triage] Schedule oil change for truck
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:2d3ba1a1-4787-4970-a6ea-6f2d3d892787
+  - [triage] BizBud: Pay $100 TN name amendment fee
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:2da5662d-301f-495e-a33a-f8125ad6b650
+  - [triage] Configure Atlas capture flow (verbatim Journal + Loops extraction)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:2e8cf402-662c-4277-a12d-2bd382bfbcb4
+  - [triage] Lost & Found (calendar)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:2f889bf7-4741-46da-b3fd-1a372fb558ca
+  - [triage] Reply to DJI support — ticket 9947443
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:30276f28-5090-46b1-8a91-86f5c3b540d1
+  - [triage] Submit FMFU permit for 12 South Market
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:311d7231-2376-46e3-9468-6d21834474b1
+  - [triage] Submit signed IRS Form 2553 (wet ink)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:32fdea33-7ba8-4da3-9fd7-592e84e60ed8
+  - [triage] BSE: Start visa application planning (appointments ≥ 2 months before program)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:330f73fb-0f9b-40a2-9a5c-b8b5d7edee21
+  - [triage] Review LSM April social media calendar + send feedback
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:331c2d73-914f-49cc-bb31-aba33ee946ce
+  - [triage] Toast app: Apple Developer account access + Toast admin invite
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:333e6493-47a1-4790-a939-c8a2aeda39db
+  - [triage] Set up / test Uber Eats Manager self-serve marketing tool
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:335d8aef-df99-4036-a07b-9f7f770512dc
+  - [triage] Hit up Abin
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:34c72a53-880e-4790-9c25-85e73cabb95d
+  - [triage] Review + file Toast invoice INV8987662
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:359fa339-5a2a-49b8-a49f-1a48e4b554a3
+  - [triage] Connect domain to Toast website
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:35f594d1-8668-455c-90cb-f2096f4ea932
+  - [triage] BizBud: Complete cleanup bookkeeping template (personal cards expenses)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:36192a63-cccd-4694-b45c-abf60924e2c2
+  - [triage] Review Tyler Mekoba strategic content + growth partnership agreement
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:3779a9c8-d4a5-4b1e-91db-014247b269a7
+  - [triage] Update Yelp Ads payment details (card expiring)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:3a191ff2-91b8-4680-804e-cdf36e65157a
+  - [triage] Toast bank account update follow-up (waiting on Toast)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:3c82f778-c66f-4a17-85a9-afc81a572edf
+  - [triage] Hand Cut Chophouse opportunity
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:3cfef3cb-bf99-4920-9d1f-9bb880a14589
+  - [triage] Pick up Mac (Apple Store)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:3d3b7f81-dae4-46a7-9f5e-79dfcd83bf7e
+  - [triage] Review: Notion Calendar promo email
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:3d7ab4b3-b091-43c6-a6a5-20f844301240
+  - [triage] Update NoFi billing payment method (failed $9.99 charge)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:3e3af357-d960-4f0c-a88f-e1c61fce579d
+  - [triage] Complete 2024 tax return
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:4073b08b-d711-4c96-8c06-ea36a56156bd
+  - [triage] Prep for Coffee chat w/ Tyler — Blacklight
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:40ec770b-55a0-42c2-a0fc-f41ecdc48989
+  - [triage] Boxing class
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:43464bd9-1548-4313-836a-624dc9b7628b
+  - [triage] HOA autopay: confirm updated dues amount
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:437e0ce3-9959-45ed-a0a4-89f7b75ec018
+  - [triage] HOA: submit maintenance/work orders via portal (not email)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:4554c450-3022-47d1-97fd-fe73b16d828b
+  - [triage] Set up Daniel's LLC
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:45d75a7b-e986-40c9-bdca-cc2571bad58e
+  - [triage] Attend “Next Level CEO – Casting Call” (Zoom)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:46dcbdfc-a805-49eb-840e-9d1057d4f9bd
+  - [triage] Renew Microsoft 365 subscription
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:493c6cd4-cd9e-4fb8-85b4-119ff313f58d
+  - [triage] Set up AI dashboard for LKQ/CBRE work
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:49a014f4-7211-4b3f-8d74-afbff77a3958
+  - [triage] Proclamation Church — send contract + collect $50 deposit
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:4b6751a6-dc6e-4b64-aacf-a212a03c54e8
+  - [triage] Update Justin’s BizBud permissions for payroll + compensation access
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:4cbd2998-8627-42ad-9a62-5a0b9d62f148
+  - [triage] Toast bank account verification — re-upload compliant bank letter/voided check (Trailer Park)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:4d806684-60d8-42af-b469-871aeede3f9d
+  - [triage] Block travel/logistics for Food Truck Conference
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:4f338381-f542-43da-ba91-a465b9f23a51
+  - [triage] BizBud: complete Tax Organizer + upload docs
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:5101febe-3b9a-4cb5-9b14-f7902b964a4b
+  - [triage] Indeed billing payment declined — update payment method
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:52e69c82-9fee-4c3d-a18e-9e40153c09d4
+  - [triage] Set up TITLE Boxing app + book first class
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:53a0dc4e-de89-4818-a794-6bb74f02b270
+  - [triage] Review editors for Fran Dev content
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:552eb28b-475d-4de8-a38f-97ecec5ffbf8
+  - [triage] Start Checkr background check (Waffle Wheels)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:56e6cd28-a7d3-4c36-9a6a-1e7ed09a4140
+  - [triage] Prep for Justin Harris meeting
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:57258137-b3ec-4810-b61e-b2ad45fcd4e6
+  - [triage] Send BizBud agenda + discussion points (Jared)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:58018081-71f2-4f27-9ec8-dd94405ce18d
+  - [triage] Accountable Plan: set monthly process (sheet → PDF → portal → reimbursement transfer)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:58842e49-c88c-43f9-b688-1d38b662c18a
+  - [triage] Complete Checkr background check (Waffle Wheels)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:589cfa47-2ae1-4eec-acd6-60d71f289687
+  - [triage] Export Google calendar data before Apr 27
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:592045a7-e6ed-4961-a0b6-fd2dc44b406f
+  - [triage] Decide on DoorDash merchant survey
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:5931bd59-4824-4fc9-813b-43be988fc2a6
+  - [triage] Toast app: complete Branded Mobile App setup in Toast Web
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:599d9338-0b8f-46a4-b148-1a43e96e1693
+  - [triage] Review Gemini conversation history retention settings (Admin console)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:5a060835-e5b0-4fd8-916e-93dfd4dd044e
+  - [triage] LSM rebrand + content scheduling follow-up (Tori/Kristen/Tyler)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:5a549e76-fe41-4d04-a310-abfe3cf3918c
+  - [triage] Fill propane for event truck
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:5bde4afd-e476-4461-a661-de9e97e68b36
+  - [triage] Decide LinkedIn posting plan (founder + company page)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:5c6081b9-94b5-4a60-b4d7-17da63e5807b
+  - [triage] Review shared Notion page: “WW - Content Calendar”
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:5cfac473-c065-42f2-8244-3e557802573b
+  - [triage] Reply to Food Insights Group about virtual brands / capacity
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:5e5a0f45-228d-45e1-aae8-655adc03346d
+  - [triage] Prep for 8:30am coffee chat w/ Tyler (Blacklight)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:5f96c11f-f4b8-4fed-8826-d2e29dffc4eb
+  - [triage] Finish Uber Eats integration setup in Toast
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:6014576e-4e86-4723-b4af-c150e4409b35
+  - [triage] Accept Relay invite for T&L Industries LLC (team access)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:602019e2-9019-4dc0-87d4-62a736dacc38
+  - [triage] Confirm HotSchedules email address
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:60b22478-5f64-40ef-98d7-859a4af0130d
+  - [triage] Review Goosehead auto quote + confirm changes (truck+trailer only; Ram removed; driver list)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:625471df-fb2d-4998-95a6-9cd333a702c6
+  - [triage] Drop truck off for oil change
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:c9ed45ef-dcc1-47fa-ac31-28c0bf462a7b:6532da39-b158-443e-8dcd-7edfab0cae5a
+  - [triage] Dip Set 3
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:09601724-8341-4f40-9632-44183bd13030
+  - [triage] Tricep Extension Set 3
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:23eec19c-b155-4d2d-8a64-87f9ca8ce10d
+  - [triage] Dumbbell Row Set 1
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:37417b0a-933c-4e30-af2b-843b62840054
+  - [triage] Pull-up Set 3
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:44e72dda-6890-4426-8d25-aed7cf332c7a
+  - [triage] Pull-up Set 1
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:47263013-ee5a-46c7-9a6c-588cf1eb3db4
+  - [triage] Pec Fly Set 2
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:5b89f3fb-9603-446c-853d-d5ee335e46d0
+  - [triage] Dumbbell Row Set 3
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:69ac4429-be3e-42dd-a7db-27c976a41f6c
+  - [triage] Pull-up Set 2
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:810b7b4f-68f9-49f1-82a8-c36ad9082f15
+  - [triage] Bicep Curl Set 3
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:9315b34d-78d9-45e8-b696-4d84e4af0cd8
+  - [triage] Pec Fly Set 1
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:9b96fc14-d54d-468f-a91e-a0d63e7e8bea
+  - [triage] Dip Set 2
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:a832332b-7328-4b7b-b1f2-e47d28a517fd
+  - [triage] Pec Fly Set 3
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:afab0af3-d717-4556-9018-1eee1b6266cc
+  - [triage] Incline DB Press Set 1
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:b330f75a-15f2-465f-b39c-d3977018e269
+  - [triage] Dumbbell Row Set 2
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:b3417ea4-60d9-436f-a1a9-289378b2cbcf
+  - [triage] Bicep Curl Set 2
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:cfdeef98-c90e-4bbc-ab18-66af670772a1
+  - [triage] Tricep Extension Set 1
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:db108417-d1f5-4c1c-b0fd-1195019c3f99
+  - [triage] Tricep Extension Set 2
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:df833d43-e74e-4be3-9a12-0340801127d9
+  - [triage] Bicep Curl Set 1
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:e1f659ed-b87c-4aab-92b2-6eb8532f3615
+  - [triage] Incline DB Press Set 2
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:e33b719c-024a-4ffb-be4f-787720900b0e
+  - [triage] Incline DB Press Set 3
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:ee32247c-09bb-4c24-b007-760717ae4e7c
+  - [triage] Dip Set 1
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:1f2675d1-f05c-4401-8c11-d5f1d010923b:fe1c55a0-a4c2-49c5-83bc-73f835eca9c8
+  - [triage] Public launch of iOS app
+    Assignee: jukes-ops-agent, Priority: 80
+    Key: notion:2f4abed9-226c-8031-b45e-000b581a135c:2f4abed9-226c-801f-a67d-c712e53c9453
+  - [triage] Quarterly sales planning
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:2f4abed9-226c-8031-b45e-000b581a135c:2f4abed9-226c-807d-bb99-c5edd9a0cc20
+  - [triage] Revamp new hire onboarding
+    Assignee: jukes-ops-agent, Priority: 20
+    Key: notion:2f4abed9-226c-8031-b45e-000b581a135c:2f4abed9-226c-80e0-80dd-f63feace1115
+  - [triage] Revamp new hire onboarding
+    Assignee: jukes-ops-agent, Priority: 20
+    Key: notion:2f4abed9-226c-806b-860d-000b9de2e1a3:2f4abed9-226c-8053-920f-fc9b38037af7
+  - [triage] Public launch of iOS app
+    Assignee: jukes-ops-agent, Priority: 80
+    Key: notion:2f4abed9-226c-806b-860d-000b9de2e1a3:2f4abed9-226c-806a-81fe-d09b0921dc92
+  - [triage] Quarterly sales planning
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:2f4abed9-226c-806b-860d-000b9de2e1a3:2f4abed9-226c-80f2-b536-c3469bc16b3b
+  - [triage] Opinion piece
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:2f4abed9-226c-800c-af5c-000bbaeaf213:2f4abed9-226c-806f-8572-f2c61a1237a6
+  - [triage] Blog post
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:2f4abed9-226c-800c-af5c-000bbaeaf213:2f4abed9-226c-80b8-8272-d1f9b4f4f6a9
+  - [triage] Product launch
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:2f4abed9-226c-800c-af5c-000bbaeaf213:2f4abed9-226c-80fa-9884-f8c168ce4bd5
+  - [triage] Close out register and count cash
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8009-b667-000b86190456:306abed9-226c-8013-8b4d-c8486251509b
+  - [triage] Order Sysco items
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8009-b667-000b86190456:306abed9-226c-8047-b43e-c45270b50fc7
+  - [triage] Check inventory against par levels
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8009-b667-000b86190456:306abed9-226c-8074-91ec-fcc35acdf465
+  - [triage] Enter weekly sales numbers
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8009-b667-000b86190456:306abed9-226c-8085-9cec-c61582d98a15
+  - [triage] Publix run for fresh items
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8009-b667-000b86190456:306abed9-226c-80b7-880b-ed5e7aff8574
+  - [triage] Prep condiment stations
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8009-b667-000b86190456:306abed9-226c-80c1-bfab-e77b7fcad62b
+  - [triage] Clean and sanitize all surfaces
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8009-b667-000b86190456:306abed9-226c-80dd-949e-d946dcc94f5f
+  - [triage] Nashville’s Farmers Market
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:307abed9-226c-80a0-8579-db71ffd5d1fd
+  - [triage] St Patrick's Parade Nashville
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:307abed9-226c-80e4-a698-cf7ecb2829fb
+  - [triage] Tennessee Pickle Festival 
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:308abed9-226c-8011-ae4d-c63033737490
+  - [triage] East Nashville Beer Fest 
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:308abed9-226c-803f-a0d7-f7fb0d1d8fad
+  - [triage] 6th Annual Hello Spring Market
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:308abed9-226c-8042-b746-ddb56c3f8c46
+  - [triage] 6th Annual Grînch Festival
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:308abed9-226c-8070-9d8e-e4dffa6bf14d
+  - [triage] 7th Annual Tennessee Christmas Festival
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:308abed9-226c-8074-a2b6-dfd6f9b85413
+  - [triage] Hendersonville Arts Festival
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:308abed9-226c-8082-89d0-de22083188ee
+  - [triage] Tennessee Banana Festival
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:308abed9-226c-8096-9c06-d2e4130d1540
+  - [triage] 6th Annual Great Pumpkin Festival
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:308abed9-226c-8097-9268-e84c029b96d0
+  - [triage] 3rd Annual TN Apple Festival
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:308abed9-226c-80c1-be62-d86980c75498
+  - [triage] Tennessee Peach Festival
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:308abed9-226c-80fe-84d0-d2f1fa123fb2
+  - [triage] Tomato Art Festival - Friday
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:309abed9-226c-8005-b7a4-f2260b553d5e
+  - [triage] Cornelia Airpark Concert - Aug
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:309abed9-226c-8024-ba05-f22b13440197
+  - [triage] Turnip Truck 25th Anniversary Picnic
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:309abed9-226c-802b-b165-f52a1ba2ec3a
+  - [triage] Tomato Art Festival - Saturday
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:309abed9-226c-802e-9179-e9dfd1b1d508
+  - [triage] Cornelia Airpark Concert - June
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:309abed9-226c-803f-9dd3-fd31da51ece5
+  - [triage] Nashville Pride Festival
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:309abed9-226c-8052-83f2-cded95a23858
+  - [triage] Williams Weenie Roast (food/music fest)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:309abed9-226c-8061-b5c1-f0ca1373382c
+  - [triage] Nashville Earth Day
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:309abed9-226c-8091-a6f4-fc91991480ba
+  - [triage] Touch of Brews (music fest)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:309abed9-226c-80c1-9458-ddd9cf3234fd
+  - [triage] Nashville Rosé Fest 
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:309abed9-226c-80ef-bcc0-e3e310898298
+  - [triage] Arrington Vineyards Friday Food Trucks
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:30babed9-226c-8012-9055-e4c738364570
+  - [triage] Arrington Vineyards Friday Food Trucks
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:30babed9-226c-80e2-8c95-f5eb59805b7a
+  - [triage] Middle TN Food Truck & Arts Festival
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:30cabed9-226c-8003-a337-d38806889015
+  - [triage] Nolensville Farmers Market - April 1 of 2
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:30cabed9-226c-804a-8448-c9f69b561179
+  - [triage] Nolensville Farmers Market - Feb
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:30cabed9-226c-8055-8116-f3cf4b643d2e
+  - [triage] Nolensville Farmers Market - April 2 of 2
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:30cabed9-226c-80a6-bf8c-ce99c20cc375
+  - [triage] Nolensville Farmers Market - March
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:30cabed9-226c-80e6-a8d3-f83161bdd3f0
+  - [triage] Smith Springs Elementary
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:313abed9-226c-80b0-a28b-dc790001027e
+  - [triage] Wedgewood Farmers Market
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:313abed9-226c-80b7-993f-c3b87ef8a7a7
+  - [triage] Smith Springs Elementary Part 2
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:306abed9-226c-8054-99a9-000b2fb2b9ef:314abed9-226c-8007-9154-d59aca6d5d3f
+  - [triage] Meet with Isabella
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:317abed9-226c-8035-8480-000b6be2667b:317abed9-226c-800a-a249-ee2afeb5590f
+  - [triage] Outreach to breweries for bookings
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:317abed9-226c-8035-8480-000b6be2667b:317abed9-226c-8032-82b6-e36235bdd700
+  - [triage] Review booking calendar with Daniel
+    Assignee: jukes-ops-agent, Priority: 80
+    Key: notion:317abed9-226c-8035-8480-000b6be2667b:317abed9-226c-8036-bff1-c0de93fd2744
+  - [triage] Email booking calendar to Daniel
+    Assignee: jukes-ops-agent, Priority: 80
+    Key: notion:317abed9-226c-8035-8480-000b6be2667b:317abed9-226c-806f-a60e-dabfb416771b
+  - [triage] Outreach to schools for bookings
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:317abed9-226c-8035-8480-000b6be2667b:317abed9-226c-8093-82a4-e02094196ce4
+  - [triage] Fix fridge
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:317abed9-226c-8035-8480-000b6be2667b:317abed9-226c-809d-aeb0-e333c41b3999
+  - [triage] Email engagement details to Kevin
+    Assignee: jukes-ops-agent, Priority: 80
+    Key: notion:317abed9-226c-8035-8480-000b6be2667b:317abed9-226c-80bf-adcf-f14eb443de7f
+  - [triage] Outreach to businesses for bookings
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:317abed9-226c-8035-8480-000b6be2667b:317abed9-226c-80cf-a2d0-edd3df6c44e4
+  - [triage] Outreach to apartment complexes for bookings
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:317abed9-226c-8035-8480-000b6be2667b:317abed9-226c-80db-a558-d5a23119101c
+  - [triage] Email invoice to Kevin for private event
+    Assignee: jukes-ops-agent, Priority: 80
+    Key: notion:317abed9-226c-8035-8480-000b6be2667b:317abed9-226c-80ed-b714-e602d8300f70
+  - [triage] Lebanon Fire Permit
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:317abed9-226c-8035-8480-000b6be2667b:317abed9-226c-80f9-9d32-d2e32d5f5985
+  - [triage] Blacklight Meeting scheduled — Mar 5
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:00c4fbf2-3dd8-4d60-ac3e-7b822335eade
+  - [triage] TPATCK housekeeping + policy refresh
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:0154f334-b0f9-436b-b7dd-9b6e7be12541
+  - [triage] Management Agreement — Joel response (email)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:035ff2c4-423c-460f-a7d5-5bbb67e6b598
+  - [triage] Toast invite: activate account (Zuzu-Nashville) — Feb 27
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:04fa304b-abcf-4e19-8438-4a79c72696a7
+  - [triage] DJI reminder — ticket 9947443
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:054dae73-554d-49ec-ae05-5d26728ecc3b
+  - [triage] BizBud onboarding email (Step 6 of 7)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:08064ed0-f61a-4ce0-9c2d-a4d2f762978d
+  - [triage] NoFi payment failed (email)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:08e8bf97-8bcb-472d-86f6-3f07eb61d5a0
+  - [triage] Email — BizBud payroll thread
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:08fe320a-f478-4148-b98c-869ca4c9116a
+  - [triage] Email triage — Brax lead gen pitch
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:0a99a6d3-6952-4844-9983-ceee513208e6
+  - [triage] Captured: Food Truck Conference added to calendar
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:0be2c19e-4508-4a4a-93a7-903f4f9011b2
+  - [triage] Booking confirmed: Next Level CEO - Casting Call
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:0d670802-6358-488b-9e4d-e00007a917b0
+  - [triage] Film (Calendar)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:0de288f6-65ea-411e-9f01-bc235be8ae9b
+  - [triage] Cold day adjustments - Feb 23
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:0e710b9b-b3f4-4d63-af16-9c87d84b02fa
+  - [triage] AP Intego workers’ comp autopay withdrawal reminder — Mar 6
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:0f7c75e6-68a7-4ca9-af58-3cb2b1c7d956
+  - [triage] Email triage: Juke’s Diner Payroll sheet share
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:104c532f-c898-4ab1-b4ba-835e0ce31ec3
+  - [triage] Checkr invoice — March 2026
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:109505a1-8c27-4f04-887f-4cd9a918da79
+  - [triage] Spain & 2026 vision - Feb 23
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:11fda68b-5bb4-4b95-a5c2-db3ecc287972
+  - [triage] InsideSuccess TV audition call prep
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:142cf240-49a7-493b-84fe-30548bf796ad
+  - [triage] 5 Types of Wealth Framework
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:15e9b8c6-a54c-40de-9d74-89889bc85e71
+  - [triage] Coterie insurance payment failed (needs fix)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:1b704c63-a789-4fa5-a29c-dce02cf2741b
+  - [triage] Trademark / PandaDoc (Christopher Cox)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:1b964ce4-84b7-4759-a87d-41f33d3561ee
+  - [triage] Toast invoice INV8930820 — $283.81 autopay Mar 7
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:1c4dc9c8-cb44-42d3-aec0-463c3461589b
+  - [triage] Ali bday (calendar event)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:1d9f6c5b-3895-4476-aa07-1172aa5e8cb4
+  - [triage] Morning setup - Feb 23
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:1e4e3964-72be-49dd-aac6-3a94a44ed7f9
+  - [triage] Checkr background check reminder — Feb 28
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:1f184582-2e12-4933-80b6-a6e7d03ad36a
+  - [triage] Indeed billing — outstanding payment
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:205fd8dd-96f7-4c54-9709-fc30945062ca
+  - [triage] BSE: visa/legalisation/insurance prep email
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:20dc1590-92a4-4be2-8f5b-a0286c51c0ce
+  - [triage] Pick up Mac scheduled
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:2365c30b-51f6-4f45-a9db-0d12b4e04723
+  - [triage] TrendX influencer marketing pitch — Mar 6
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:244c6bd4-8d1a-4575-8236-329a91b79211
+  - [triage] Toast: bank account requires verification — Mar 2
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:26cc4e4e-6166-4495-8e6d-8db975f4af79
+  - [triage] Daily recap — Feb 24
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:27890a08-045a-47ad-bbe6-09a0806872a2
+  - [triage] CBRE calls and LKQ client setup
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:27de04c0-3cb4-461c-9adc-bbd8263f1825
+  - [triage] NEXT Insurance premium collection update — Feb 26
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:283a1928-55fc-4684-813a-653395a4a24e
+  - [triage] BizBud tax organizer step - Feb 24
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:296cf026-8275-4bd2-9836-fb67a26e35c5
+  - [triage] LKQ interview progress - Feb 23
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:2ae114ff-017a-4777-8b9b-c678ea970de2
+  - [triage] BizBud follow-up: board meeting room quotes
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:2be64688-3979-4e44-b945-bdca531f3b32
+  - [triage] NexusPoint EA search — follow-up
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:2c97c8d1-e848-4e3c-b26c-1a0de3390c19
+  - [triage] Deacon scheduled — Mar 17
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:2f0a4f1f-5887-45cf-8e40-5f9218cbb875
+  - [triage] QR Code Generator PRO renewal notice — Mar 2
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:3b3ad19a-792a-42ab-ae31-d37243ba4fd5
+  - [triage] LSM access ping - Feb 24
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:3bfecd57-725c-42a3-b000-97f680d45553
+  - [triage] BizBud tax organizer ping
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:3c922848-3474-4017-9e52-787b7d5d0d2a
+  - [triage] Calendar: Vending machine (May 5)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:3d52c5a0-baf7-4162-b949-b75e4e3a3215
+  - [triage] Toast onboarding kickoff reschedule (email)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:3e738479-de5d-4012-a077-e6cb6f0936d1
+  - [triage] Email: Virtual Brands for Waffle Wheels
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:3fb86b09-71af-4b3d-94d2-9b53586450c7
+  - [triage] Toast KDS replacement question — Feb 27
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:3ffa1b8a-f220-4f5f-99bc-43d2be3e305b
+  - [triage] Fit Factory scheduled — Mar 4
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:43589ec6-9fb2-47ba-86d4-cd06dd38f1ac
+  - [triage] Calendar: BJ’s
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:44c15175-03b8-477c-a19b-e15e7ffc6953
+  - [triage] Toast bank account update — waiting
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:48c81a70-88ef-4c91-b7e3-b081ff8c9415
+  - [triage] Wholesale buns sourcing — Lavender Moon Bakery
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:492b4397-d421-4641-9c9e-116f3abf1b70
+  - [triage] Email: appointment reminder (Next Level CEO – Casting Call)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:4f1b0bcd-718d-4156-8b3a-99ed49c91f17
+  - [triage] QuickBooks trial ending — action needed by Mar 11
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:4fc30867-ddeb-41e1-8108-533345023cbc
+  - [triage] LKQ benefits + application link received
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:4fd56f6c-baf1-40cd-b071-c242caca5d3e
+  - [triage] BizBud recap + punch list
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:51859111-7594-4aeb-bcb1-464bb1d776db
+  - [triage] Email: Renewal Letter quote received
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:544b9fcb-7f56-4295-8a7a-48ac486246be
+  - [triage] Email: Dan Otis — lunch Tue Mar 24 at 11
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:547e314b-1a4d-417d-9cba-2dea914ea988
+  - [triage] Sysco overdue reminder ($1,267.98)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:54a4dc4c-d936-4233-bc8b-b26af9ec13c8
+  - [triage] Tomorrow plan + logistics — Feb 24
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:56d1cbd0-b285-4b19-89dc-cabaee975065
+  - [triage] Biz dev brainstorm (door-to-door + catering)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:56dbe093-6bfa-44f2-a3e6-593de9f247b7
+  - [triage] Email loop: UVA McIntire article chat scheduling
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:586d82bd-a2a5-4679-85b2-2599a91da7b6
+  - [triage] BizBud meeting follow-up
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:5a6d33bf-4927-4d26-a148-169e0ee0c6d2
+  - [triage] Shared Notion page: WW - Content Calendar
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:5a9f72e1-b181-4eb3-9e94-7196b1687628
+  - [triage] Dan Brickstone scheduled — Mar 24
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:5acd87da-db01-4d5a-81da-82ca325f1634
+  - [triage] Toast bank verification email (action required)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:5d055159-0dce-408f-a796-d3d998346ddf
+  - [triage] TITLE Boxing membership details — Feb 25
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:5ee9dfab-5f5d-4a0e-9005-a492bf4d16ae
+  - [triage] Gate 1 progress - Feb 23
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:601d3b2b-6c9c-4c14-8389-2541a81472a1
+  - [triage] Cushman job, CPA progress, WW Diner rebrand - Feb 23
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:60a488fd-99b1-408a-8723-31716ae70105
+  - [triage] FTO Pop-Ups registration receipt (Nashville)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:638889cd-1663-48a7-bd6c-4a9cfc37af14
+  - [triage] Switchyards scheduled — Mar 12
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:6575fc52-448f-4997-a28a-f93924138341
+  - [triage] Calendar event created: Jacob — Mar 10
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:67052e1c-605a-42ef-a7a7-6a8880a2d585
+  - [triage] Toast: Uber Eats integration setup email — Feb 27
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:6ad8f31e-7fcc-4a51-84b1-2cfe8a52ab83
+  - [triage] Toast onboarding kickoff — reschedule
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:70d7d907-3cdd-4f31-bf47-2457eea7edd9
+  - [triage] Calendar event created — Call (Mar 10)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:7446eb2b-a2fa-4b6b-995d-fabe7d37b67e
+  - [triage] LKQ Interview scheduled — Mar 11
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:7521d80b-2a77-4d08-86d6-327faedd2cbc
+  - [triage] Calendar event created: Justin Harris
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:76787228-e10f-4dbd-902e-80aa70a1091e
+  - [triage] Toast invoice INV8987662 ready
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:77ec023d-a298-4aca-9a34-9beba45ab3c0
+  - [triage] Calendar: Financing Close created
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:7c7b7f69-adde-442a-bd41-70145cb3d83c
+  - [triage] Dancing scheduled — Mar 10
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:7cf9e9c6-42cd-479c-81ff-ac3d1df11a4e
+  - [triage] Email triage: BizBud transaction questions
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:7f9211dd-9df1-4c41-84b5-1293a04defd1
+  - [triage] Fathom recap — meeting w/ theswagguys.com
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:80afbd1b-3220-4885-a63e-e47c8489063b
+  - [triage] Checkr reminder: background check due Mar 5 — Mar 1
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:8301451f-c081-4340-afed-4416f3b494e0
+  - [triage] Calendar event created: UVA Call — Mar 20
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:846b42f6-4ef6-4136-9f27-42c72dcc2c52
+  - [triage] Metro Parks vendor docs reminder
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:854c14b8-f203-4927-a0e8-0a683e69bfb5
+  - [triage] Toast bank verification failed (Trailer Park)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:861c2a46-781a-4e11-9dc3-e5c37a43721c
+  - [triage] LKQ Call scheduled — Mar 3
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:86e26908-cbf2-44c0-ba2d-9cff456f86ec
+  - [triage] MAX 2026 registration confirmed
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:8a379133-0f1a-4c0e-83de-da299eae69ba
+  - [triage] Email: BizBud Accountable Plan + Agreement
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:8b29c39a-9bbe-4114-b745-1f51d67e991b
+  - [triage] Email from Dan Otis — “Re: Next week”
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:8c7135fc-7ef7-4bda-9e28-364168badd30
+  - [triage] Sysco NSF / stop notice (Waffle Wheels)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:8e07bf90-7fd4-427a-af33-f23f4e2e08c1
+  - [triage] Daily Agenda - Mon Feb 23
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:90b57e8b-e042-496b-b8e0-60d9ebf02f5c
+  - [triage] LSM rebrand + content scheduling update
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:9295914d-3321-40ad-a5df-d5eb47bbbc44
+  - [triage] BizBud payroll + reimbursements guidance
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:9296d74e-b278-47f0-918d-bf90d46fbbc0
+  - [triage] Momentum Brands: BB content system + comms glow-up — Mar 3
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:92b1861e-6d39-425c-b70b-067740908708
+  - [triage] Momentum Brands: LinkedIn content + Target Audience feature
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:946bcd35-51ef-407c-bba6-20919ac45e0f
+  - [triage] Claude credit + extra usage change (email)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:94a38008-6b6b-46e7-9230-c631f0fa1931
+  - [triage] Calendar event created: Zuzu — Mar 12
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:964f93e4-a721-4577-9ae3-76077840dbf2
+  - [triage] Intuit payment receipt — Mar 1
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:9752071f-c266-445d-91bc-a5671a08f3b4
+  - [triage] BizBud: Toast monthly statements request — Mar 4
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:99d8b833-1394-4579-ad0c-fd633e37affd
+  - [triage] Made Market reply — Franklin 7/18
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:99fbcaa3-9286-44b8-95c7-517c6397c763
+  - [triage] Inbound SEO pitch email (Arnold Humphers)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:9e0177e7-e29e-4e13-856c-11b0db433115
+  - [triage] Baker Donelson invoice received
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:0a02e23b-ae86-45e5-bf36-352866d747fd:a5ab176b-deed-4a17-a4b8-47bdaa7be65f
+  - [triage] Upper 1 - Saturday
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:beee62c3-f2ec-4d87-b202-ab568cdcf0cc:541d4bba-f551-41b4-bdaf-d47e7e296d35
+  - [triage] Lighter Protein Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:03805e8d-7c5e-49f1-adeb-630fb25cb254
+  - [triage] D3 Steak Bowl
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:04b9bc84-33d2-42dd-a5d9-106c2bd79c12
+  - [triage] Quick Breakfast (eggs/sandwich/muffin)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:07546eeb-aa2c-48bf-ae85-9b41f6c0649c
+  - [triage] L3 BBQ chicken rice bowl
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:08b5328b-82a9-4cea-83fb-801cb5b194ce
+  - [triage] L2 Tuna melt / tuna sandwich plate
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:099d8e10-ff65-424a-bf78-f46a82132a8e
+  - [triage] Quick Breakfast (eggs/sandwich/muffin)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:0f376a17-f2b8-408a-9bef-fe36a4b36f7c
+  - [triage] B2 Oatmeal bowl + eggs
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:1401eb5d-dc2c-4705-8441-17dff94a0f73
+  - [triage] Protein Oats Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:165dd75c-1089-4a79-96e7-b53af8497084
+  - [triage] Inventory (v0)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:1d029ceb-6162-4653-9bef-e0fca0099479
+  - [triage] Protein Oats Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:1e23e77b-ea90-42a2-b900-99f9461a6b9d
+  - [triage] Protein Oats Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:1efbba34-e683-46f9-a0b3-8512de151e41
+  - [triage] D1 Salmon + Potatoes + Veg
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:23a979f1-278d-414b-ad67-88032dcdbdef
+  - [triage] L1 Chicken Rice Bowl
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:2708b6ae-8f0c-4b36-a48b-b559bf4dc6cd
+  - [triage] D2 Chicken Tacos (3)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:2be50373-ba23-4067-9013-2183deb98bff
+  - [triage] L1 Chicken Rice Bowl
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:2c659c66-d500-410e-ae6a-136eeb3fbd65
+  - [triage] Lighter Protein Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:34ba05cd-5f1b-4d44-8682-2be4f186c4d3
+  - [triage] L3 Ground Beef Pasta Bowl
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:38da3433-004a-456d-a95f-6aa5b989012d
+  - [triage] Quick Breakfast (eggs/sandwich/muffin)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:42216077-e621-4083-94b2-ec937041a661
+  - [triage] Social dinner (800 target)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:47a28734-640f-4c73-820f-cc6409bc0bec
+  - [triage] Lighter Protein Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:489a09ec-0dde-46cc-82f4-c7c66593b0f5
+  - [triage] SN6 Ice cream
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:4a7bf9d8-533a-4ee6-82ec-1d711f81fe2e
+  - [triage] D1 Salmon + Potatoes + Veg
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:4ba0edeb-fb0b-4d77-b35d-126b14094195
+  - [triage] Protein Oats Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:50fb2e24-7d2f-4d53-945e-411d722eabe2
+  - [triage] Quick Breakfast (eggs/sandwich/muffin)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:5319ea35-fda9-41a2-8915-81809baf1c3d
+  - [triage] L4 Beef and rice bowl
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:5887cde9-027d-4f6e-96f9-88055500d5b5
+  - [triage] B1 Eggs + English muffin + yogurt (default)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:5c74405e-53a0-48b7-af08-ff868f2d7a12
+  - [triage] Protein Oats Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:6762751b-1d14-4cb8-98fd-f0551ea5331a
+  - [triage] Lighter Protein Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:68c2d01a-969d-4210-b4b4-4bb763243ae7
+  - [triage] SN3 Carrots + hummus
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:6b48ff96-4fde-49eb-99de-90466c2615d9
+  - [triage] L2 Turkey Wrap + Fruit
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:700773bb-5b24-4bf8-9e15-77796832fd2f
+  - [triage] Quick Breakfast (eggs/sandwich/muffin)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:71441ba5-93a1-454c-bbdd-9a3ce8b2d635
+  - [triage] D3 Chicken sausage vodka pasta
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:721424b1-c225-4c96-9047-31ad52f2bc5a
+  - [triage] L3 Ground Beef Pasta Bowl
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:7239480a-4ff2-4f73-af5d-135b0abc70fc
+  - [triage] L2 Turkey Wrap + Fruit
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:74c4be16-c69f-4363-a98c-cf3d470ea4bc
+  - [triage] Optional night shake or dessert
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:78cedbe0-8f6f-4e04-9e63-b01ae3925307
+  - [triage] B3 Turkey/provolone breakfast sandwich
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:7af1d404-f7ca-4a71-a6a8-9d19c200bf0d
+  - [triage] Dinner out target (big night)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:7cd28d57-eaa4-4730-85b2-2d927608395e
+  - [triage] D2 Chicken Tacos (3)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:7d24485b-b687-4fae-9a44-b20721a998cf
+  - [triage] Lighter Protein Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:8c6cdd69-01ce-440e-9406-f3a71cf60672
+  - [triage] S3 Emergency no-blend option
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:8cecc852-1b33-4808-9f9c-ed4dcc5169ca
+  - [triage] Protein Oats Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:9429600d-78b2-414b-b9bb-380865d545b9
+  - [triage] D1 Salmon rice plate
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:9465d9ef-5a0e-4ffe-9c03-ab4179f0ee38
+  - [triage] L1 Chicken Rice Bowl
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:974d9ca6-34dd-458d-96ae-b667a164bcc0
+  - [triage] SN4 Trail mix (pre-portioned)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:9c0013ad-6f83-48b1-91f2-a0fab3d1181a
+  - [triage] Lighter Protein Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:a1bc6b11-18b8-4484-86b3-31f3f173af9d
+  - [triage] Quick Breakfast (eggs/sandwich/muffin)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:a579c550-dbca-4c9b-84f4-2454243cf28a
+  - [triage] SN1 Greek yogurt + granola
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:a659c70f-c00f-481f-900d-39e28a4fa680
+  - [triage] Social dinner (800 target)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:a8593e7a-a680-4e94-a73a-4315033fdef8
+  - [triage] Lighter Protein Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:acb04533-b085-46d7-a2a8-982dae4d80d7
+  - [triage] D1 Salmon + Potatoes + Veg
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:ade0da18-3c0f-48d4-a380-14daf18f9073
+  - [triage] L1 Chicken Rice Bowl
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:b1489f09-72f2-4796-a2e8-c3cb2c446fab
+  - [triage] L1 Turkey sandwich + carrots/hummus + salad kit
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:b40a14ce-6173-4283-b7bb-f3ab1881f72b
+  - [triage] D1 Salmon + Potatoes + Veg
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:b8d6f528-8cb5-4f94-9bb8-eff3e0c0ee25
+  - [triage] Social dinner (900 target)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:b914957a-1ad5-4bba-9f5f-ac4568cd5c01
+  - [triage] L2 Turkey Wrap + Fruit
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:bcd2ae83-c6d3-49ea-8abc-e3a4a1cf332e
+  - [triage] Lighter Protein Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:bea14293-ed48-43e1-8c8c-9533cdd8dc53
+  - [triage] SN2 Protein bar
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:c9a88201-a28a-4a09-866a-70eef8ff23cb
+  - [triage] SN5 Ensure
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:d1bd63dc-3f45-4950-8bad-1f01c2b98d10
+  - [triage] D4 BBQ chicken plate
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:d31b8415-1f72-42a4-971a-01b0541da689
+  - [triage] D3 Steak Bowl
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:d34f6d2c-7690-4335-88ab-06b2b2d32e79
+  - [triage] L3 Ground Beef Pasta Bowl
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:d83451ed-60a4-4f9e-8041-1c1c9d202d9a
+  - [triage] Protein Oats Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:d8d21c4d-efa6-452c-895c-e292e572f87e
+  - [triage] Quick Breakfast (eggs/sandwich/muffin)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:de03276f-0d2c-4105-9724-e0f88aa2f8cc
+  - [triage] S1 Breakfast shake (high calorie)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:ec7658c3-84bb-4b46-b253-94c5ddb63321
+  - [triage] Quick Breakfast (eggs/sandwich/muffin)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:edba2829-98e1-4178-8ece-bf4c5d6afd6b
+  - [triage] S2 Lighter protein shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:ef7fc6a4-5b82-4dc0-ab16-09ace7ffed0a
+  - [triage] D2 Ribeye night
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:f03b7f0a-23bc-49da-8672-8479901cd34e
+  - [triage] Protein Oats Shake
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:f426fb87-8aee-4bc1-931d-6b8630f23057
+  - [triage] Dinner out target (moderate)
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:83117b35-5b61-4905-9ccf-1539509ead28:fdcb2418-9132-4530-a135-619a6e1397ae
+  - [triage] Tue Feb 24
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:d10e16ae-bf4d-49f3-9dfa-c39e5a9d3379:495978f6-cbe4-4776-9ed8-51b09c4ce46e
+  - [triage] Mon Feb 23
+    Assignee: jukes-ops-agent, Priority: 50
+    Key: notion:d10e16ae-bf4d-49f3-9dfa-c39e5a9d3379:d320ce5c-497a-4dd7-ba30-75cbe30417ed
+  - [triage] Enter all finances into Nano app
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8101-8d69-ca4eb87cfaee
+  - [triage] Flex 0% expires June 25 — plan for payoff
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8104-965d-ced80ea416dc
+  - [triage] Set up business phone to Mac mini photo sync
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-810d-9267-f5e929209c35
+  - [triage] Citizens Kitchen tour for cold storage 
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8115-a25a-e965099c94f4
+  - [triage] GL insurance for T&L Industries
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8119-9490-fe550205ced8
+  - [triage] Diner sign installation when it arrives
+    Assignee: Daniel, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8119-971d-caeb70bd5023
+  - [triage] Buy gym bag, lunch box, AirPods, trail mix
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-811b-80e3-dcd5d4537547
+  - [triage] EA interview May 1st — prep onboarding materials
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8125-8d87-e4bf6678a29f
+  - [triage] Move all recurring charges to Freedom Unlimited
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8128-acc6-e2f375e54ee6
+  - [triage] Nano app Stripe fix
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8129-9de3-c0983c56a40c
+  - [triage] Submit health permit application
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8129-bdb2-d8ff5ff4233f
+  - [triage] Pick up title and transfer to Justin name
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8130-bda4-f558aee603c9
+  - [triage] Truck/auto insurance — call Progressive
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8139-9da4-fe8122ba0c6c
+  - [triage] PFG group ordering inquiry for trailer park
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-813d-8cc3-fe18b7212c0b
+  - [triage] Talk to Conan about editing partnership
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-813d-b8c5-f67eb1bd4b4c
+  - [triage] Print and mail parents photo book
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-813e-b226-dd96579282cf
+  - [triage] Quickbooks subscription for Cameron/BizBud
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-813f-aca1-c58e3bdd1ba0
+  - [triage] Post on Indeed Lebanon for hourly staff
+    Assignee: Daniel, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-814a-9c6b-f3c0639221a5
+  - [triage] Press Pan America on trailer delivery date
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-814e-88e6-da70a4192df6
+  - [triage] Meal prep consistently
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8150-bdd9-cf472ba123f3
+  - [triage] Set up Toast deposits to Justin Relay account
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8157-8602-ed3b6b93110c
+  - [triage] $12k high interest debt paydown plan
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8158-a79b-dc2d80f601c1
+  - [triage] Set up Juke's Diner LinkedIn page
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8159-abc2-d58bac0f1c82
+  - [triage] Complete Toast transfer to T&L Industries (5-10 days)
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-815f-b63f-ca71b2483fcc
+  - [triage] Trailer park meeting — confirm Jeremy as president
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8163-9d8e-ffdc53e8bc48
+  - [triage] Film hard launch rebrand video
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8165-88a8-decdc94e7636
+  - [triage] Lease abstraction follow-up with Jonathan
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8167-8d13-e873c3774d97
+  - [triage] Daniel employment agreement — call Peter lawyers
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8167-afa5-fa0bfe9a0aa6
+  - [triage] Find 3rd trailer location
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-816e-9300-fcb7d6d42906
+  - [triage] May company meeting — prep AI presentation pitch
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-816e-9a2e-d1c5da34a1fb
+  - [triage] Prep for UVA article launch
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8176-81d7-cfd11ee794e3
+  - [triage] Workers comp for T&L Industries
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-817a-9d10-f19dd651a730
+  - [triage] Prep bookkeeping infrastructure for Nathan
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-817e-a5ef-c0c4a96eb635
+  - [triage] Clean room
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8180-8aea-ff6f400d5ec5
+  - [triage] Follow up with Lexi (social media) or move on
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8180-a815-ce388cc12ef8
+  - [triage] Post 3 videos this week
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8183-83db-c348599e0c03
+  - [triage] Repair list for trailer
+    Assignee: Daniel, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8183-b6ac-c9323af107ef
+  - [triage] Policy Horizon website rebuild
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8184-ad88-c8a8174d3934
+  - [triage] Keith meeting — Toast optimization
+    Assignee: Keith, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-8190-82b6-c98a9c8e50df
+  - [triage] Signal Studio website
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81a1-a811-c5e38dff9d91
+  - [triage] Fire LSM — send formal termination email
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81a4-a046-daa6e54ea9bf
+  - [triage] Schedule fire inspection with Sean once trailer delivered
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81ad-8233-c862ab29476a
+  - [triage] Toast payroll for T&L Industries
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81ad-a416-c85a72bb7295
+  - [triage] Pipeline rebuild with Karthick (May 1 target)
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81ae-a3f5-fd9c3aef6324
+  - [triage] Writing buddy app
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81b6-911c-eb0790f0c37f
+  - [triage] Sysco account setup with Randy
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81b8-b8c2-d3e55364831c
+  - [triage] Submit trailer park application with new menu
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81ba-9a84-d348194c35b7
+  - [triage] Chest freezer and shed for trailer park
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81bc-8844-edb5751a97c2
+  - [triage] Email approval for Power Automate integration
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81d4-b326-f59c0782335a
+  - [triage] jukesdiner.com website polish for rebrand
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81d5-aec4-ed38969d9da9
+  - [triage] Cain Union portal
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81d6-bd6d-cd4ff3625151
+  - [triage] Swapnil call on Finance360
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81e6-9191-d3621476edb2
+  - [triage] Purchase list for new trailer (screen door etc)
+    Assignee: Daniel, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81e8-90bc-c4b79697aef3
+  - [triage] Amex Business Cash 0% expires April 28 — call Amex about extension
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81e9-9bd1-ea372a38bcce
+  - [triage] Custom aprons and uniforms
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81e9-9d36-ee1e4922e366
+  - [triage] New logo and wrap on trailer and event truck
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81ea-8972-e9d7bd68b734
+  - [triage] Set up CapCut shared workspace with 3deo
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81fa-af57-ce9265dc9b70
+  - [triage] Set revenue target for event truck with Daniel
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:348abed9-226c-81ff-bfcf-dba3887a98d7
+  - [triage] Fix up PowerPoint for RVP presentation next week
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8109-a773-e06b1e381a59
+  - [triage] Ask Jordan for separate workspace / different part of office
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-810d-a02f-d18eec08b7a8
+  - [triage] Build automated pipeline dashboard with AI interaction layer
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-810e-8228-fc530942c856
+  - [triage] Strip LSM of all platform permissions
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-810f-8afe-c770d86063d5
+  - [triage] Meet with Nathan — show him the ropes, get him taking ownership
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-810f-a309-ed0512197226
+  - [triage] Henry cooking meals — take lunch to LKQ
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8113-b988-f9a9bff78459
+  - [triage] Get new logo wrapped onto trailer and event truck
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8119-a259-ef6397540b47
+  - [triage] Set up Google Voice for EA call/text routing
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-811b-85ff-f67ba16caf59
+  - [triage] Build brain dump and writing workflow for scripts
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-811b-a515-c0bbe2b8ee60
+  - [triage] Hook up Stripe + QuickBooks — break out by location and bank account
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-811e-980d-ec8a02b6c1c3
+  - [triage] Reduce Hand Cut to 1 shift/week — enough for rent + personal expenses
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-811e-bd7c-d04f60736f5d
+  - [triage] Lock in daily blocks for all major lines of effort
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8122-b18a-fdc49a95b688
+  - [triage] Scan and mail parents photo book — batch with other mail
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-812a-8357-e12aa3ce1fcb
+  - [triage] Start gym routine: Tue-Thu before work, Saturday mornings
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8136-baf5-fb8180404493
+  - [triage] Add NBV to pipeline for LKQ
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-813d-a159-d7e07ae9d397
+  - [triage] Start Spain visa application
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8141-8cbc-eb8f03c44745
+  - [triage] Laundry
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8141-916c-c7c7582d0b36
+  - [triage] Connect OpenClaw to Slack for read access
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8143-8378-d1d4453a9eda
+  - [triage] Justin: screen door net, checklists sorted, new menu running
+    Assignee: Daniel, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8145-a54b-cda3a0916e4a
+  - [triage] Get acclimated to LKQ business context and terminology
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-814b-9d91-e948f5e93027
+  - [triage] Scout and secure 3rd location — need strong social media presence first
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-815a-9965-e6220ed53265
+  - [triage] Set up Spanish learning routine
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-815d-bf05-f8e7090550c0
+  - [triage] Evaluate shutting down event truck for winter if no franchisee found
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8161-821c-f081861687ec
+  - [triage] Get car insurance for Ram 1500
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-816f-8854-f31c59cfb565
+  - [triage] Move into downstairs room next week — deep clean it first
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8181-a77d-e6a73b05c072
+  - [triage] EA interview next Friday (May 1) — prep onboarding plan
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8185-b064-dd07bf2f6d03
+  - [triage] Clear old iPhone for EA mirroring / call routing
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8186-830a-d75d1d8988da
+  - [triage] Saturday = film day. Block entire Saturdays for content
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-818c-af59-d27da60dcbf7
+  - [triage] Hook up iPhone photos to Mac mini for filming pipeline
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-818f-b283-ec3feefe39ff
+  - [triage] Lock in commissary kitchen parking for trailer
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8196-bf35-e7a30408aee6
+  - [triage] Monday spiritual director meetings — recurring rhythm
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-8197-884e-cd3cfd06545e
+  - [triage] Figure out email setup for EA — consider lexi@belairintel.com for OpenClaw access
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-819f-9830-c850ea1e9715
+  - [triage] Go through mail
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-81b3-a527-c2317ffcd9f3
+  - [triage] Schedule batch of LinkedIn posts via Metricool
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-81bc-af33-fc11d9062e67
+  - [triage] Set up pass point workflow with 3deo
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-81cb-b835-d6950be1e0f2
+  - [triage] Set up Slack workspace for team (EA, Daniel, Tyler, Nathan)
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-81cc-a656-da68f7db2584
+  - [triage] Figure out who fastens the new Juke's sign
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-81ed-9773-f12bf952e8a1
+  - [triage] July company meeting — prep AI pitch and working demos
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-81f1-a9c4-f282b7448214
+  - [triage] Get final batch of content from LSM before firing
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-81f5-818f-c6dc6da3c08d
+  - [triage] Fire BizBud/Cameron after S corp and taxes are done
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-81fb-a59d-ce4f2154d315
+  - [triage] Set up weekly rhythm: Mon/Fri hermit deep focus, Sat film day, Sun church + Hand Cut
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:34cabed9-226c-81fe-b47c-cf1bd1c2cb87
+  - [triage] Integrate LKQ email into Notion calendar
+    Assignee: John, Priority: 50
+    Key: notion:9bd73487-0859-42fd-beee-80b106222297:351abed9-226c-8125-8a04-d132f9f2e5e4
+
+============================================================

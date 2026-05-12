@@ -127,7 +127,7 @@ export default function DashboardLayout() {
           </div>
           <button
             onClick={handleLogout}
-            className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-gray-400 hover:bg-red-500/10 hover:text-red-500 transition-all"
+            className="w-full flex items-center gap-3 px-4 py-4 rounded-xl text-gray-400 hover:bg-red-500/10 hover:text-red-500 transition-all"
           >
             <LogOut className="h-4 w-4" />
             <span className="text-xs font-medium uppercase tracking-widest">Logout</span>

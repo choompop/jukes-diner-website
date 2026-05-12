@@ -41,7 +41,7 @@ export default function Resources() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl text-diner-black mb-1">DOCUMENTS & RESOURCES</h1>
-          <p className="text-gray-500 font-serif italic">Everything you need to run your business legally and efficiently.</p>
+          <p className="text-gray-500 font-sans">Everything you need to run your business legally and efficiently.</p>
         </div>
         <div className="relative">
           <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
@@ -88,7 +88,7 @@ export default function Resources() {
         <div className="relative z-10 flex flex-col md:flex-row items-center gap-12">
           <div className="flex-grow space-y-6">
             <h2 className="text-4xl">LEGAL COUNSEL</h2>
-            <p className="text-gray-400 font-serif italic text-lg leading-relaxed">
+            <p className="text-gray-400 font-sans text-lg leading-relaxed">
               While we provide templates, we strongly recommend having your own legal counsel review all agreements. Need a referral?
             </p>
             <div className="flex flex-wrap gap-4">

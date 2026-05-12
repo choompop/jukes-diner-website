@@ -29,7 +29,7 @@ export default function Operations() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl text-diner-black mb-1">OPERATIONS</h1>
-          <p className="text-gray-500 font-serif italic">Keep the wheels turning. Manage events, tasks, and inventory.</p>
+          <p className="text-gray-500 font-sans">Keep the wheels turning. Manage events, tasks, and inventory.</p>
         </div>
         <div className="flex gap-2">
           <button className="bg-white text-gray-500 px-4 py-2 rounded-xl border border-gray-200 hover:bg-gray-50 transition-colors flex items-center gap-2 text-sm">
@@ -130,7 +130,7 @@ export default function Operations() {
                   <th className="px-8 py-4">Status</th>
                 </tr>
               </thead>
-              <tbody className="font-serif">
+              <tbody className="font-sans">
                 {[
                   { name: "Beef Patties (80/20)", stock: "45 lbs", status: "Critical" },
                   { name: "Brioche Buns", stock: "120 units", status: "Low" },

@@ -1,12 +1,16 @@
 import { NextResponse } from 'next/server';
-import { authenticate } from '@/lib/auth';
+import { authenticateDashboardUser, applyDashboardSessionCookie, clearDashboardSessionCookie } from '@/lib/dashboard-auth.mjs';
 
 export async function POST(request) {
   const { username, password } = await request.json();
-  const user = authenticate(username, password);
+  const user = authenticateDashboardUser(username, password);
 
   if (user) {
-    return NextResponse.json({ user });
+    return applyDashboardSessionCookie(NextResponse.json({ user: user.username }), user);
   }
   return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 });
+}
+
+export async function DELETE() {
+  return clearDashboardSessionCookie(NextResponse.json({ ok: true }));
 }

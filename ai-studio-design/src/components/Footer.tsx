@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display text-lg mb-6 text-diner-red">Quick Links</h4>
+            <h2 className="font-display text-lg mb-6 text-diner-red">Quick Links</h2>
             <ul className="space-y-4 text-gray-400">
               <li><Link to="/menu" className="hover:text-white transition-colors">Menu</Link></li>
               <li><Link to="/find-us" className="hover:text-white transition-colors">Find Us</Link></li>
@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-display text-lg mb-6 text-diner-red">Contact</h4>
+            <h2 className="font-display text-lg mb-6 text-diner-red">Contact</h2>
             <ul className="space-y-4 text-gray-400 text-sm">
               <li>contact@jukesdiner.com</li>
               <li>443-528-9679</li>

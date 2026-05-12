@@ -1,8 +1,30 @@
 import type { Metadata } from 'next';
+import { Atkinson_Hyperlegible, Bebas_Neue, IBM_Plex_Mono } from 'next/font/google';
 import './globals.css';
 import { AuthProvider } from '@/context/AuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+
+const atkinsonHyperlegible = Atkinson_Hyperlegible({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  display: 'swap',
+  variable: '--font-atkinson-hyperlegible',
+});
+
+const bebasNeue = Bebas_Neue({
+  subsets: ['latin'],
+  weight: '400',
+  display: 'swap',
+  variable: '--font-bebas-neue',
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ['latin'],
+  weight: '500',
+  display: 'swap',
+  variable: '--font-ibm-plex-mono',
+});
 
 export const metadata: Metadata = {
   title: "Juke's Diner | Nashville Food Truck",
@@ -19,13 +41,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className={`${atkinsonHyperlegible.variable} ${bebasNeue.variable} ${ibmPlexMono.variable}`}>
         <AuthProvider>
           <div className="flex flex-col min-h-screen">
             <Navbar />
-            <main className="flex-grow">
+            <div className="flex-grow">
               {children}
-            </main>
+            </div>
             <Footer />
           </div>
         </AuthProvider>

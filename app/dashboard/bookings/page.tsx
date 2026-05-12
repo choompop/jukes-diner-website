@@ -12,6 +12,7 @@ import {
   Plus
 } from 'lucide-react';
 import { cn } from '../../../lib/utils';
+import { StatusBadge } from '../../../components/StatusBadge';
 
 export default function Bookings() {
   const [activeTab, setActiveTab] = useState('inbox');
@@ -28,7 +29,7 @@ export default function Bookings() {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl text-diner-black mb-1">BOOKINGS</h1>
-          <p className="text-gray-500 font-serif italic">Manage your event pipeline and incoming requests.</p>
+          <p className="text-gray-500 font-sans">Manage your event pipeline and incoming requests.</p>
         </div>
         <button className="bg-diner-red text-white px-6 py-3 rounded-xl font-display text-sm hover:bg-red-700 transition-colors flex items-center gap-2 shadow-lg">
           <Plus className="h-4 w-4" /> NEW BOOKING
@@ -70,16 +71,13 @@ export default function Bookings() {
                     </div>
                     <div>
                       <h4 className="font-bold text-sm">{msg.from}</h4>
-                      <p className="text-xs text-gray-500 font-serif italic">{msg.type} Inquiry • {msg.date}</p>
+                      <p className="text-xs text-gray-500 font-sans">{msg.type} Inquiry • {msg.date}</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4">
-                    <span className={cn(
-                      "text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest",
-                      msg.status === 'New' ? "bg-diner-red/10 text-diner-red" : "bg-gray-100 text-gray-500"
-                    )}>
+                    <StatusBadge variant={msg.status === 'New' ? 'error' : 'neutral'}>
                       {msg.status}
-                    </span>
+                    </StatusBadge>
                     <ChevronRight className="h-4 w-4 text-gray-300 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
@@ -111,7 +109,7 @@ export default function Bookings() {
               <div className="pt-8 border-t border-gray-50 text-center">
                 <p className="text-sm text-gray-400 font-display uppercase tracking-widest mb-2">Suggested Quote</p>
                 <h2 className="text-5xl text-diner-black font-bold">$1,850.00</h2>
-                <p className="text-xs text-gray-400 font-serif italic mt-2">* Includes service fee and travel within 20 miles.</p>
+                <p className="text-xs text-gray-400 font-sans mt-2">* Includes service fee and travel within 20 miles.</p>
               </div>
             </div>
           </div>

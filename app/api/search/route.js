@@ -1,7 +1,11 @@
 import { NextResponse } from 'next/server';
+import { requireDashboardApiAuth } from '@/lib/dashboard-auth.mjs';
 import { getSupabase } from '@/lib/supabase';
 
 export async function GET(request) {
+  const auth = requireDashboardApiAuth(request);
+  if (!auth.ok) return NextResponse.json({ error: auth.error }, { status: auth.status });
+
   try {
     const { searchParams } = new URL(request.url);
     const q = searchParams.get('q');
