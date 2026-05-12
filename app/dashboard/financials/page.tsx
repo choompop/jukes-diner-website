@@ -26,6 +26,8 @@ import {
   getStripeAccountReadiness,
 } from '@/lib/franchise-financials.mjs';
 import { createDefaultStripeConnectModel } from '@/lib/stripe-connect.mjs';
+import { buildStripeWeeklyCashflowViews } from '@/lib/stripe-cashflow.mjs';
+import integrations from '@/data/dashboard-integrations.json';
 import { cn } from '@/lib/utils';
 
 function money(value) {
@@ -57,6 +59,7 @@ export default async function Financials() {
   const consolidatedCashflow = getConsolidatedWeeklyCashflow(financials);
   const stripeReadiness = getStripeAccountReadiness(financials);
   const stripeConnect = createDefaultStripeConnectModel();
+  const stripeCashflow = buildStripeWeeklyCashflowViews(financials, { env: process.env });
 
   const statCards = [
     { label: 'Weekly Sales', value: money(stats.weeklySales), note: `${stats.transactions} transactions`, tone: 'text-emerald-600' },
@@ -80,11 +83,15 @@ export default async function Financials() {
             <div className="mt-6 flex flex-wrap gap-3">
               <span className="rounded-full bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-diner-cream">{financials.period.label}</span>
               <span className="rounded-full bg-amber-400 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-diner-black">WATCH</span>
+              <a href={integrations.stripe.dashboardUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-diner-black hover:bg-diner-cream">
+                Stripe Dashboard <ArrowUpRight className="h-4 w-4" />
+              </a>
             </div>
           </div>
           <div className="rounded-[1.5rem] bg-white/10 p-6">
             <p className="text-[10px] font-display uppercase tracking-[0.28em] text-white/50">Flo Finance Guardrails</p>
             <ul className="mt-4 space-y-3 text-sm leading-6 text-diner-cream/80">
+              <li>• Stripe is linked as read-only-first: dashboard links work now; live reporting turns on when keys are added.</li>
               <li>• Flo can answer from SOPs, KPI dictionary, and attached financial docs.</li>
               <li>• Flo flags exceptions and missing docs instead of inventing numbers.</li>
               <li>• Operators see their unit; ownership sees cash and franchise-wide variance.</li>
@@ -266,6 +273,34 @@ export default async function Financials() {
             <p className="mt-4 rounded-2xl border border-diner-red/10 bg-diner-red/5 p-4 text-sm leading-6 text-gray-600">
               {stripeConnect.config.warning} Live account links and all money movement stay disabled until explicit approval.
             </p>
+            <div className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-900">
+              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-amber-700">Read-only cashflow status</p>
+              <p className="mt-2 font-bold">{stripeCashflow.dashboardMessage}</p>
+              <p className="mt-2 text-xs leading-5">{stripeCashflow.setupRequest}</p>
+            </div>
+            <div className="mt-4 space-y-2">
+              {stripeCashflow.statusChecklist.map((item) => (
+                <div key={item.id} className="flex items-start justify-between gap-3 rounded-2xl border border-gray-100 px-4 py-3">
+                  <div>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-500">{item.label}</span>
+                    {'detail' in item && item.detail ? <p className="mt-1 text-xs text-gray-500">{item.detail}</p> : null}
+                    {'envKey' in item && item.envKey ? <p className="mt-1 break-all text-[10px] text-gray-400">{item.envKey}</p> : null}
+                  </div>
+                  <span className={cn('shrink-0 rounded-full px-2 py-1 text-[10px] font-bold uppercase tracking-[0.16em]', item.complete ? 'bg-emerald-100 text-emerald-700' : 'bg-amber-100 text-amber-700')}>
+                    {item.complete ? 'ready' : 'missing'}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-4 rounded-2xl bg-gray-50 p-4">
+              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-gray-400">Minimum restricted-key permissions</p>
+              <ul className="mt-2 space-y-2 text-xs leading-5 text-gray-600">
+                {stripeCashflow.restrictedKeyPermissions.map((permission) => (
+                  <li key={permission.resource}><span className="font-bold text-diner-black">{permission.resource}: {permission.permission}</span> — {permission.reason}</li>
+                ))}
+              </ul>
+              <p className="mt-3 text-[10px] uppercase tracking-[0.16em] text-diner-red">Forbidden: charges/refunds/payouts/transfers/products/customers/accounts/account-links write permissions.</p>
+            </div>
             <div className="mt-4 space-y-2">
               {Object.entries(stripeConnect.config.keysPresent).map(([key, present]) => (
                 <div key={key} className="flex items-center justify-between rounded-2xl border border-gray-100 px-4 py-3">

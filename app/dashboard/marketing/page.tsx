@@ -2,6 +2,7 @@ import {
   Camera,
   CheckCircle2,
   Download,
+  ExternalLink,
   FileImage,
   Palette,
   Tags,
@@ -17,6 +18,7 @@ import {
   getMediaHubStats,
 } from '../../../lib/media-hub.mjs';
 import websitePlacementMap from '../../../data/website-content-placement-map.json';
+import integrations from '../../../data/dashboard-integrations.json';
 import { cn } from '../../../lib/utils';
 import { MediaWorkflowControls, AddMediaAssetForm } from './MediaWorkflowControls';
 
@@ -51,7 +53,15 @@ export default async function Marketing() {
             One tagged source of truth for Juke&apos;s media, brand voice, operator capture requests, and content repurposing.
           </p>
         </div>
-        <AddMediaAssetForm />
+        <div className="flex flex-wrap gap-3">
+          <a href={integrations.googleDrive.sheetUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl border border-diner-teal px-4 py-3 font-display text-xs text-diner-teal hover:bg-diner-teal/5">
+            Content Index <ExternalLink className="h-4 w-4" />
+          </a>
+          <a href={integrations.googleDrive.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl bg-diner-black px-4 py-3 font-display text-xs text-white hover:bg-diner-red">
+            Drive Assets <ExternalLink className="h-4 w-4" />
+          </a>
+          <AddMediaAssetForm />
+        </div>
       </div>
 
       <section className="grid gap-4 md:grid-cols-5">

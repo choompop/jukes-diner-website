@@ -17,11 +17,12 @@ test('stripe connect config status checks key presence without exposing secret v
 
   assert.equal(status.readyForMockedConnect, true);
   assert.equal(status.readyForLiveAccountLinks, false);
-  assert.deepEqual(status.keysPresent, {
-    STRIPE_SECRET_KEY: true,
-    STRIPE_WEBHOOK_SECRET: true,
-    NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY: true,
-  });
+  assert.equal(status.keysPresent.STRIPE_SECRET_KEY, true);
+  assert.equal(status.keysPresent.STRIPE_WEBHOOK_SECRET, true);
+  assert.equal(status.keysPresent.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY, true);
+  assert.ok(status.missingKeys.includes('STRIPE_ACCOUNT_EVENT_TRUCK'));
+  assert.ok(status.restrictedKeyPermissions.some((permission) => permission.resource === 'Balance transactions'));
+  assert.ok(status.forbiddenPermissions.includes('Payouts write'));
   assert.equal(JSON.stringify(status).includes('sk_test_hidden'), false);
   assert.equal(JSON.stringify(status).includes('whsec_hidden'), false);
 });

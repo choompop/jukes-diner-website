@@ -29,6 +29,7 @@ import {
   getSlackAgentPlan,
   getWeeklyContentPlan,
 } from '@/lib/social-dashboard.mjs';
+import integrations from '@/data/dashboard-integrations.json';
 import { cn } from '@/lib/utils';
 
 const channelIcons: Record<string, React.ReactNode> = {
@@ -73,6 +74,14 @@ export default function SocialDashboard() {
             One operating view for every external surface: founder story, food portfolio,
             community engagement, catering conversion, lead capture, and franchise signal.
           </p>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a href={integrations.slack.growthChannel} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-diner-red px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white hover:bg-red-700">
+              Open Flo in #growth <ExternalLink className="h-4 w-4" />
+            </a>
+            <a href={integrations.googleDrive.sheetUrl} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-diner-black hover:bg-diner-cream">
+              Content Index <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </div>
 
@@ -144,6 +153,9 @@ export default function SocialDashboard() {
               </li>
             ))}
           </ul>
+          <a href={integrations.slack.allJukesChannel} target="_blank" rel="noreferrer" className="mt-5 inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.18em] text-white hover:bg-white/20">
+            Open #all-jukes-diner <ExternalLink className="h-4 w-4" />
+          </a>
         </div>
       </div>
 

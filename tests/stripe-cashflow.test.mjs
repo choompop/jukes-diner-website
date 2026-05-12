@@ -3,6 +3,9 @@ import assert from 'node:assert/strict';
 
 import {
   STRIPE_WEEKLY_CASHFLOW_UNITS,
+  STRIPE_READ_ONLY_ENV_KEYS,
+  STRIPE_READ_ONLY_RESTRICTED_KEY_PERMISSIONS,
+  STRIPE_READ_ONLY_FORBIDDEN_PERMISSIONS,
   getStripeReadOnlyClientStatus,
   createStripeReadOnlyClient,
   normalizeStripeBalanceTransaction,
@@ -21,6 +24,25 @@ test('stripe cashflow unit env map covers the four operating accounts', () => {
   ]);
 });
 
+test('stripe read-only env contract and restricted-key policy stay reporting-only', () => {
+  assert.deepEqual(STRIPE_READ_ONLY_ENV_KEYS, [
+    'STRIPE_SECRET_KEY',
+    'NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY',
+    'STRIPE_WEBHOOK_SECRET',
+    'STRIPE_ACCOUNT_EVENT_TRUCK',
+    'STRIPE_ACCOUNT_TRAILER_PARK',
+    'STRIPE_ACCOUNT_EAST_NASHVILLE',
+    'STRIPE_ACCOUNT_CORPORATE',
+  ]);
+  assert.deepEqual(STRIPE_READ_ONLY_RESTRICTED_KEY_PERMISSIONS.map((permission) => [permission.resource, permission.permission]), [
+    ['Balance', 'Read'],
+    ['Balance transactions', 'Read'],
+    ['Accounts', 'Read'],
+  ]);
+  assert.ok(STRIPE_READ_ONLY_FORBIDDEN_PERMISSIONS.every((permission) => /write/i.test(permission)));
+  assert.ok(STRIPE_READ_ONLY_FORBIDDEN_PERMISSIONS.includes('Refunds write'));
+});
+
 test('read-only client status keeps dashboard safe when keys or account ids are missing', () => {
   const status = getStripeReadOnlyClientStatus({
     STRIPE_SECRET_KEY: '',
@@ -31,9 +53,14 @@ test('read-only client status keeps dashboard safe when keys or account ids are 
   assert.equal(status.safeMode, true);
   assert.equal(status.canReadStripe, false);
   assert.equal(status.canMoveMoney, false);
+  assert.equal(status.readyForReadOnlyReporting, false);
   assert.ok(status.missingKeys.includes('STRIPE_SECRET_KEY'));
+  assert.ok(status.missingKeys.includes('NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY'));
+  assert.ok(status.missingKeys.includes('STRIPE_WEBHOOK_SECRET'));
   assert.ok(status.accounts.find((account) => account.id === 'event-truck').accountIdPresent);
   assert.ok(status.accounts.find((account) => account.id === 'trailer-park').missingReason.includes('STRIPE_ACCOUNT_TRAILER_PARK'));
+  assert.ok(status.statusChecklist.find((item) => item.id === 'connected-account-ids').detail.includes('1 of 4'));
+  assert.ok(status.setupRequest.includes('dashboard hosting environment'));
   assert.equal(JSON.stringify(status).includes('acct_event'), false);
 });
 

@@ -1,27 +1,45 @@
 'use client';
 
-import { HardDrive, File, Folder, Search, Filter, ExternalLink } from 'lucide-react';
+import { HardDrive, File, Folder, Search, Filter, ExternalLink, CheckCircle2 } from 'lucide-react';
+import integrations from '@/data/dashboard-integrations.json';
 
 export default function DriveViewer() {
-  const mockFiles = [
-    { name: 'Franchise_Agreement_v2.pdf', type: 'pdf', size: '2.4 MB', date: '2026-03-28' },
-    { name: 'Menu_Spring_2026_Draft.docx', type: 'doc', size: '1.1 MB', date: '2026-04-01' },
-    { name: 'Truck_Maintenance_Log.xlsx', type: 'sheet', size: '850 KB', date: '2026-04-03' },
-    { name: 'Branding_Assets', type: 'folder', size: '--', date: '2026-02-15' },
-    { name: 'Event_Photos_March.zip', type: 'zip', size: '156 MB', date: '2026-03-30' },
-  ];
+  const files = integrations.googleDrive.verifiedFiles;
 
   return (
     <div className="space-y-8">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h1 className="text-3xl text-diner-black mb-1">GOOGLE DRIVE</h1>
-          <p className="text-gray-500 font-sans">Centralized franchise assets and documents</p>
+          <p className="text-gray-500 font-sans">Verified Juke&apos;s assets, menus, and content-library links.</p>
         </div>
-        <button className="bg-diner-teal text-white px-6 py-3 rounded-xl font-display text-sm hover:bg-teal-700 transition-colors flex items-center gap-2">
-          <ExternalLink className="h-4 w-4" /> OPEN IN DRIVE
-        </button>
+        <div className="flex flex-wrap gap-3">
+          <a href={integrations.googleDrive.sheetUrl} target="_blank" rel="noreferrer" className="border border-diner-teal text-diner-teal px-6 py-3 rounded-xl font-display text-sm hover:bg-diner-teal/5 transition-colors flex items-center gap-2">
+            <ExternalLink className="h-4 w-4" /> CONTENT INDEX
+          </a>
+          <a href={integrations.googleDrive.url} target="_blank" rel="noreferrer" className="bg-diner-teal text-white px-6 py-3 rounded-xl font-display text-sm hover:bg-teal-700 transition-colors flex items-center gap-2">
+            <ExternalLink className="h-4 w-4" /> OPEN DRIVE FOLDER
+          </a>
+        </div>
       </div>
+
+      <section className="grid gap-4 md:grid-cols-3">
+        <div className="rounded-3xl border border-emerald-100 bg-emerald-50 p-5">
+          <CheckCircle2 className="mb-3 h-5 w-5 text-emerald-700" />
+          <p className="font-display text-lg text-emerald-900">Hermes read access verified</p>
+          <p className="mt-2 text-sm text-emerald-800/80">Drive and Sheet assets are reachable by agents for inventory and tagging.</p>
+        </div>
+        <div className="rounded-3xl border border-gray-100 bg-white p-5 shadow-sm">
+          <p className="text-[10px] font-display uppercase tracking-[0.25em] text-gray-400">Source folder</p>
+          <p className="mt-2 font-display text-lg text-diner-black">{integrations.googleDrive.label}</p>
+          <p className="mt-2 break-all font-mono text-[11px] text-gray-400">{integrations.googleDrive.folderId}</p>
+        </div>
+        <div className="rounded-3xl border border-gray-100 bg-white p-5 shadow-sm">
+          <p className="text-[10px] font-display uppercase tracking-[0.25em] text-gray-400">Runtime bridge</p>
+          <p className="mt-2 font-display text-lg text-diner-black">Vercel credential needed</p>
+          <p className="mt-2 text-sm text-gray-500">Live dashboard can link out now; direct server-side Drive browsing needs a least-privilege Google credential.</p>
+        </div>
+      </section>
 
       <div className="glass-card rounded-[2rem] overflow-hidden">
         <div className="p-6 border-b border-gray-100 flex flex-col sm:flex-row gap-4 justify-between items-center bg-gray-50/50">
@@ -29,18 +47,18 @@ export default function DriveViewer() {
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
             <input
               type="text"
-              placeholder="Search files..."
+              placeholder="Search verified files..."
               className="w-full pl-12 pr-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-diner-teal outline-none text-sm"
             />
           </div>
           <div className="flex gap-2">
-            <button className="p-3 rounded-xl border border-gray-200 hover:bg-white transition-colors text-gray-500">
+            <button className="p-3 rounded-xl border border-gray-200 hover:bg-white transition-colors text-gray-500" aria-label="Filter files">
               <Filter className="h-4 w-4" />
             </button>
             <div className="h-10 w-[1px] bg-gray-200 mx-2" />
             <div className="flex items-center gap-2 text-xs font-display text-gray-400">
               <HardDrive className="h-4 w-4" />
-              <span>4.2 GB / 15 GB</span>
+              <span>{files.length} verified links</span>
             </div>
           </div>
         </div>
@@ -50,17 +68,17 @@ export default function DriveViewer() {
             <thead>
               <tr className="bg-gray-50/30 text-[10px] font-display text-gray-400 uppercase tracking-widest">
                 <th className="px-8 py-4">Name</th>
-                <th className="px-8 py-4">Size</th>
+                <th className="px-8 py-4">Source</th>
                 <th className="px-8 py-4">Last Modified</th>
-                <th className="px-8 py-4"></th>
+                <th className="px-8 py-4">Open</th>
               </tr>
             </thead>
             <tbody className="font-sans">
-              {mockFiles.map((file, i) => (
-                <tr key={i} className="border-b border-gray-50 hover:bg-diner-cream/30 transition-colors group">
+              {files.map((file) => (
+                <tr key={file.url} className="border-b border-gray-50 hover:bg-diner-cream/30 transition-colors group">
                   <td className="px-8 py-4">
                     <div className="flex items-center gap-3">
-                      {file.type === 'folder' ? (
+                      {file.type === 'sheet' ? (
                         <Folder className="h-5 w-5 text-diner-teal fill-diner-teal/20" />
                       ) : (
                         <File className="h-5 w-5 text-gray-400" />
@@ -72,10 +90,10 @@ export default function DriveViewer() {
                   </td>
                   <td className="px-8 py-4 text-sm text-gray-500">{file.size}</td>
                   <td className="px-8 py-4 text-sm text-gray-500">{file.date}</td>
-                  <td className="px-8 py-4 text-right">
-                    <button className="text-gray-300 hover:text-diner-teal transition-colors">
-                      <ExternalLink className="h-4 w-4" />
-                    </button>
+                  <td className="px-8 py-4">
+                    <a href={file.url} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-bold text-diner-teal ring-1 ring-gray-100 hover:bg-diner-teal hover:text-white">
+                      Open <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
                   </td>
                 </tr>
               ))}
@@ -83,11 +101,10 @@ export default function DriveViewer() {
           </table>
         </div>
 
-        <div className="p-12 text-center border-t border-gray-50 bg-gray-50/20">
-          <HardDrive className="h-12 w-12 text-gray-200 mx-auto mb-4" />
-          <h3 className="text-xl text-gray-400 mb-2">GOOGLE DRIVE INTEGRATION</h3>
-          <p className="text-gray-400 font-sans max-w-md mx-auto">
-            This is a live preview of your franchise Google Drive folder. Connect your Google Cloud project to enable real-time file management.
+        <div className="p-8 border-t border-gray-50 bg-gray-50/40">
+          <h3 className="text-xl text-diner-black mb-2">How to use this</h3>
+          <p className="text-sm text-gray-500 font-sans max-w-3xl">
+            Use Drive for source material, the Content Library Index for tagging/approval, and Brand & Marketing for what is safe to reuse on the website or in Flo/social workflows.
           </p>
         </div>
       </div>

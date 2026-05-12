@@ -1,0 +1,106 @@
+{
+  "updatedAt": "2026-05-12",
+  "googleDrive": {
+    "status": "verified-local-read",
+    "label": "Juke's Organized Content Library",
+    "folderId": "1RyLaK_SS_odU6bbUlI0S6H5DZ9jaA_L_",
+    "url": "https://drive.google.com/drive/folders/1RyLaK_SS_odU6bbUlI0S6H5DZ9jaA_L_",
+    "sheetLabel": "Juke's Content Library Index",
+    "sheetId": "1HnWNteS8QCzfsWPT4kNoStkCo6Q4zIOrpmbNYevNPWk",
+    "sheetUrl": "https://docs.google.com/spreadsheets/d/1HnWNteS8QCzfsWPT4kNoStkCo6Q4zIOrpmbNYevNPWk/edit",
+    "verifiedFiles": [
+      {
+        "name": "jukes_diner_menu_720.png",
+        "type": "image",
+        "size": "Drive",
+        "date": "2026-05-11",
+        "url": "https://drive.google.com/file/d/1sjSOQH-3jB4MAntZshKGPmXDSN93xWJO/view"
+      },
+      {
+        "name": "jukes_diner_breakfast_menu_720.png",
+        "type": "image",
+        "size": "Drive",
+        "date": "2026-05-11",
+        "url": "https://drive.google.com/file/d/1pVj6o7PvAjOP3ymgtN10tJzMaj_77hYR/view"
+      },
+      {
+        "name": "Juke's Content Library Index",
+        "type": "sheet",
+        "size": "Google Sheet",
+        "date": "2026-05-11",
+        "url": "https://docs.google.com/spreadsheets/d/1HnWNteS8QCzfsWPT4kNoStkCo6Q4zIOrpmbNYevNPWk/edit"
+      },
+      {
+        "name": "Jukes_April_6_26-227.jpg",
+        "type": "image",
+        "size": "Drive",
+        "date": "2026-05-04",
+        "url": "https://drive.google.com/file/d/15vsN0xSQ5H4XFKMyKiUaLbrMJJk9o0Kh/view"
+      },
+      {
+        "name": "Jukes_April_6_26-228.jpg",
+        "type": "image",
+        "size": "Drive",
+        "date": "2026-05-04",
+        "url": "https://drive.google.com/file/d/1kplZWQKUXrj3xmQnRY_kDhd2sOUl7c5l/view"
+      }
+    ]
+  },
+  "googleCalendar": {
+    "status": "verified-local-read",
+    "calendarId": "booking@jukesdiner.com",
+    "url": "https://calendar.google.com/calendar/u/0/r?cid=booking%40jukesdiner.com",
+    "holdLinkMode": "enabled-for-booking-inquiries",
+    "sampleEvents": [
+      "Wedgewood Houston Farmers Market",
+      "WHFM Movie Night",
+      "AESC Lunch",
+      "Spring Market Basement Marketplace"
+    ]
+  },
+  "slack": {
+    "status": "flo-running",
+    "workspace": "Juke's Diner",
+    "teamId": "T0B1BSE9YPJ",
+    "agentName": "Flo",
+    "growthChannel": "https://app.slack.com/client/T0B1BSE9YPJ/C0B2PDF0SBU",
+    "allJukesChannel": "https://app.slack.com/client/T0B1BSE9YPJ/C0B0FGFSF46",
+    "channels": ["#growth", "#all-jukes-diner"],
+    "guardrail": "Flo stays scoped to Juke's Slack/social/booking operations and approved business knowledge."
+  },
+  "stripe": {
+    "status": "needs-keys-read-only-first",
+    "dashboardUrl": "https://dashboard.stripe.com/",
+    "requiredEnv": [
+      "STRIPE_SECRET_KEY",
+      "STRIPE_WEBHOOK_SECRET",
+      "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY",
+      "STRIPE_ACCOUNT_EVENT_TRUCK",
+      "STRIPE_ACCOUNT_TRAILER_PARK",
+      "STRIPE_ACCOUNT_EAST_NASHVILLE",
+      "STRIPE_ACCOUNT_CORPORATE"
+    ],
+    "guardrail": "Read-only reporting first; no charges/refunds/payouts/transfers without explicit approval."
+  },
+  "metricool": {
+    "status": "needs-credentials",
+    "url": "https://app.metricool.com/",
+    "requiredEnv": ["METRICOOL_API_KEY", "METRICOOL_USER_ID", "METRICOOL_BRAND_ID", "METRICOOL_PROFILE_MAP"]
+  },
+  "printful": {
+    "status": "optional-next-layer",
+    "url": "https://www.printful.com/dashboard",
+    "requiredEnv": ["PRINTFUL_API_KEY", "PRINTFUL_STORE_ID"]
+  },
+  "vercel": {
+    "status": "production-live",
+    "project": "jukes-diner-website",
+    "url": "https://vercel.com/lexis-projects-b928a9e2/jukes-diner-website",
+    "liveUrl": "https://jukesdiner.com"
+  },
+  "dashboard": {
+    "status": "production-auth-verified",
+    "url": "https://jukesdiner.com/dashboard",
+    "loginUrl": "https://jukesdiner.com/dashboard/login"
+  }
+}

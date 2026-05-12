@@ -14,6 +14,9 @@ import {
   getConsolidatedWeeklyCashflow,
   getStripeAccountReadiness,
 } from '@/lib/franchise-financials.mjs';
+import {
+  buildStripeWeeklyCashflowViews,
+} from '@/lib/stripe-cashflow.mjs';
 
 export async function GET(request) {
   const auth = requireDashboardApiAuth(request);
@@ -32,6 +35,7 @@ export async function GET(request) {
       units: getFinancialUnits(financials),
       consolidatedWeeklyCashflow: getConsolidatedWeeklyCashflow(financials),
       stripeReadiness: getStripeAccountReadiness(financials),
+      stripeCashflow: buildStripeWeeklyCashflowViews(financials, { env: process.env }),
     });
   } catch (error) {
     console.error('Franchise financials API error:', error);
