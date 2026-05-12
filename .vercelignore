@@ -1,0 +1,9 @@
+.env
+.env.*
+.next
+.next.backup*/
+node_modules
+.playwright-mcp
+.qa-reports
+dogfood-output
+tmp
