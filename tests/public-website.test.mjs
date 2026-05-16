@@ -52,6 +52,64 @@ test('homepage has prominent Book Jukes CTA', () => {
   assert.match(content, /\/book|booking/i, 'Should have booking CTA or link');
 });
 
+test('homepage Fan Favorites cards are mobile-visible without scroll-triggered motion gating', () => {
+  const content = readPage('app/page.tsx');
+  const fanFavoritesSection = content.match(/<section[^>]*id="fan-favorites"[\s\S]*?<\/section>/i)?.[0];
+
+  assert.ok(fanFavoritesSection, 'Fan Favorites section should be present');
+  assert.doesNotMatch(
+    fanFavoritesSection,
+    /<motion\.|initial=\{\{\s*opacity:\s*0|whileInView|viewport=\{\{/,
+    'Fan Favorites cards must not start hidden or depend on scroll-triggered motion to appear on mobile',
+  );
+  assert.match(
+    fanFavoritesSection,
+    /<article[^>]*className="[^"]*opacity-100[^"]*translate-y-0[^"]*"/,
+    'Fan Favorites cards should explicitly render visible at mobile widths',
+  );
+  assert.match(
+    fanFavoritesSection,
+    /grid[^"']*grid-cols-1[^"']*sm:grid-cols-2[^"']*lg:grid-cols-4/,
+    'Fan Favorites grid should render one column on mobile, two on tablet, and four on desktop',
+  );
+});
+
+test('homepage Fan Favorites renders the four accepted cards with order CTAs', () => {
+  const content = readPage('app/page.tsx');
+  const fanFavoritesSection = content.match(/<section[^>]*id="fan-favorites"[\s\S]*?<\/section>/i)?.[0];
+
+  assert.ok(fanFavoritesSection, 'Fan Favorites section should be present');
+  for (const itemName of ['Diner Burger', 'Philly Cheesesteak', '615 Hot Chicken', 'Texas BLT']) {
+    assert.match(content, new RegExp(`['\"]${itemName}['\"]`), `${itemName} should be selected for homepage Fan Favorites`);
+  }
+  assert.doesNotMatch(
+    content,
+    /['\"](?:Loaded Grilled Cheese|Buffalo Chicken Wrap|Chicken & Waffles|Loaded Fries)['\"](?=,?\s*\n)/,
+    'Homepage Fan Favorites should stay to the four accepted cards',
+  );
+  assert.match(fanFavoritesSection, /href="\/order"[\s\S]*Order Now/, 'Fan Favorites cards should include visible Order Now buttons');
+});
+
+test('/apply hero presents both job and franchise CTAs before the card grid', () => {
+  const content = readPage('app/apply/page.js');
+  const heroBeforeCards = content.split('<div className="mx-auto mt-8 grid max-w-5xl')[0];
+
+  assert.match(heroBeforeCards, /Juke%27s%20Job%20Application/, 'Hero should expose the job application mailto before the below-fold card grid');
+  assert.match(heroBeforeCards, /Apply by email|Work with us/i, 'Hero should label the job CTA clearly');
+  assert.match(heroBeforeCards, /Juke%27s%20Franchise%20Inquiry/, 'Hero should keep the franchise inquiry mailto');
+  assert.match(heroBeforeCards, /Ask about franchise/i, 'Hero should label the franchise CTA clearly');
+  assert.match(heroBeforeCards, /flex[^"']*flex-col[^"']*sm:flex-row/, 'Hero CTAs should stack on mobile and sit side by side from small screens up');
+});
+
+test('/find-us launch-safe schedule status label uses AA-safe teal on white', () => {
+  const content = readPage('app/find-us/page.js');
+  const statusLabel = content.match(/<p className="([^"]*)">Launch-safe schedule status<\/p>/)?.[1];
+
+  assert.ok(statusLabel, 'Find Us launch-safe schedule status label should be present');
+  assert.doesNotMatch(statusLabel, /\btext-diner-teal\b/, 'Label must not use standard diner teal because #2a9d8f on white is below WCAG AA for 14px text');
+  assert.match(statusLabel, /(?:^|\s)text-\[#087879\](?:\s|$)/, 'Label should use the darker on-brand teal #087879 with >= 4.5:1 contrast on white');
+});
+
 test('all public pages use correct retro diner color palette', () => {
   const pages = [
     'app/page.tsx',
@@ -101,6 +159,24 @@ test('navbar keeps dashboard out of public navigation', () => {
   assert.match(content, /href="\/book"[\s\S]*Book/, 'Navbar should keep the public book CTA');
 });
 
+test('public mobile drawer exposes direct order route', () => {
+  const content = readPage('app/components/Navbar.tsx');
+
+  assert.match(
+    content,
+    /navLinks\s*=\s*\[[\s\S]*name:\s*['"]Order(?: Now)?['"][\s\S]*path:\s*['"]\/order['"][\s\S]*\]/i,
+    'Global public navLinks should include a direct ORDER link to /order so the mobile drawer exposes ordering',
+  );
+});
+
+test('public mobile drawer closes when Escape is pressed', () => {
+  const content = readPage('app/components/Navbar.tsx');
+
+  assert.match(content, /keydown/i, 'Navbar should listen for keyboard events');
+  assert.match(content, /event\.key\s*={2,3}\s*['"]Escape['"]/, 'Navbar should detect the Escape key');
+  assert.match(content, /setIsOpen\(false\)/, 'Escape handling should close the mobile drawer');
+});
+
 test('public pages do not expose sensitive dashboard information', () => {
   const publicPages = [
     'app/page.tsx',
@@ -124,6 +200,18 @@ test('public pages do not expose sensitive dashboard information', () => {
       assert.ok(!pattern.test(content), `${page} should not expose sensitive data matching ${pattern}`);
     }
   }
+});
+
+test('/order delivery CTA avoids brittle DoorDash search URLs and gives search instructions', () => {
+  const content = readPage('app/order/page.js');
+
+  assert.doesNotMatch(
+    content,
+    /href=\"https:\/\/www\.doordash\.com\/search\/store\/jukes%20diner\//,
+    'Primary delivery CTA should not link to the brittle DoorDash store-search URL that triggers Cloudflare challenges',
+  );
+  assert.match(content, /search DoorDash for Juke&apos;s Diner/i, 'Delivery copy should explicitly tell customers how to search DoorDash when available');
+  assert.match(content, /availability|live near you|service area/i, 'Delivery copy should frame DoorDash as availability-based, not guaranteed live ordering');
 });
 
 test('all required public pages exist and can be read', () => {

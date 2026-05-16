@@ -11,18 +11,17 @@
  * 4. Disabled states (visual clarity - LOW priority)
  */
 
-@layer components {
-  /* ====================================================================
-   * FOCUS INDICATORS (WCAG 2.1 Level AA - Success Criterion 2.4.7)
-   * ==================================================================== */
+/* ====================================================================
+ * FOCUS INDICATORS (WCAG 2.1 Level AA - Success Criterion 2.4.7)
+ * ==================================================================== */
 
-  /**
-   * Remove default browser focus outline globally,
-   * then add custom accessible focus rings below.
-   */
-  *:focus {
-    outline: none;
-  }
+/**
+ * Remove default browser focus outline globally,
+ * then add custom accessible focus rings below.
+ */
+*:focus {
+  outline: none;
+}
 
   /**
    * Primary focus indicator for all interactive elements.
@@ -312,7 +311,6 @@
       opacity: 0.8;
     }
   }
-}
 
 /* ====================================================================
  * UTILITY CLASSES (Compose multiple states)

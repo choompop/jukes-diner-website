@@ -2,14 +2,23 @@ import Link from 'next/link';
 import { ArrowRight, CalendarCheck, MapPin, ShieldCheck, Sparkles, Truck } from 'lucide-react';
 import { MENU_ITEMS } from '@/lib/constants';
 
+const FEATURED_MENU_ITEM_NAMES = [
+  'Diner Burger',
+  'Philly Cheesesteak',
+  '615 Hot Chicken',
+  'Texas BLT',
+];
+
 const offers = [
-  { title: 'Book the Truck', copy: 'Corporate lunches, festivals, late-night drops, weddings, and private parties.', href: '/book', icon: CalendarCheck },
-  { title: 'Find Us Live', copy: 'See the weekly Nashville route and where the truck is popping up next.', href: '/find-us', icon: MapPin },
-  { title: 'Franchise Track', copy: "Interested in working with Juke's or future franchise opportunities? Start here.", href: '/apply', icon: ShieldCheck },
+  { title: 'Book the Truck', copy: 'Corporate lunches, festivals, late-night drops, weddings, and private parties.', href: '/book', icon: CalendarCheck, cta: 'Book Now' },
+  { title: 'Find Us', copy: 'Public stops will be posted when confirmed. Until then, ask about bringing the truck to your event.', href: '/find-us', icon: MapPin, cta: 'Check Updates' },
+  { title: 'Franchise Track', copy: "Interested in working with Juke's or future franchise opportunities? Start here.", href: '/apply', icon: ShieldCheck, cta: 'Start Franchise Inquiry' },
 ];
 
 export default function Home() {
-  const featured = MENU_ITEMS.slice(0, 6);
+  const featured = FEATURED_MENU_ITEM_NAMES
+    .map((name) => MENU_ITEMS.find((item) => item.name === name))
+    .filter((item): item is (typeof MENU_ITEMS)[number] => Boolean(item));
   return (
     <main>
       <section className="relative overflow-hidden border-b-4 border-diner-black bg-diner-red text-white">
@@ -39,36 +48,37 @@ export default function Home() {
 
       <section className="bg-diner-cream py-16">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:px-6 md:grid-cols-3 lg:px-8">
-          {offers.map(({ title, copy, href, icon: Icon }) => (
+          {offers.map(({ title, copy, href, icon: Icon, cta }) => (
             <Link key={title} href={href} className="retro-card group p-7 transition-transform hover:-translate-y-1">
               <Icon className="mb-5 h-10 w-10 text-diner-red" />
               <h2 className="text-4xl text-diner-black">{title}</h2>
               <p className="mt-3 leading-7 text-diner-black">{copy}</p>
-              <p className="mt-5 font-black uppercase tracking-widest text-diner-black">Go</p>
+              <p className="mt-5 font-black uppercase tracking-widest text-diner-black">{cta}</p>
             </Link>
           ))}
         </div>
       </section>
 
-      <section className="border-y-4 border-diner-black bg-white py-20">
+      <section id="fan-favorites" aria-labelledby="fan-favorites-heading" className="border-y-4 border-diner-black bg-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mb-10 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="font-black uppercase tracking-[0.25em] text-diner-red">Fan favorites</p>
-              <h2 className="text-6xl text-diner-black md:text-7xl">Diner food that moves</h2>
+              <h2 id="fan-favorites-heading" className="text-6xl text-diner-black md:text-7xl">Diner food that moves</h2>
             </div>
             <Link href="/menu" className="retro-button bg-diner-red text-white">Full Menu</Link>
           </div>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {featured.map((item) => (
-              <article key={item.id} className="retro-card overflow-hidden">
+              <article key={item.id} className="retro-card flex h-full opacity-100 translate-y-0 flex-col overflow-hidden transition-transform duration-200 hover:-translate-y-1">
                 <img src={item.image} alt={item.name} className="h-48 w-full object-cover" referrerPolicy="no-referrer" />
-                <div className="p-6">
+                <div className="flex flex-1 flex-col p-6">
                   <div className="flex items-start justify-between gap-4">
                     <h3 className="text-3xl text-diner-black">{item.name}</h3>
                     <span className="rounded-full bg-diner-teal px-3 py-1 font-mono text-sm font-bold text-diner-black">${item.price}</span>
                   </div>
                   <p className="mt-3 text-sm leading-6 text-diner-black">{item.description}</p>
+                  <Link href="/order" className="retro-button mt-auto w-full justify-center bg-diner-red px-4 py-3 text-sm text-white">Order Now</Link>
                 </div>
               </article>
             ))}

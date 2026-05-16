@@ -32,7 +32,7 @@ export const MENU_ITEMS: MenuItem[] = [
     description: "Crispy bacon, lettuce, tomato, mayo on grilled Texas toast",
     price: 11.99,
     category: 'main',
-    image: "/images/drive/burger-side.jpg"
+    image: "/images/drive/sandwich-closeup.jpg"
   },
   {
     id: '5',

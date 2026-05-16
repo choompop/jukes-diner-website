@@ -40,6 +40,17 @@ test('previously broken audited menu items no longer point at remote placeholder
   }
 });
 
+test('Texas BLT uses the approved BLT-on-Texas-toast image instead of burger media', () => {
+  const texasBlt = MENU_ITEMS.find((item) => item.name === 'Texas BLT');
+
+  assert.ok(texasBlt, 'Texas BLT should still exist in the menu');
+  assert.equal(
+    texasBlt.image,
+    '/images/drive/sandwich-closeup.jpg',
+    'Texas BLT should use brand-safe BLT/Texas-toast media, not burger-style media',
+  );
+});
+
 test('homepage and menu preserve menu image alt text and fixed card aspect ratios', async () => {
   const [homePage, menuPage] = await Promise.all([
     readFile(new URL('../app/page.tsx', import.meta.url), 'utf8'),

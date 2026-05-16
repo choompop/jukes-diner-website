@@ -6,12 +6,13 @@ const values = ['Real diner food, not fast food', 'Clean truck, clean process', 
 export default function About() {
   return (
     <main className="bg-diner-cream">
-      <section className="border-b-4 border-diner-black bg-diner-red py-20 text-white">
+      <section className="border-b-4 border-diner-black bg-diner-red py-12 text-white sm:py-16 lg:py-20">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 sm:px-6 lg:grid-cols-[.9fr_1.1fr] lg:px-8">
           <div>
             <p className="font-black uppercase tracking-[0.25em] text-white">Our story</p>
-            <h1 className="mt-3 text-7xl text-white md:text-9xl">A DINER DREAM ON WHEELS</h1>
-            <p className="mt-6 text-xl font-bold leading-8 text-white">Juke&apos;s is retro diner nostalgia rebuilt for Nashville streets, private events, and a franchise system people can actually operate.</p>
+            <h1 className="mt-3 text-5xl text-white sm:text-7xl md:text-9xl">A DINER DREAM ON WHEELS</h1>
+            <p className="mt-4 text-lg font-bold leading-7 text-white sm:mt-6 sm:text-xl sm:leading-8">Juke&apos;s is retro diner nostalgia rebuilt for Nashville streets, private events, and a franchise system people can actually operate.</p>
+            <Link href="/book" className="retro-button mt-5 bg-diner-cream text-diner-black sm:mt-6">Book the Truck <ArrowRight className="ml-2 h-5 w-5" /></Link>
           </div>
           <div className="retro-card overflow-hidden bg-white p-3">
             <img src="/images/truck.jpg" alt="Juke's Diner trailer with retro diner artwork" className="h-[380px] w-full rounded-[1.5rem] object-cover" />

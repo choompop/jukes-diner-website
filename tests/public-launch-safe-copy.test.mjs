@@ -72,15 +72,28 @@ test('homepage uses approved Jukes trailer and real food photography', () => {
   assert.match(homepage, /\/images\/drive\/chicken-waffles\.jpg/);
 });
 
-test('find-us hides legacy Waffle Wheels calendar and shows launch-safe schedule fallback', () => {
+test('find-us hides legacy Waffle Wheels calendar and shows explicit no-public-stops empty state', () => {
   const findUs = readSource('app/find-us/page.js');
 
   assert.ok(!findUs.includes('wafflewheelsdiner%40gmail.com'), 'find-us should not expose legacy calendar account');
-  assert.match(findUs, /Schedule coming together/);
-  assert.match(findUs, /Ask about a date/);
+  assert.ok(!findUs.includes('Find the next public stop'), 'find-us hero should not promise a next public stop without a live schedule');
+  assert.ok(!findUs.includes('check upcoming events'), 'find-us hero should not promise an event calendar without a live calendar');
+  assert.ok(!findUs.includes('Check the calendar'), 'find-us cards should not direct guests to a missing calendar');
+  assert.match(findUs, /No public stops posted yet/);
+  assert.match(findUs, /Juke&apos;s does not have public pop-up stops on the board yet/);
+  assert.match(findUs, /There is no live map or calendar until public dates are confirmed/);
   assert.match(findUs, /Private events/);
-  assert.match(findUs, /Weekly pop-ups/);
-  assert.match(findUs, /Nashville area/);
+  assert.match(findUs, /Ask about a date/);
+});
+
+test('order page frames DoorDash as a conditional availability check', () => {
+  const order = readSource('app/order/page.js');
+
+  assert.match(order, /Delivery links change by stop and service area\./);
+  assert.match(order, /If Juke&apos;s is live near you, search DoorDash for Juke&apos;s Diner/);
+  assert.match(order, /otherwise check our public stops or book the truck for a group\./);
+  assert.match(order, />Check DoorDash availability<\/a>/);
+  assert.doesNotMatch(order, />Search DoorDash<\/a>/, 'DoorDash CTA should not read like a generic/direct order promise');
 });
 
 test('Waffle Wheels public business-name references are removed from customer source', () => {

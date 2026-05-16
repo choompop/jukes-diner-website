@@ -43,6 +43,18 @@ const requiredHeroCtas = [
     href: 'https://www.instagram.com/jukesdiner',
     label: /Follow on Instagram/i,
   },
+  {
+    route: '/order',
+    file: 'app/order/page.js',
+    href: '#ordering-options',
+    label: /See ordering options|Order \/ Delivery Options/i,
+  },
+  {
+    route: '/book',
+    file: 'app/book/page.js',
+    href: '#booking-inquiry',
+    label: /Start Booking Request|Start Booking Inquiry|Jump to form/i,
+  },
 ];
 
 test('mobile public route hero sections include compact first-screen conversion CTAs', () => {

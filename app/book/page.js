@@ -70,6 +70,7 @@ export default function Book() {
             <p className="font-black uppercase tracking-[0.25em] text-diner-black">Events + catering</p>
             <h1 className="mt-3 text-7xl md:text-9xl">BOOK THE TRUCK</h1>
             <p className="mt-5 text-xl font-bold leading-8 text-diner-black">Tell us about the event, and we will follow up with availability, menu options, and the cleanest way to feed your crowd.</p>
+            <Link href="#booking-inquiry" className="retro-button mt-4 bg-diner-red text-white">Start Booking Request</Link>
             <img src="/images/truck.jpg" alt="Juke's Diner food trailer ready for events" className="mt-8 h-64 w-full rounded-[1.5rem] border-4 border-diner-black object-cover shadow-[8px_8px_0_#171717]" />
             <div className="mt-8 grid gap-3">
               {['Corporate lunches', 'Festivals and pop-ups', 'Weddings and private parties', 'Late-night food service'].map((item) => (
@@ -77,7 +78,7 @@ export default function Book() {
               ))}
             </div>
           </div>
-          <form onSubmit={submit} className="retro-card bg-white p-6 text-diner-black md:p-8">
+          <form id="booking-inquiry" onSubmit={submit} className="retro-card bg-white p-6 text-diner-black md:p-8">
             <CalendarCheck className="mb-4 h-10 w-10 text-diner-red" />
             <h2 className="text-5xl">Event inquiry</h2>
             <div className="mt-6 grid gap-4 md:grid-cols-2">

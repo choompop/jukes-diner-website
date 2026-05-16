@@ -30,6 +30,9 @@ export const metadata: Metadata = {
   title: "Juke's Diner | Nashville Food Truck",
   description: "Diner-style food done right, served from a truck. Good eats all day, all night. Nashville, TN.",
   keywords: "food truck, Nashville, diner, catering, events, Juke's Diner",
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     title: "Juke's Diner | Nashville Food Truck",
     description: "Diner-style food done right, served from a truck.",
