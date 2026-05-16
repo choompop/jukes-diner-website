@@ -4,6 +4,7 @@ import './globals.css';
 import { AuthProvider } from '@/context/AuthContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import Jukebox from './components/Jukebox';
 
 const atkinsonHyperlegible = Atkinson_Hyperlegible({
   subsets: ['latin'],
@@ -52,6 +53,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               {children}
             </div>
             <Footer />
+            <Jukebox />
           </div>
         </AuthProvider>
       </body>
